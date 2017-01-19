@@ -1,6 +1,5 @@
-GIT
-  remote: git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git
-  revision: f29c5998c4ff3c8090958ff709f3f3d7b1186268
+PATH
+  remote: /home/ian/workspace/fsa/fsa_pattern_library
   specs:
     fsa_pattern_library (0.1.0)
       rails (~> 5.0.0, >= 5.0.0.1)

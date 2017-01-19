@@ -37,4 +37,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
-gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
+#gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
+gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa_pattern_library'
