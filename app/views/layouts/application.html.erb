@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>DataCatalogueBrowser</title>
     <%= csrf_meta_tags %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= render partial: 'shared/page_header' %>
     <%= yield %>
+    <%= render partial: 'shared/page_footer' %>
   </body>
 </html>
