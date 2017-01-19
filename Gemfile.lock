@@ -1,4 +1,11 @@
 PATH
+  remote: /home/ian/workspace/epimorphics/cairn_catalogue_browser
+  specs:
+    cairn_catalogue_browser (0.1.0)
+      haml-rails (~> 0.9.0)
+      rails (~> 5.0.0, >= 5.0.0.1)
+
+PATH
   remote: /home/ian/workspace/fsa/fsa_pattern_library
   specs:
     fsa_pattern_library (0.1.0)
@@ -170,6 +177,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  cairn_catalogue_browser!
   fsa_pattern_library!
   haml-rails
   jbuilder (~> 2.5)
