@@ -41,3 +41,7 @@ gem 'haml-rails'
 gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa-pattern-library'
 
 gem 'cairn_catalogue_browser', path: '/home/ian/workspace/epimorphics/cairn-catalogue-browser'
+
+gem 'faraday'
+gem 'faraday_middleware'
+gem 'yajl-ruby', require: 'yajl'

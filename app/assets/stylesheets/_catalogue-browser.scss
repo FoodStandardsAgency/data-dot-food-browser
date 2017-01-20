@@ -1,0 +1,36 @@
+.c-dataset-entry {
+  padding: 0;
+  border-bottom: 1px dotted #999;
+
+  &--title {
+    @extend .font-size--h4;
+  }
+}
+
+.c-dataset-catalogue--list {
+  @extend .u-list-undecorated;
+}
+
+.c-dataset-keywords {
+  @extend .u-list-undecorated;
+  @extend .u-list-inline;
+}
+
+.o-dataset-keyword {
+  @extend .tags;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Utilities */
+
+.u-list-undecorated {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.u-list-inline li {
+  display: inline-block;
+  margin: 0;
+}
