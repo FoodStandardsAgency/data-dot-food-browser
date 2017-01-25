@@ -16,6 +16,15 @@
   @extend .u-list-inline;
 }
 
+.c-dataset-list {
+  padding: 0;
+  margin-left: 0;
+}
+
+.c-dataset-entry {
+  list-style: none;
+}
+
 .o-dataset-keyword {
   @extend .tags;
   padding-left: 10px;
