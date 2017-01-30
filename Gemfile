@@ -42,6 +42,6 @@ gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa-pattern-library'
 
 gem 'cairn_catalogue_browser', path: '/home/ian/workspace/epimorphics/cairn-catalogue-browser'
 
-gem 'faraday'
-gem 'faraday_middleware'
+gem 'faraday', '~> 0.11.0'
+gem 'faraday_middleware', '~> 0.11.0.1'
 gem 'yajl-ruby', require: 'yajl'
