@@ -31,10 +31,40 @@
   padding-right: 10px;
 }
 
-.c-catalog-entry {
+.c-catalogue-entry-wrap {
+  @extend .col-wrap;
+}
+
+.c-catalogue-entry {
   .c-dataset-keywords {
     margin: 0;
   }
+
+  .c-catalogue-entry--heading {
+    @extend .col;
+  }
+
+  .c-catalogue-entry--metadata {
+    @extend .col;
+    @extend .col--fluid-two-thirds;
+  }
+
+  .c-catalogue-entry--description {
+    @extend .col;
+    @extend .col--fluid-two-thirds;
+  }
+
+  .c-catalogue-entry--table {
+    @extend .table;
+  }
+
+  .c-catalogue-entry--metadata {
+    @extend .col;
+  }
+}
+
+.c-catalogue-downloads-wrap {
+  @extend .col-wrap;
 }
 
 /* Utilities */
