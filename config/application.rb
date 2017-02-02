@@ -23,3 +23,6 @@ module DataCatalogueBrowser
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+# Additional libs to load
+require 'kaminari'
