@@ -1,0 +1,23 @@
+.c-breadcrumbs-wrap {
+  @extend .col-wrap
+}
+
+.c-breadcrumbs-wrap--inner {
+  @extend .col
+}
+
+.c-breadcrumbs-list {
+  @extend .breadcrumb__list;
+}
+
+.c-breadcrumbs-list--item {
+  @extend .breadcrumb__item;
+}
+
+.c-breadcrumbs-list--link {
+  // @extend .breadcrumb__link;
+}
+
+.c-breadcrumbs-list--item__highlighted {
+  // @extend .regional;
+}
