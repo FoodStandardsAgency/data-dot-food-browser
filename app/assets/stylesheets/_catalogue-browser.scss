@@ -113,6 +113,11 @@
   }
 }
 
+.o-datasets-nav {
+  padding-bottom: 2em;
+  @extend .separator-dotted;
+}
+
 /* Utilities */
 
 .u-list-undecorated {
