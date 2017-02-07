@@ -134,3 +134,10 @@
 .u-sr-only {
   display:none;
 }
+
+.u-disabled {
+  cursor: not-allowed;
+  a {
+    pointer-events: none;
+  }
+}
