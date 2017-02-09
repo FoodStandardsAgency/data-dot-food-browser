@@ -113,6 +113,11 @@
   }
 }
 
+.c-prompt-explanation {
+  font-weight: 200;
+  color: #222;
+}
+
 .o-datasets-nav {
   padding-bottom: 2em;
   @extend .separator-dotted;
