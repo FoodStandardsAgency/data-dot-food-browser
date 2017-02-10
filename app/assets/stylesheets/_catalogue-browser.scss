@@ -107,6 +107,11 @@
     font-size: 15px;
     display: inline-block;
   }
+
+  .c-dataset-element--group {
+    @extend .col-wrap;
+  }
+
   .c-dataset-element--distribution-prompt {
     @extend .c-dataset-element--distribution;
     font-weight: 600;
