@@ -26,9 +26,11 @@
 }
 
 .o-dataset-keyword {
-  @extend .tags;
-  padding-left: 10px;
-  padding-right: 10px;
+  a {
+    @extend .tags;
+  }
+  margin: 0;
+  padding: 0;
 }
 
 .c-catalogue-entry-wrap {
