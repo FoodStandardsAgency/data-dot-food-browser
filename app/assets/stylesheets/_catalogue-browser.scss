@@ -151,9 +151,7 @@
 .o-datasets-nav {
   padding-bottom: 2em;
   @extend .separator-dotted;
-}
 
-.o-datasets-nav--years {
   h4 {
     font-weight: normal;
     margin: 0;
@@ -167,6 +165,9 @@
   }
 }
 
+.o-datasets-nav--keywords {
+}
+
 li.c-dataset-nav-year {
   display: inline-block;
   margin: 0;
@@ -175,6 +176,11 @@ li.c-dataset-nav-year {
   input {
     display: inline-block;
   }
+}
+
+li.c-dataset-nav-keyword {
+  margin: 0 20px 0 0;
+  padding: 0;
 }
 
 /* Utilities */
