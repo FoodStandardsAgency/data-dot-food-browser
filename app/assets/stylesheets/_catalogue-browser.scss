@@ -26,9 +26,16 @@
 }
 
 .o-dataset-keyword {
-  a {
+  .o-dataset-keyword--filter {
     @extend .tags;
   }
+
+  span.o-dataset-keyword--filter__selected {
+    font-weight: bold;
+    color: #444;
+    border-bottom: none;
+  }
+
   margin: 0;
   padding: 0;
 }
@@ -168,10 +175,6 @@ li.c-dataset-nav-year {
   input {
     display: inline-block;
   }
-}
-
-.o-dataset-keyword--filter__selected {
-  font-weight: bold;
 }
 
 /* Utilities */
