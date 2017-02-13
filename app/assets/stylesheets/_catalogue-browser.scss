@@ -125,6 +125,22 @@
   color: #222;
 }
 
+.c-navigation-search {
+  @extend .btn;
+
+  background-color: $mid-green;
+  color: $white;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 40px;
+  width: 100%;
+
+  &::after {
+    content: "\f002";
+    font-family: FontAwesome;
+  }
+}
+
 .o-datasets-nav {
   padding-bottom: 2em;
   @extend .separator-dotted;
