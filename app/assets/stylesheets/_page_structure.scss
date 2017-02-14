@@ -1,0 +1,9 @@
+.o-catalog-page--navigation {
+  @extend .col;
+  @extend .col--fluid-one-third;
+}
+
+.o-catalog-page--content {
+  @extend .col;
+  @extend .col--fluid-two-thirds;
+}
