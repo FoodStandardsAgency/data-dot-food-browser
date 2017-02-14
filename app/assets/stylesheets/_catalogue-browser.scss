@@ -129,7 +129,7 @@
 
 .c-prompt-explanation {
   font-weight: 200;
-  color: #222;
+  color: $text;
 }
 
 .c-navigation-search {
@@ -181,6 +181,21 @@ li.c-dataset-nav-year {
 li.c-dataset-nav-keyword {
   margin: 0 20px 0 0;
   padding: 0;
+}
+
+.o-datasets-nav--reset-filter {
+  display: inline-block;
+  float: right;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: $very-light-grey;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
 }
 
 /* Utilities */
