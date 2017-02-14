@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   mount CairnCatalogueBrowser::Engine => '/'
 
   root to: 'cairn_catalogue_browser/datasets#index'
+
+  get '/feedback', to: 'feedback#show'
+  post '/feedback', to: 'feedback#create'
 end
