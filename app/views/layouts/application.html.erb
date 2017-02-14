@@ -16,7 +16,7 @@
     <%= render partial: 'shared/page_header' %>
     <%= render partial: 'shared/phase_header' %>
     <main id="main" class="wrapper content" role="main">
-      <%= render partial: 'shared/highlighted_datasets' if @view_state.show_highlighted? %>
+      <%= render partial: 'shared/highlighted_datasets' if @view_state && @view_state.show_highlighted? %>
       <%= yield %>
     </main>
     <%= render partial: 'shared/page_footer' %>

@@ -6,7 +6,7 @@
         Please help us to make our open data service more effective by telling us what is working
         well, or what we need to improve.
 
-      = form_tag( "/feedback", method: :post) do
+      = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
 
         .form-group
           %label.control-label{ for: :purpose }
