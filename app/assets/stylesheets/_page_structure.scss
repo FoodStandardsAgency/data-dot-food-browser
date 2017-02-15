@@ -7,3 +7,7 @@
   @extend .col;
   @extend .col--fluid-two-thirds;
 }
+
+.footer nav {
+  min-height: 4em;
+}
