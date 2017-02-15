@@ -1,0 +1,61 @@
+
+.c-catalogue-entry--downloads {
+  .c-dataset-element--container {
+    @extend .col;
+    @extend .col--fluid-one-quarter;
+    @extend .home-news-tile;
+    @extend .separator-right-solid;
+  }
+
+  .c-dataset-element {
+    @extend .separator-dotted;
+    margin-bottom: 0.4em;
+  }
+
+  .c-dataset-element--title {
+    font-size: 16px;
+    line-height: 18px;
+    background-color: #007FB2;
+    color: white;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .c-dataset-element--features {
+    font-size: 15px;
+    line-height: 16px;
+    margin-top: 0.4em;
+  }
+
+  .c-dataset-element--downloads {
+    margin: 0.4em 0 0 0;
+    padding: 0;
+  }
+
+  .c-dataset-element--distribution {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .c-dataset-element--group {
+    @extend .col-wrap;
+  }
+
+  .c-dataset-element--distribution-prompt {
+    @extend .c-dataset-element--distribution;
+    font-weight: 600;
+  }
+}
+
+.c-catalogue-entry-downloads-wrap {
+  @extend .col-wrap;
+}
+
+
+
+.u-tagged-value-prompt {
+  padding-top: 22px !important;
+}
