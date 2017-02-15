@@ -1,0 +1,62 @@
+    <main id="main" role="main" tabindex="-1">
+      <h1>FSA data catalog: aliveness check</h1>
+      <table id="isAlive" class="table">
+        <thead>
+          <tr>
+            <th>Check</th>
+            <th>Expected</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Rails working
+            </td>
+            <td>
+              'present'
+            </td>
+            <td id="checkVelocity">
+              <%= @view_state[:message] %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              JavaScript loaded
+            </td>
+            <td>
+              'present'
+            </td>
+            <td id="checkJavaScript">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CSS check: H1 font size
+            </td>
+            <td>
+              integer, more than 30
+            </td>
+            <td id="checkCSS">
+            </td>
+          </tr>
+          <tr>
+            <td>Number of datasets loaded from API</td>
+            <td>integer, more than 1</td>
+            <td id="checkAPI">
+              <%= @view_state[:dataset_count] %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById("checkJavaScript").innerHTML = window.fsaData.liveCheck;
+
+        var el = document.getElementsByTagName('h1')[0];
+        var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+        document.getElementById("checkCSS").innerHTML = parseFloat(style);
+      });
+    </script>

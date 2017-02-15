@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/feedback', to: 'feedback#show'
   post '/feedback', to: 'feedback#create'
+
+  get '/live-check', to: 'live_check#show'
 end
