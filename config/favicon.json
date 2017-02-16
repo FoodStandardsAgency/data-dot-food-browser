@@ -1,5 +1,5 @@
 {
-    "master_picture": "app/assets/images/fsa-logo-square.png",
+    "master_picture": "app/assets/images/fsa-logo-master-square.svg",
     "favicon_design": {
         "ios": {
             "picture_aspect": "no_change",
@@ -15,7 +15,7 @@
         ],
         "windows": {
             "picture_aspect": "no_change",
-            "background_color": "#00a300",
+            "background_color": "#00aba9",
             "on_conflict": "override",
             "assets": {
                 "windows_80_ie_10_tile": false,
@@ -42,8 +42,7 @@
             }
         },
         "safari_pinned_tab": {
-            "picture_aspect": "black_and_white",
-            "threshold": 75,
+            "picture_aspect": "silhouette",
             "theme_color": "#5bbad5"
         }
     },
