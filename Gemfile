@@ -31,6 +31,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rails_real_favicon'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
