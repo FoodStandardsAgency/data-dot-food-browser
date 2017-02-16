@@ -86,11 +86,12 @@
 
 .c-navigation-search {
   @extend .btn;
+  @extend .btn--primary;
 
-  background-color: $mid-green;
-  color: $white;
-  background-repeat: no-repeat;
-  background-position: right;
+  // background-color: $mid-green;
+  // color: $white;
+  // background-repeat: no-repeat;
+  // background-position: right;
   padding-right: 40px;
   width: 100%;
 
