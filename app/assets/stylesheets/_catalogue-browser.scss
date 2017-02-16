@@ -6,6 +6,11 @@
     @extend .font-size--h5;
     line-height: 24px;
   }
+
+  .c-dataset-entry--date-range {
+    margin: 0;
+    padding-bottom: 0;
+  }
 }
 
 .c-dataset-catalogue--list {
