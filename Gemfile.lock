@@ -1,6 +1,6 @@
 GIT
   remote: git@codebasehq.com:epimorphics/data-platform/cairn-catalogue-browser-72fdaa.git
-  revision: d47cef9d101a31cb8e1870859fb5d3ee7c38d4d3
+  revision: 6949f2e65dd613cb3b659f8dd423b6b1697c7711
   specs:
     cairn_catalogue_browser (0.1.0)
       faraday_middleware (~> 0.11.0)
