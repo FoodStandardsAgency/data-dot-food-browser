@@ -13,7 +13,7 @@
   }
 }
 
-.c-dataset-catalogue--list {
+.c-dataset-catalog--list {
   @extend .u-list-undecorated;
 }
 
@@ -46,34 +46,34 @@
   padding: 0;
 }
 
-.c-catalogue-entry-wrap {
+.c-catalog-entry-wrap {
   @extend .col-wrap;
 }
 
-.c-catalogue-entry {
+.c-catalog-entry {
   .c-dataset-keywords {
     margin: 0;
   }
 
-  .c-catalogue-entry--heading {
+  .c-catalog-entry--heading {
     @extend .col;
   }
 
-  .c-catalogue-entry--metadata {
-    @extend .col;
-    @extend .col--fluid-two-thirds;
-  }
-
-  .c-catalogue-entry--description {
+  .c-catalog-entry--metadata {
     @extend .col;
     @extend .col--fluid-two-thirds;
   }
 
-  .c-catalogue-entry--table {
+  .c-catalog-entry--description {
+    @extend .col;
+    @extend .col--fluid-two-thirds;
+  }
+
+  .c-catalog-entry--table {
     @extend .table;
   }
 
-  .c-catalogue-entry--metadata {
+  .c-catalog-entry--metadata {
     @extend .col;
   }
 }

@@ -4,7 +4,7 @@ class LiveCheckController < ApplicationController
   before_filter :set_cache_headers
 
   def show
-    api = CairnCatalogueBrowser::CatalogueApi.new
+    api = CairnCatalogBrowser::CatalogApi.new
 
     @view_state = {
       message: 'present',

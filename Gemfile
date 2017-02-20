@@ -41,8 +41,8 @@ gem 'haml-rails'
 gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
 #gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa-pattern-library'
 
-# gem 'cairn_catalogue_browser', path: '/home/ian/workspace/epimorphics/cairn-catalogue-browser'
-gem 'cairn_catalogue_browser', git: 'git@codebasehq.com:epimorphics/data-platform/cairn-catalogue-browser-72fdaa.git'
+# gem 'cairn_catalog_browser', path: '/home/ian/workspace/epimorphics/cairn-catalog-browser'
+gem 'cairn_catalog_browser', git: 'git@codebasehq.com:epimorphics/data-platform/cairn-catalog-browser.git'
 
 gem 'faraday', '~> 0.11.0'
 gem 'faraday_middleware', '~> 0.11.0.1'
