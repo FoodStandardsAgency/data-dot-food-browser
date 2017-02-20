@@ -1,8 +1,8 @@
 GIT
-  remote: git@codebasehq.com:epimorphics/data-platform/cairn-catalogue-browser-72fdaa.git
-  revision: f71e699635d52edb8b031005a95f3bcd9dd9626e
+  remote: git@codebasehq.com:epimorphics/data-platform/cairn-catalog-browser.git
+  revision: 552004d504824399a7e3e31f2214588f888ccc58
   specs:
-    cairn_catalogue_browser (0.1.0)
+    cairn_catalog_browser (0.2.0)
       faraday_middleware (~> 0.11.0)
       haml-rails (~> 0.9.0)
       kaminari (~> 1.0.1)
@@ -220,7 +220,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  cairn_catalogue_browser!
+  cairn_catalog_browser!
   faraday (~> 0.11.0)
   faraday_middleware (~> 0.11.0.1)
   font-awesome-sass

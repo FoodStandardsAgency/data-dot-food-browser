@@ -7,6 +7,6 @@ class FeedbackController < ApplicationController
 
   def create
     Rails.logger.debug 'TODO forward feedback'
-    redirect_to controller: 'cairn_catalogue_browser/datasets', action: :index
+    redirect_to controller: 'cairn_catalog_browser/datasets', action: :index
   end
 end
