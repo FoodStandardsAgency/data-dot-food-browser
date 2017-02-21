@@ -8,36 +8,38 @@
       %h2
         Featured datasets
       %p
-        All of our datasets are available for you to re-use for free.
+        All of our open datasets are available for you to use for free.
 
-.col-wrap.separator-dotted
+.col-wrap
   .col.col--fluid-5.home-campaign-tile.home-campaign-tile--img-first
     %article.c-featured-dataset
-      .c-featured-dataset--colour-banner
+      %a{ href: "datasets/fsa-10-08a" }
+        %img.img-responsive{ src: image_path('datasets/rating-sticker-5.jpg')}
       %h2
-        %a{href: "#todo"}
-          Some other dataset
+        %a{ href: "datasets/fsa-10-08a" }
+          FHRS
       %p
-        Another featured dataset, but this one doesn't have an
-        obvious picture.
+        Food hygiene ratings and API.
 
   .col.col--fluid-5.home-campaign-tile.home-campaign-tile--img-first
     %article.c-featured-dataset
-      %img.img-responsive{ src: image_path('food-types-image.png')}
+      %a{ href: "#coming-soon" }
+        %img.img-responsive{ src: image_path('datasets/food-types-image.png')}
       %h2
-        %a{href: "#todo"}
+        %a{href: "#coming-soon"}
           Food types
       %p
         Food type coding and classification register.
 
   .col.col--fluid-5.home-campaign-tile.home-campaign-tile--img-first
     %article.c-featured-dataset
-      %img.img-responsive{ src: image_path('rating-sticker-5.jpg')}
+      %a{ href: "datasets/fsa-13-04k" }
+        %img.img-responsive{ src: image_path('datasets/bookkeeper.jpg')}
       %h2
-        %a{ href: "#todo" }
-          FHRS
+        %a{href: "datasets/fsa-13-04k"}
+          Expenditure over £25k
       %p
-        Food hygiene ratings and API.
+        Financial transactions over £25,000
 
 .col-wrap
   .col
