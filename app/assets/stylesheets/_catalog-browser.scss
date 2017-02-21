@@ -105,6 +105,10 @@
   padding-bottom: 2em;
   @extend .separator-dotted;
 
+  h3 {
+    font-size: 110%;
+  }
+
   h4 {
     font-weight: normal;
     margin: 0;
