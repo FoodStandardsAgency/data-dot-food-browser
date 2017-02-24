@@ -1,28 +1,27 @@
-%main#main.wrapper.content{ role: "main" }
-  .col-wrap
-    .c-catalog-preamble.col
-      %h1 We welcome your feedback
-      %p.text-muted.col--fluid-two-thirds
-        Please help us to make our open data service more effective by telling us what is working
-        well, or what we need to improve.
+%article.col-wrap
+  .c-catalog-preamble.col
+    %h1 We welcome your feedback
+    %p.text-muted.col--fluid-two-thirds
+      Please help us to make our open data service more effective by telling us what is working
+      well, or what we need to improve.
 
-      = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
+    = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
 
-        .form-group
-          %label.control-label{ for: :purpose }
-            Please tell us what you would like do with our data:
-          %textarea.form-control{ rows: 5, id: :purpose, name: :purpose }
+      .form-group
+        %label.control-label{ for: :purpose }
+          Please tell us what you would like do with our data:
+        %textarea.form-control{ rows: 5, id: :purpose, name: :purpose }
 
-        .form-group
-          %label.control-label{ for: 'working-ok' }
-            What is working well at the moment?
-          %textarea.form-control{ rows: 8, id: 'working-ok', name: 'working-ok' }
+      .form-group
+        %label.control-label{ for: 'working-ok' }
+          What is working well at the moment?
+        %textarea.form-control{ rows: 8, id: 'working-ok', name: 'working-ok' }
 
-        .form-group
-          %label.control-label{ for: :improve }
-            What could we do better?
-          %textarea.form-control{ rows: 8, id: :improve, name: :improve }
+      .form-group
+        %label.control-label{ for: :improve }
+          What could we do better?
+        %textarea.form-control{ rows: 8, id: :improve, name: :improve }
 
 
-        %button.btn.btn--primary{ type: :submit }
-          Send feedback
+      %button.btn.btn--primary{ type: :submit }
+        Send feedback
