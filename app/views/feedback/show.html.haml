@@ -7,21 +7,17 @@
 
     = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
 
-      .form-group
-        %label.control-label{ for: :purpose }
-          Please tell us what you would like do with our data:
-        %textarea.form-control{ rows: 5, id: :purpose, name: :purpose }
+      %input{ type: 'hidden', id: 'referer', name: 'referer', value: request.referer }
 
-      .form-group
-        %label.control-label{ for: 'working-ok' }
-          What is working well at the moment?
-        %textarea.form-control{ rows: 8, id: 'working-ok', name: 'working-ok' }
-
-      .form-group
-        %label.control-label{ for: :improve }
-          What could we do better?
-        %textarea.form-control{ rows: 8, id: :improve, name: :improve }
-
+      - @view_state.each_q do |question|
+        - unless question.hidden?
+          .form-group
+            %label.control-label{ for: question.id }
+              = question.prompt
+            - if question.input_type
+              %input.form-control{ type: question.input_type, id: question.id, name: question.id }
+            - else
+              %textarea.form-control{ rows: 5, id: question.id, name: question.id }
 
       %button.btn.btn--primary{ type: :submit }
         Send feedback

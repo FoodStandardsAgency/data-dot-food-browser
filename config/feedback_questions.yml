@@ -1,0 +1,17 @@
+-
+  id: purpose
+  prompt: "Please tell us what you would like do with our data:"
+-
+  id: working-ok
+  prompt: "What is working well at the moment?"
+-
+  id: improve
+  prompt: "What could we do better?"
+-
+  id: contact
+  prompt: "If you would like a response to your comments, please provide your email address:"
+  input_type: email
+-
+  id: referer
+  prompt: "Which page were you looking at?"
+  hidden: true

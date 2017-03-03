@@ -48,3 +48,5 @@ gem 'faraday', '~> 0.11.0'
 gem 'faraday_middleware', '~> 0.11.0.1'
 gem 'yajl-ruby', require: 'yajl'
 gem 'font-awesome-sass'
+
+gem 'aws-sdk-rails'
