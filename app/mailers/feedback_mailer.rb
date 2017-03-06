@@ -4,6 +4,9 @@ class FeedbackMailer < ActionMailer::Base
 
   def feedback_email(questions_and_answers)
     @view_state = questions_and_answers
-    mail(to: 'fsa-data-feedback@epimorphics.com', subject: 'FSA data catalog feedback')
+
+    now = Time.now.strftime('%H:%M %d-%m-%Y')
+    mail(to: 'fsa-data-feedback@epimorphics.com',
+         subject: "FSA data catalog feedback - #{now}".html_safe)
   end
 end
