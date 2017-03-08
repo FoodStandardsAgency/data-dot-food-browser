@@ -26,3 +26,4 @@ end
 
 # Additional libs to load
 require 'kaminari'
+require 'version'
