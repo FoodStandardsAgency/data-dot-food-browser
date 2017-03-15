@@ -27,6 +27,8 @@ class ExceptionController < ActionController::Base
   private
 
   def setup_view(ex)
+    Rails.logger.debug "ex class is #{ex.exception.class.inspect}"
+    Rails.logger.debug "ex is SE = #{ex.exception.class === CairnCatalogBrowser::ServiceException}"
     case ex.exception.class
     when CairnCatalogBrowser::ServiceException
       setup_service_exception_view(ex)
