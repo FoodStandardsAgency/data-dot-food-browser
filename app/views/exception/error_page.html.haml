@@ -1,11 +1,14 @@
-%h1
-  Hmm, something isn't right
+%article.col-wrap
+  .col
+    %h1
+      Hmm, something isn't right
 
-%p
-  This page means that something is amiss. The error message I have is:
+    %p
+      This page means that something is amiss. The error message I have is:
 
-%pre
-  #{@view_state.msg}
+    %blockquote
+      %code
+        #{@view_state.msg}
 
-%p
-  If this problem persists, please let us know via the feedback form.
+    %p
+      If this problem persists, please let us know via the feedback form.
