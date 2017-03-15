@@ -30,9 +30,9 @@ class ExceptionController < ActionController::Base
     ex = wex.exception
 
     case
-    when ex.is_a? CairnCatalogBrowser::ServiceException
+    when ex.is_a?(CairnCatalogBrowser::ServiceException)
       setup_service_exception_view(ex)
-    when ex.is_a? ActionController::RoutingError
+    when ex.is_a?(ActionController::RoutingError)
       setup_not_found_exception_view(ex)
     else
       setup_default_exception_view(ex)
