@@ -27,7 +27,7 @@ class ExceptionController < ActionController::Base
   private
 
   def setup_view(ex)
-    case ex.class
+    case ex.exception.class
     when CairnCatalogBrowser::ServiceException
       setup_service_exception_view(ex)
     when ActionController::RoutingError
