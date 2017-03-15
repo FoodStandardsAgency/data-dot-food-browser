@@ -26,13 +26,13 @@ class ExceptionController < ActionController::Base
 
   private
 
-  def setup_view(ex)
-    Rails.logger.debug "ex class is #{ex.exception.class.inspect}"
-    Rails.logger.debug "ex is SE = #{ex.exception.class === CairnCatalogBrowser::ServiceException}"
-    case ex.exception.class
-    when CairnCatalogBrowser::ServiceException
+  def setup_view(wex)
+    ex = wex.exception
+
+    case
+    when ex.is_a? CairnCatalogBrowser::ServiceException
       setup_service_exception_view(ex)
-    when ActionController::RoutingError
+    when ex.is_a? ActionController::RoutingError
       setup_not_found_exception_view(ex)
     else
       setup_default_exception_view(ex)
