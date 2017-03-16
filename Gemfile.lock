@@ -8,7 +8,7 @@ GIT
 PATH
   remote: /home/ian/workspace/epimorphics/cairn-catalog-browser
   specs:
-    cairn_catalog_browser (0.3.3)
+    cairn_catalog_browser (0.3.4)
       faraday_middleware (~> 0.11.0)
       haml-rails (~> 0.9.0)
       kaminari (~> 1.0.1)
