@@ -11,9 +11,9 @@ GIT
 
 GIT
   remote: git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git
-  revision: f6d320380e4a45f53132730e386554c657e58e1f
+  revision: 5b9f129ab418c2cd4119fae03806e2aee82d0947
   specs:
-    fsa_pattern_library (0.1.0)
+    fsa_pattern_library (0.2.1)
       rails (~> 5.0.0, >= 5.0.0.1)
 
 GEM
@@ -137,7 +137,7 @@ GEM
     multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.0.0)
-    nokogiri (1.7.0.1)
+    nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     puma (3.7.0)
     rack (2.0.1)
