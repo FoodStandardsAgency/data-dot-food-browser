@@ -3,3 +3,29 @@
 .header {
   padding-bottom: 0;
 }
+
+h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  @include breakpoint(xs) {
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 44px;
+    line-height: 46px;
+  }
+}
+
+.u-title-font {
+  font-family: oscine, sans-serif;
+}
+
+.c-catalog-entry--metadata {
+  h2 {
+    @extend .u-title-font;
+  }
+}
