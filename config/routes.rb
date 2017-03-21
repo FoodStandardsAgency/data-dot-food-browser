@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post '/feedback', to: 'feedback#create'
 
   get '/live-check', to: 'live_check#show'
+
+  get '*unmatched_route', to: 'exception#render_404'
 end

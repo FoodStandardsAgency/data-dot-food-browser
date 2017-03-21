@@ -19,14 +19,24 @@ class ExceptionController < ActionController::Base
   layout 'application'
 
   def render_error
-    exception = env['action_dispatch.exception']
-    wrapped_exception = ActionDispatch::ExceptionWrapper.new(env, exception)
-    @view_state = setup_view(wrapped_exception)
+    ex = env['action_dispatch.exception']
+    @view_state = view_state(ex)
 
     render 'error_page', status: @view_state.status
   end
 
+  def render_404
+    ex = ActionController::RoutingError.new('')
+    @view_state = view_state(ex)
+
+    render 'error_page', status: 404
+  end
+
   private
+
+  def view_state(ex)
+    setup_view(ActionDispatch::ExceptionWrapper.new(request.env, ex))
+  end
 
   def setup_view(wex)
     ex = wex.exception
