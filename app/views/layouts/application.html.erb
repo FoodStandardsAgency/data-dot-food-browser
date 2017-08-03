@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <% if @view_state && @view_state.dataset %>
+    <% if @view_state && @view_state.respond_to?(:dataset) && @view_state.dataset %>
       <title><%= @view_state.dataset.title %></title>
       <meta name="description" content="<%= @view_state.dataset.description %>">
       <meta name="keywords" content="<%= @view_state.dataset.keywords.join(' ') %>">
