@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FSA Open Data Catalog Browser</title>
+    <% if @view_state && @view_state.dataset %>
+      <title><%= @view_state.dataset.title %></title>
+      <meta name="description" content="<%= @view_state.dataset.description %>">
+      <meta name="keywords" content="<%= @view_state.dataset.keywords.join(' ') %>">
+    <% else %>
+      <title>FSA Open Data Catalog Browser</title>
+    <% end %>
     <%= csrf_meta_tags %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Food Standards Agency">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= render partial: 'shared/gtm_script' %>
