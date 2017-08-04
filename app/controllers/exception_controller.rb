@@ -3,13 +3,18 @@ class ExceptionControllerViewState
   attr_reader :msg
   attr_reader :status
 
-  def initialize(msg, status)
+  def initialize(msg, status, title = nil)
     @msg = msg
     @status = status
+    @title = title
   end
 
   def show_highlighted?
     false
+  end
+
+  def title
+    @title || @msg
   end
 end
 
@@ -41,11 +46,10 @@ class ExceptionController < ActionController::Base
   def setup_view(wex)
     ex = wex.exception
 
-    case
-    when ex.is_a?(CairnCatalogBrowser::ServiceException)
-      setup_service_exception_view(ex)
-    when ex.is_a?(ActionController::RoutingError)
+    if ex.is_a?(ActionController::RoutingError) || ex.status == 404
       setup_not_found_exception_view(ex)
+    elsif ex.is_a?(CairnCatalogBrowser::ServiceException)
+      setup_service_exception_view(ex)
     else
       setup_default_exception_view(ex)
     end
@@ -56,13 +60,14 @@ class ExceptionController < ActionController::Base
     Rails.logger.debug("ServiceException #{svc_exception.message} \
       #{svc_exception.status} \
       #{svc_exception.service_message} from #{svc_exception.source}")
-    ExceptionControllerViewState.new(svc_exception.message, svc_exception.status)
+    ExceptionControllerViewState.new(svc_exception.message, svc_exception.status,
+                                     'Something has gone wrong')
   end
 
   def setup_not_found_exception_view(ex)
     Rails.logger.debug(ex.exception)
     ExceptionControllerViewState.new(
-      "Not found: #{ex.exception.message}", 404
+      "Not found: #{ex.exception.message}", 404, 'Page not found'
     )
   end
 
