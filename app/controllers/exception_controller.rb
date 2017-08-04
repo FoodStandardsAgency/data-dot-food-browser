@@ -13,7 +13,7 @@ class ExceptionControllerViewState
     false
   end
 
-  def title
+  def page_title
     @title || @msg
   end
 end

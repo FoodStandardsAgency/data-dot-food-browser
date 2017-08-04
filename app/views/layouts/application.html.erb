@@ -5,8 +5,8 @@
       <title><%= @view_state.dataset.title %></title>
       <meta name="description" content="<%= @view_state.dataset.description %>">
       <meta name="keywords" content="<%= @view_state.dataset.keywords.join(' ') %>">
-    <% elsif @view_state && @view_state.respond_to?(:title) %>
-      <title><%= @view_state.title %></title>
+    <% elsif @view_state && @view_state.respond_to?(:page_title) && @view_state.page_title %>
+      <title><%= @view_state.page_title %></title>
     <% else %>
       <title>FSA Open Data Catalog Browser</title>
     <% end %>
