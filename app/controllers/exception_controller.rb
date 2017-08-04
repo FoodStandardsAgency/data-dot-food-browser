@@ -74,7 +74,8 @@ class ExceptionController < ActionController::Base
   def setup_default_exception_view(ex)
     Rails.logger.debug(ex.exception)
     ExceptionControllerViewState.new(
-      "Sorry, something went wrong: #{ex.exception.message}", 500
+      "Sorry, something went wrong: #{ex.exception.message}", 500,
+      'Something has gone wrong (500)'
     )
   end
 end
