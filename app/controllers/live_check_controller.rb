@@ -1,7 +1,7 @@
 # Controller for automated liveness check
 class LiveCheckController < ApplicationController
   layout 'live_check'
-  before_filter :set_cache_headers
+  before_action :set_cache_headers
 
   def show
     api = CairnCatalogBrowser::CatalogApi.new
