@@ -44,8 +44,8 @@ gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa
 gem 'cairn_catalog_browser', path: '/home/ian/workspace/epimorphics/cairn-catalog-browser'
 # gem 'cairn_catalog_browser', git: 'git@codebasehq.com:epimorphics/data-platform/cairn-catalog-browser.git'
 
-gem 'faraday', '~> 0.11.0'
-gem 'faraday_middleware', '~> 0.11.0.1'
+gem 'faraday', '~> 0.15.0'
+gem 'faraday_middleware', '~> 0.12.2'
 gem 'font-awesome-sass'
 gem 'yajl-ruby', require: 'yajl'
 

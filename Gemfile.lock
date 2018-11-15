@@ -9,7 +9,7 @@ PATH
   remote: /home/ian/workspace/epimorphics/cairn-catalog-browser
   specs:
     cairn_catalog_browser (0.5.0)
-      faraday_middleware (~> 0.11.0)
+      faraday_middleware (~> 0.12.2)
       haml (~> 5.0.0)
       kaminari (~> 1.0.1)
       rails (~> 5.2.0, >= 5.0.0.1)
@@ -83,9 +83,9 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
-    faraday (0.11.0)
+    faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.11.0.1)
+    faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.25)
     font-awesome-sass (5.5.0.1)
@@ -243,8 +243,8 @@ DEPENDENCIES
   aws-sdk-rails
   byebug
   cairn_catalog_browser!
-  faraday (~> 0.11.0)
-  faraday_middleware (~> 0.11.0.1)
+  faraday (~> 0.15.0)
+  faraday_middleware (~> 0.12.2)
   font-awesome-sass
   fsa_pattern_library!
   haml
@@ -264,4 +264,4 @@ DEPENDENCIES
   yajl-ruby
 
 BUNDLED WITH
-   1.16.0
+   1.16.6
