@@ -8,13 +8,25 @@
     = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
 
       %input{ type: 'hidden', id: 'referer', name: 'referer', value: request.referer }
+      - if @view_state.dataset
+        %input{ type: 'hidden', id: 'dataset-name', name: 'dataset-name', value: @view_state.dataset.title }
 
       - @view_state.each_q do |question|
         - unless question.hidden?
           .form-group
             %label.control-label{ for: question.id }
               = question.prompt
-            - if question.input_type
+            - if question.input_type == 'yesno'
+              %br
+              %label
+                %input{ type: 'radio', id: question.id, name: question.id, value: 'no', checked: true }
+                no
+              %span
+                &nbsp;&nbsp;&nbsp;
+              %label
+                %input{ type: 'radio', id: question.id, name: question.id, value: 'yes' }
+                yes
+            - elsif question.input_type
               %input.form-control{ type: question.input_type, id: question.id, name: question.id }
             - else
               %textarea.form-control{ rows: 5, id: question.id, name: question.id }

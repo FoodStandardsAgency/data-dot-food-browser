@@ -8,10 +8,18 @@
   id: improve
   prompt: "What could we do better?"
 -
+  id: research
+  prompt: "We are working on a new version of this site. Would you be willing to have a brief chat with one of our researchers to help us find out what you need?"
+  input_type: yesno
+-
   id: contact
-  prompt: "If you would like a response to your comments, please provide your email address:"
+  prompt: "If you would like a response to your comments, or are willing to participate in the study, please provide your email address:"
   input_type: email
 -
   id: referer
   prompt: "Which page were you looking at?"
+  hidden: true
+-
+  id: dataset-name
+  prompt: "Which dataset were you looking at, if any?"
   hidden: true
