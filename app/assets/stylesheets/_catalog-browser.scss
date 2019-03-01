@@ -155,6 +155,11 @@ li.c-dataset-nav-keyword {
   }
 }
 
+.c-contact-form__privacy-notice {
+  font-size: 1.2em;
+  margin-top: 2em;
+}
+
 /* Utilities */
 
 .u-list-undecorated {
@@ -177,4 +182,8 @@ li.c-dataset-nav-keyword {
   a {
     pointer-events: none;
   }
+}
+
+.u-text-centre {
+  text-align: center;
 }

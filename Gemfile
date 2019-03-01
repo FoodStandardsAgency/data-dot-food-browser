@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -37,15 +37,15 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'haml-rails'
+gem 'haml'
 gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
 #gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa-pattern-library'
 
 # gem 'cairn_catalog_browser', path: '/home/ian/workspace/epimorphics/cairn-catalog-browser'
 gem 'cairn_catalog_browser', git: 'git@codebasehq.com:epimorphics/data-platform/cairn-catalog-browser.git'
 
-gem 'faraday', '~> 0.11.0'
-gem 'faraday_middleware', '~> 0.11.0.1'
+gem 'faraday', '~> 0.15.0'
+gem 'faraday_middleware', '~> 0.12.2'
 gem 'font-awesome-sass'
 gem 'yajl-ruby', require: 'yajl'
 

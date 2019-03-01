@@ -1,7 +1,10 @@
 # Presenter to show feedback questions and answers
 class FeedbackQuestions
-  def initialize(questions, params = nil)
+  attr_reader :dataset
+
+  def initialize(questions, dataset = nil, params = nil)
     @questions = questions
+    @dataset = dataset
 
     question_keys = questions.map(&:id)
     question_keys << "referer"
