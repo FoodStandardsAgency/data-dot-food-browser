@@ -8,8 +8,7 @@ class FeedbackController < ApplicationController
 
   def create
     presenter = FeedbackQuestions.new(load_questions, nil, params)
-    # FeedbackMailer.feedback_email(presenter).deliver_now
-    byebug
+    FeedbackMailer.feedback_email(presenter).deliver_now
 
     redirect_to controller: 'cairn_catalog_browser/datasets', action: :index
   end
