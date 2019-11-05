@@ -50,3 +50,5 @@ gem 'font-awesome-sass'
 gem 'yajl-ruby', require: 'yajl'
 
 gem 'aws-sdk-rails'
+
+gem 'webpacker', '~> 4.0'
