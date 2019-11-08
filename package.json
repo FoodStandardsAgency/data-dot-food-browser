@@ -1,0 +1,26 @@
+{
+  "name": "data-dot-food",
+  "version": "1.0.0",
+  "main": "app/javascript/packs/application.js",
+  "repository": "git@codebasehq.com:epimorphics/fsa-projects/data-catalog-browser.git",
+  "author": "Epimorphics Ltd.",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fsastyles": "^0.0.3",
+    "jquery": "^3.4.1",
+    "jquery-ujs": "^1.2.2",
+    "postcss-color-function": "^4.1.0",
+    "webpack": "^4.41.2",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
