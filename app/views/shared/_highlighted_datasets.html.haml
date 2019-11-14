@@ -1,68 +1,45 @@
-.layout.hero-wrapper
-  .layout__container
-    .layout__content.hero-wrapper__content
-      .hero.hero--with-content
-        .hero__secondary-navigation
-          .breadcrumb
-            .breadcrumb__item
-              %a{ href:"#hero", class:"breadcrumb__link" }
-                Home
-            .breadcrumb__item
-              Food Standards Agency Open Data
-        .hero__background.hero__background--pattern
-        .hero__region
-          .hero__content
-            %h1.hero__heading
-              Food Standards Agency Open Data
-            %p
-              Our job is to use our expertise and influence so that people can trust that the food they buy and eat is safe and honest.
-.layout.layout--main.layout--with-no-sidebar
-  .layout__container.layout__container--main
-    .layout__content.layout__content--main.layout__content--header
-      %div
-        #block-mainpagecontent
-          %article{ role: "article", about:"/home" }
-            .field.field__field_lander_row
-              .field__field_lander_row__item.field__field_lander_row__item--even
-                .paragraph.paragraph--type-content-promo.paragraph--view-mode--default
-                  .field.field__field_title
-                    %h2.field__field_title__item.field__field_title__item--even
-                      Featured datasets
-                  %p
-                    All of our open datasets are available for you to use for free.
-                  .field.field__field_content_promo.promo-listing
-                    .promo-listing__item
-                      .promo-wrapper
-                        %a{ href: "#{Rails.application.config.relative_url_root}/datasets/38dd8d6a-5ab1-4f50-b753-ab33288e3200",
-                            class: "field__field_content_promo__item field__field_content_promo__item--even bg_found" }
-                          %div{ style:"background-image: url(#{image_path('datasets/rating-sticker-5.jpg')})",
-                                class:"promo__background-image bg_found" }
-                          .promo__content
-                            %h3.field.field__field_title#subject-starting-up
-                              FHRS
-                          .field.field__field_intro
-                            Food hygiene ratings and API.
-                    .promo-listing__item
-                      .promo-wrapper
-                        %a{ href: "#{Rails.application.config.relative_url_root}/datasets/1e61736a-2a1a-4c6a-b8b1-e45912ebc8e3",
-                            class: "field__field_content_promo__item field__field_content_promo__item--even bg_found" }
-                          %div{ style:"background-image: url(#{image_path('datasets/cattle-inspected.jpg')})",
-                                class:"promo__background-image bg_found" }
-                          .promo__content
-                            %h3.field.field__field_title#subject-starting-up
-                              Approved Food Establishments
-                          .field.field__field_intro
-                            Full list of approved food establishments.
-                    .promo-listing__item
-                      .promo-wrapper
-                        %a{ href: "#{Rails.application.config.relative_url_root}/datasets/bd0f9ddf-11a9-4b38-96e6-8cb0aac30753", class: "field__field_content_promo__item field__field_content_promo__item--even bg_found" }
-                          %div{ style:"background-image: url(#{image_path('datasets/fnywave4.jpg')})",
-                                class:"promo__background-image bg_found" }
-                          .promo__content
-                            %h3.field.field__field_title#subject-starting-up
-                              Food and You Survey
-                          .field.field__field_intro
-                            Latest Food and You survey data.
-            .col-wrap
-              .col
-                %h2.u-title-font Data catalog
+.col-wrap
+  .c-catalog-preamble.col
+    %h1 Food Standards Agency Open Data
+
+.col-wrap
+  .col.col--fluid-10.home-campaign-tile.home-campaign-tile--img-first
+    %article.c-featured-dataset.c-featured-dataset--heading
+      %h2
+        Featured datasets
+      %p
+        All of our open datasets are available for you to use for free.
+
+.col-wrap
+  .col.col--fluid-5.home-campaign-tile.home-campaign-tile--img-first
+    %article.c-featured-dataset
+      %a{ href: "#{Rails.application.config.relative_url_root}/datasets/38dd8d6a-5ab1-4f50-b753-ab33288e3200" }
+        %img.img-responsive{ src: image_path('datasets/rating-sticker-5.jpg')}
+      %h2
+        %a{ href: "#{Rails.application.config.relative_url_root}/datasets/38dd8d6a-5ab1-4f50-b753-ab33288e3200" }
+          FHRS
+      %p
+        Food hygiene ratings and API.
+
+  .col.col--fluid-5.home-campaign-tile.home-campaign-tile--img-first
+    %article.c-featured-dataset
+      %a{ href: "#{Rails.application.config.relative_url_root}/datasets/1e61736a-2a1a-4c6a-b8b1-e45912ebc8e3" }
+        %img.img-responsive{ src: image_path('datasets/cattle-inspected.jpg')}
+      %h2
+        %a{href: "#{Rails.application.config.relative_url_root}/datasets/1e61736a-2a1a-4c6a-b8b1-e45912ebc8e3"}
+          Approved Food Establishments
+      %p
+        Full list of approved food establishments.
+
+  .col.col--fluid-5.home-campaign-tile.home-campaign-tile--img-first
+    %article.c-featured-dataset
+      %a{ href: "#{Rails.application.config.relative_url_root}/datasets/bd0f9ddf-11a9-4b38-96e6-8cb0aac30753" }
+        %img.img-responsive{ src: image_path('datasets/fnywave4.jpg'), class: 'u-simple-border'}
+      %h2
+        %a{href: "#{Rails.application.config.relative_url_root}/datasets/bd0f9ddf-11a9-4b38-96e6-8cb0aac30753"}
+          Food and You Survey
+      %p
+        Latest Food and You survey data.
+.col-wrap
+  .col
+    %h2.u-title-font Data catalog
