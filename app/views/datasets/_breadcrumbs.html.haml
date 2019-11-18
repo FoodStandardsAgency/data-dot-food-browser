@@ -1,0 +1,11 @@
+.c-breadcrumbs-wrap
+  .c-breadcrumbs-wrap--inner
+    %ol.c-breadcrumbs-list
+      - path.each do |path_elem|
+        - if path_elem.is_a?(Hash)
+          %li.c-breadcrumbs-list--item
+            = link_to(path_elem[:l], path_elem[:u], {class: 'c-breadcrumbs-list--link'})
+        - else
+          %li.c-breadcrumbs-list--item
+            %span.c-breadcrumbs-list--item__highlighted
+              = path_elem
