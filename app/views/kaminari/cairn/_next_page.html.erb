@@ -6,11 +6,11 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
 -%>
-<li>
+<li class="pager__item <% 'pager__item--last' if current_page.last? %>">
   <%- if current_page.last? %>
-    <span class="c-paginator--end-marker"><%= t('views.pagination.next').html_safe %></span>
+    <span class=""><%= t('views.pagination.next').html_safe %></span>
   <%- else %>
-    <%= link_to t('views.pagination.next').html_safe, url, rel: 'next', remote: remote, class: "c-paginator--next" %>
+    <%= link_to t('views.pagination.next').html_safe, url, rel: 'next', remote: remote, class: "u-no-wrap" %>
   <%- end %>
 
 </li>
