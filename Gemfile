@@ -44,7 +44,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
-gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
+# gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
 gem 'faraday', '~> 0.15.0'
 gem 'faraday_middleware', '~> 0.12.2'
 gem 'font-awesome-sass'
