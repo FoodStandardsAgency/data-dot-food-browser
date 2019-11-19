@@ -1,4 +1,4 @@
-%nav.o-datasets-nav
+%nav.navigation-side.o-datasets-nav
   %form{ action: datasets_path( anchor: 'results') }
     %h3
       Filter datasets
@@ -56,7 +56,7 @@
         Find matching datasets
 
 
-.o-results-summary
-  .o-results-summary--counts
-    = page_entries_info @view_state.datasets, entry_name: 'dataset'
-  = paginate @view_state.datasets, theme: 'cairn'
+  .o-results-summary
+    .o-results-summary--counts
+      = page_entries_info @view_state.datasets, entry_name: 'dataset'
+    = paginate @view_state.datasets, theme: 'cairn'

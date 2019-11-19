@@ -1,6 +1,14 @@
-.col-wrap
-  .o-catalog-page--navigation
-    = render partial: "index_navigation"
+.layout.layout--main.layout--with-sidebar.js-sticky-container
+  .layout__container.layout__container__main
+    .layout__content.layout__content--main.layout__content--header.layout__content--with-sidebar.js-content
+      %div
+        #block-pagetitle.block-page-title
+          %h2
+            %span.field.field__title
+              Data Catalog
+      .o-catalog-page--navigation
+        = render partial: "index_page_content"
 
-  .o-catalog-page--content
-    = render partial: "index_page_content"
+    %aside.layout__sidebar.js-sticky-element.o-catalog-page--content
+      .sidebar
+        = render partial: "index_navigation"
