@@ -17,4 +17,4 @@ class DatasetDistribution < CatalogApiObject
   def download_url
     json['downloadURL']
   end
-  end
+end
