@@ -24,6 +24,12 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'capybara_minitest_spec'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+  gem 'mocha'
+  gem 'simplecov'
+  gem 'vcr'
 end
 
 group :development do
@@ -39,14 +45,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
 gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
-#gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa-pattern-library'
-
-# gem 'cairn_catalog_browser', path: '/home/ian/workspace/epimorphics/cairn-catalog-browser'
-gem 'cairn_catalog_browser', git: 'git@codebasehq.com:epimorphics/data-platform/cairn-catalog-browser.git'
-
 gem 'faraday', '~> 0.15.0'
 gem 'faraday_middleware', '~> 0.12.2'
 gem 'font-awesome-sass'
+gem 'kaminari', '~> 1.0.1'
 gem 'yajl-ruby', require: 'yajl'
 
 gem 'aws-sdk-rails'
