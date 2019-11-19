@@ -29,10 +29,14 @@
         <%= render partial: 'shared/global_cookie_message' %>
         <%= render partial: 'shared/phase_header' %>
         <%= render partial: 'shared/page_header' %>
-        <main id="main" class="wrapper content" role="main">
+        <div class="layout__container">
+          <h1>Food Standards Agency Open Data</h1>
           <%= render partial: 'shared/highlighted_datasets' if @view_state && @view_state.show_highlighted? %>
-          <%= yield %>
-        </main>
+          <main id="main" class="layout--with-sidebar" role="main">
+            <h2 class="u-title-font">Data catalog</h2>
+            <%= yield %>
+          </main>
+        </div>
         <%= render partial: 'shared/page_footer' %>
       </div>
     </div>
