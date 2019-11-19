@@ -24,6 +24,12 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'capybara_minitest_spec'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+  gem 'mocha'
+  gem 'simplecov'
+  gem 'vcr'
 end
 
 group :development do
