@@ -9,9 +9,11 @@
   "dependencies": {
     "fsastyles": "^0.0.3",
     "jquery": "^3.4.1",
-    "jquery-ujs": "^1.2.2"
+    "jquery-ujs": "^1.2.2",
+    "postcss-url": "^8.0.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "@rails/webpacker": "^4.2.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
