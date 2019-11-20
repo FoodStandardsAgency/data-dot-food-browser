@@ -1,59 +1,62 @@
-%article.col-wrap.c-contact-form
-  .c-catalog-preamble.col
-    %h1 We welcome your feedback
-    %p.text-muted.col--fluid-two-thirds
-      Please help us to make our open data service more effective by telling us what is working
-      well, or what we need to improve.
+.layout.layout--main
+  .layout__container.layout__container__main
+    .layout__content.layout__content--main.layout__content--header.js-content
+      %article.col-wrap.c-contact-form
+        .c-catalog-preamble.col
+          %h1 We welcome your feedback
+          %p.text-muted.col--fluid-two-thirds
+            Please help us to make our open data service more effective by telling us what is working
+            well, or what we need to improve.
 
-    = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
+          = form_tag( "#{Rails.application.config.relative_url_root}/feedback", method: :post) do
 
-      %input{ type: 'hidden', id: 'referer', name: 'referer', value: request.referer }
-      - if @view_state.dataset
-        %input{ type: 'hidden', id: 'dataset-name', name: 'dataset-name', value: @view_state.dataset.title }
+            %input{ type: 'hidden', id: 'referer', name: 'referer', value: request.referer }
+            - if @view_state.dataset
+              %input{ type: 'hidden', id: 'dataset-name', name: 'dataset-name', value: @view_state.dataset.title }
 
-      - @view_state.each_q do |question|
-        - unless question.hidden?
-          .form-group
-            %label.control-label{ for: question.id }
-              = question.prompt
-            - if question.input_type == 'yesno'
-              %br
-              %label
-                %input{ type: 'radio', id: question.id, name: question.id, value: 'no', checked: true }
-                no
-              %span
-                &nbsp;&nbsp;&nbsp;
-              %label
-                %input{ type: 'radio', id: question.id, name: question.id, value: 'yes' }
-                yes
-            - elsif question.input_type
-              %input.form-control{ type: question.input_type, id: question.id, name: question.id }
-            - else
-              %textarea.form-control{ rows: 5, id: question.id, name: question.id }
+            - @view_state.each_q do |question|
+              - unless question.hidden?
+                .form-group
+                  %label.control-label{ for: question.id }
+                    = question.prompt
+                  - if question.input_type == 'yesno'
+                    %br
+                    %label
+                      %input{ type: 'radio', id: question.id, name: question.id, value: 'no', checked: true }
+                      no
+                    %span
+                      &nbsp;&nbsp;&nbsp;
+                    %label
+                      %input{ type: 'radio', id: question.id, name: question.id, value: 'yes' }
+                      yes
+                  - elsif question.input_type
+                    %input.form-control{ type: question.input_type, id: question.id, name: question.id }
+                  - else
+                    %textarea.form-control{ rows: 5, id: question.id, name: question.id }
 
-      .u-text-centre
-        %button.btn.btn--primary{ type: :submit }
-          Send feedback
+            .u-text-centre
+              %button.btn.btn--primary{ type: :submit }
+                Send feedback
 
-      %h3.c-contact-form__privacy-notice How we will use your personal data
-      %p.text-muted.col--fluid-two-thirds
-        In providing your email address in the feedback form you consented to it being used to
-        contact you about the data catalog feedback.  You are able to withdraw this consent at any
-        time by getting in touch with us, or with the Food Standards Agency (FSA) via
-        = mail_to('data@food.gov.uk')
-      %p.text-muted.col--fluid-two-thirds
-        The FSA is the Controller of this data and
-        = link_to('Epimorphics Ltd', 'https://www.epimorphics.com')
-        is the processor.  This means
-        that Epimorphics is conducting this research and using contact details on instruction of the FSA
-        for this purpose only. Epimorphics will not use it for any other purpose, or share it with any
-        other third parties.
-      %p.text-muted.col--fluid-two-thirds
-        We will retain your contact details only for as long as it is necessary to complete the
-        user research (or no longer than 12 months), after which it will be destroyed securely.
-        All research findings will be anonymised and may form part of FSA reports.
-      %p.text-muted.col--fluid-two-thirds
-        If you have any enquiries about the way your contact details are being used, please contact
-        us.  For more information about the way the FSA processes personal data
-        and information about your rights, please refer to the on the
-        = link_to('FSA website', 'https://www.food.gov.uk/privacy-policy')
+            %h3.c-contact-form__privacy-notice How we will use your personal data
+            %p.text-muted.col--fluid-two-thirds
+              In providing your email address in the feedback form you consented to it being used to
+              contact you about the data catalog feedback.  You are able to withdraw this consent at any
+              time by getting in touch with us, or with the Food Standards Agency (FSA) via
+              = mail_to('data@food.gov.uk')
+            %p.text-muted.col--fluid-two-thirds
+              The FSA is the Controller of this data and
+              = link_to('Epimorphics Ltd', 'https://www.epimorphics.com')
+              is the processor.  This means
+              that Epimorphics is conducting this research and using contact details on instruction of the FSA
+              for this purpose only. Epimorphics will not use it for any other purpose, or share it with any
+              other third parties.
+            %p.text-muted.col--fluid-two-thirds
+              We will retain your contact details only for as long as it is necessary to complete the
+              user research (or no longer than 12 months), after which it will be destroyed securely.
+              All research findings will be anonymised and may form part of FSA reports.
+            %p.text-muted.col--fluid-two-thirds
+              If you have any enquiries about the way your contact details are being used, please contact
+              us.  For more information about the way the FSA processes personal data
+              and information about your rights, please refer to the on the
+              = link_to('FSA website', 'https://www.food.gov.uk/privacy-policy')
