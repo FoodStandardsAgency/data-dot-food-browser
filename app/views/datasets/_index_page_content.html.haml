@@ -1,17 +1,20 @@
-%ul#results.c-dataset-list
+#results.c-dataset-list.listing
   - @view_state.datasets.each do |dataset|
-    %li.c-dataset-entry
-      %h2.c-dataset-entry--title
-        %a{ href: dataset_path(id: dataset.id)}
-          = dataset.title
-
-      %p.c-dataset-entry--date-range
-        = summarise_date_range(dataset)
-
-      %p.c-dataset-entry--description
-        = dataset.description
-
-      = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: true}
+    %article.item.item--has-meta
+      .item__content
+        %h2.c-dataset-entry--title
+          %a{ href: dataset_path(id: dataset.id)}
+            %span.field.field__title
+              = dataset.title
+        %div
+          .field
+            %p.c-dataset-entry--date-range
+              = summarise_date_range(dataset)
+          .field
+            %p.c-dataset-entry--description
+              = dataset.description
+      %footer.item__meta
+        = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: true}
 
 .o-results-summary
   .o-results-summary--counts
