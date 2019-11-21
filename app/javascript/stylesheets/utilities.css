@@ -30,6 +30,15 @@
   white-space: nowrap;
 }
 
+.u-list-no-style {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+}
+
 /* FSA Missing Style */
 .visually-hidden {
   position: absolute !important;
@@ -40,11 +49,10 @@
   word-wrap: normal;
 }
 
-.u-list-no-style {
-  list-style: none;
-  padding: 0;
+.o-datasets-nav--reset-filter {
+  float: right;
+}
 
-  li {
-    display: inline-block;
-  }
+.form-group + .form-group, .navigation-side > * + * {
+  margin-top: 1em;
 }
