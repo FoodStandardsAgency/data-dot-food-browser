@@ -1,70 +1,72 @@
 - dataset = @view_state.dataset
+.layout.layout--main
+  .layout__container.layout__container__main
+    .layout__content.layout__content--main.layout__content--header.js-content
+      %article.c-catalog-entry-wrap
+        - path = [{l: 'Home', u: {action: :index}}, 'Dataset details']
+        = render partial: "breadcrumbs", locals: {path: path}
 
-%article.c-catalog-entry-wrap
-  - path = [{l: 'Home', u: {action: :index}}, 'Dataset details']
-  = render partial: "breadcrumbs", locals: {path: path}
+        .c-catalog-entry
+          .c-catalog-entry--heading
+            %h1
+              = dataset.title
 
-  .c-catalog-entry
-    .c-catalog-entry--heading
-      %h1
-        = dataset.title
+          .c-catalog-entry--description
+            %p
+              = dataset.description
 
-    .c-catalog-entry--description
-      %p
-        = dataset.description
+          .c-catalog-entry--metadata
+            %h2 About  this dataset
+            %table.c-catalog-entry--table
+              %thead
+                %tr.u-sr-only
+                  %th
+                    Key
+                  %th
+                    Value
+              %tbody
+                - if dataset.key?(:issued)
+                  %tr
+                    %td
+                      Issued
+                    %td
+                      = dataset.issue_date.strftime("%e %b, %Y")
+                - if dataset.key?(:modified)
+                  %tr
+                    %td
+                      Modified
+                    %td
+                      = dataset.modification_date.strftime("%e %b, %Y")
+                %tr
+                  %td
+                    Update period
+                  %td
+                    = dataset.update_period
+                - if dataset.key?(:license)
+                  %tr
+                    %td
+                      License
+                    %td
+                      %a{ href: dataset.license_uri }
+                        = dataset.license_name
+                %tr
+                  %td.u-tagged-value-prompt
+                    Keywords
+                  %td
+                    = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
 
-    .c-catalog-entry--metadata
-      %h2 About  this dataset
-      %table.c-catalog-entry--table
-        %thead
-          %tr.u-sr-only
-            %th
-              Key
-            %th
-              Value
-        %tbody
-          - if dataset.key?(:issued)
-            %tr
-              %td
-                Issued
-              %td
-                = dataset.issue_date.strftime("%e %b, %Y")
-          - if dataset.key?(:modified)
-            %tr
-              %td
-                Modified
-              %td
-                = dataset.modification_date.strftime("%e %b, %Y")
-          %tr
-            %td
-              Update period
-            %td
-              = dataset.update_period
-          - if dataset.key?(:license)
-            %tr
-              %td
-                License
-              %td
-                %a{ href: dataset.license_uri }
-                  = dataset.license_name
-          %tr
-            %td.u-tagged-value-prompt
-              Keywords
-            %td
-              = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
+                %tr
+                  %td.u-tagged-value-prompt
+                    Activities
+                  %td
+                    = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
 
-          %tr
-            %td.u-tagged-value-prompt
-              Activities
-            %td
-              = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
+          .c-catalog-entry--metadata
+            %h2 Downloadable data
 
-    .c-catalog-entry--metadata
-      %h2 Downloadable data
-
-.c-catalog-entry-downloads-wrap
-  .c-catalog-entry--downloads
-    - dataset.elements.each_slice(4) do |slice|
-      .c-dataset-element--group
-        - slice.each do |elem|
-          = render partial: 'dataset_element', locals: {elem: elem}
+      .c-catalog-entry-downloads-wrap
+        .c-catalog-entry--downloads
+          - dataset.elements.each_slice(4) do |slice|
+            .c-dataset-element--group
+              - slice.each do |elem|
+                = render partial: 'dataset_element', locals: {elem: elem}
