@@ -1,3 +1,8 @@
+.o-results-summary
+  .o-results-summary--counts
+    = page_entries_info @view_state.datasets, entry_name: 'dataset'
+  = paginate @view_state.datasets, theme: 'cairn'
+
 #results.c-dataset-list.listing
   - @view_state.datasets.each do |dataset|
     %article.item.item--has-meta

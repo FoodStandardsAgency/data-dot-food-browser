@@ -54,9 +54,3 @@
     %div
       %button.c-navigation-search.u-no-wrap.button{ type: "submit" }
         Find matching datasets
-
-
-  .o-results-summary
-    .o-results-summary--counts
-      = page_entries_info @view_state.datasets, entry_name: 'dataset'
-    = paginate @view_state.datasets, theme: 'cairn'
