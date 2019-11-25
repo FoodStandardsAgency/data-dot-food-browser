@@ -7,7 +7,7 @@
   - @view_state.datasets.each do |dataset|
     %article.item.item--has-meta
       .item__content
-        %h2.c-dataset-entry--title
+        %h3.c-dataset-entry--title
           %a{ href: dataset_path(id: dataset.id)}
             %span.field.field__title
               = dataset.title
