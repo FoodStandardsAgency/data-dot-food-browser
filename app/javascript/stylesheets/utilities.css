@@ -63,3 +63,29 @@
   font-weight: normal;
   color: color(black lightness(60%));
 }
+
+.c-dataset-element{
+
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  &--group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &--container {
+    flex-basis: 100%;
+    font-size: 0.8em;
+    padding: 0 1.5%;
+    margin-bottom: 1em;
+
+    @media (--breakpoint-sm) {
+      flex-basis: 50%;
+    }
+
+    @media (--breakpoint-md) {
+      flex-basis: 25%;
+    }
+  }
+}
