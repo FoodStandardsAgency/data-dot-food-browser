@@ -21,8 +21,8 @@
       %ul.u-list-no-style
         - @view_state.years.each do |year|
           %li.c-dataset-nav-year
-            %label
-              %input{ type: 'checkbox', class: 'checkbox', name: 'year[]', value: year, checked: @view_state.check_year?(year) }
+            %input{ type: 'checkbox', class: 'checkbox', name: "year[#{year}]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
+            %label{ for: "year[#{year}]"}
               = year
         - unless @view_state.prefs.all_years?
           %li.c-dataset-nav-year
