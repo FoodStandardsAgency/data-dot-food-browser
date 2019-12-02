@@ -88,3 +88,20 @@
     }
   }
 }
+
+.o-dataset-keyword {
+  .o-dataset-keyword--filter {
+    background-color: var(--fsa-primary_light-grey);
+    line-height: 2.1;
+    padding: 0.3em;
+    text-transform: lowercase;
+
+    span {
+      border-bottom: 1px dotted var(--dark-primary-color);
+    }
+  }
+}
+
+.listing .item__content h3 a {
+  display: block;
+}
