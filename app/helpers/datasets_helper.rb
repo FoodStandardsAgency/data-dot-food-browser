@@ -83,7 +83,7 @@ module DatasetsHelper
     if add
       link_to(text, dest, class: cls)
     else
-      content_tag(:div, text, class: cls)
+      content_tag(:span, text, class: cls)
     end
   end
   # rubocop:enable Metrics/ParameterLists
