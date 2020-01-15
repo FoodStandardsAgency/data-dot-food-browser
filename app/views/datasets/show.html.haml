@@ -9,19 +9,18 @@
   .layout__container.layout__container__main
     .layout__content.layout__content--main.layout__content--header.js-content
 
-      .c-catalog-entry
+      %article.c-catalog-entry-wrap
         #block-pagetitle.c-catalog-entry--heading
-          %h1
+          %h2
             %span.field.field__title
               = dataset.title
 
-      %article.c-catalog-entry-wrap
         .c-catalog-entry--description
           %p
             = dataset.description
 
         .c-catalog-entry--metadata
-          %h2 About  this dataset
+          %h3 About this dataset
           %table.c-catalog-entry--table
             %thead
               %tr.u-sr-only
@@ -66,11 +65,12 @@
                 %td
                   = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
       .c-catalog-entry--metadata
-        %h2 Downloadable data
+        %h3 Downloadable data
 
-      .c-catalog-entry-downloads-wrap
-        .c-catalog-entry--downloads
-          - dataset.elements.each_slice(4) do |slice|
-            .c-dataset-element--group
-              - slice.each do |elem|
-                = render partial: 'dataset_element', locals: {elem: elem}
+        .c-catalog-entry-downloads-wrap
+          .c-catalog-entry--downloads
+            - dataset.elements.each_slice(4) do |slice|
+              %ul.u-list-undecorated.c-dataset-element--group
+                - slice.each do |elem|
+                  %li.c-dataset-element--container
+                    = render partial: 'dataset_element', locals: {elem: elem}

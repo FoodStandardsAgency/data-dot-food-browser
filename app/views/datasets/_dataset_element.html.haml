@@ -1,20 +1,22 @@
-.c-dataset-element--container
-  %article.c-dataset-element.infobox
-    %h2.c-dataset-element--title
-      = elem.title
-    %p.u-list-no-style.c-dataset-element--features
-      - if elem.key?(:startDate)
-        %span.c-dataset-element--feature-start
-          From: #{elem.start_date.strftime('%e %b %Y')}
-      - if elem.key?(:endDate)
-        %br
-        %span.c-dataset-element--feature-end
-          To: #{elem.end_date.strftime('%e %b %Y')}
+%article.c-dataset-element
+  %h4.c-dataset-element--title
+    = elem.title
+  %dl.u-list-no-style.c-dataset-element--features
+    - if elem.key?(:startDate)
+      %dt.c-dataset-element--feature-start
+        From: 
+      %dd  
+        #{elem.start_date.strftime('%e %b %Y')}
+    - if elem.key?(:endDate)
+      %dt.c-dataset-element--feature-end
+        To:
+      %dd
+        #{elem.end_date.strftime('%e %b %Y')}
 
-    .c-dataset-element--downloads
-      %h3.reset-font-style.c-dataset-element--distribution-prompt
-        %strong
-          Download:
-      - elem.distributions.each do |dist|
-        .c-dataset-element--distribution
-          = distribution_link(dist, elem)
+  .c-dataset-element--downloads
+    %h5.reset-font-style.c-dataset-element--distribution-prompt
+      %strong
+        Download:
+    - elem.distributions.each do |dist|
+      .c-dataset-element--distribution
+        = distribution_link(dist, elem)
