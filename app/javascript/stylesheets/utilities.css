@@ -1,3 +1,5 @@
+@import "fsastyles/helper/helper.css";
+
 /* Utilities */
 
 .u-list-undecorated {
@@ -116,4 +118,45 @@ dd {
 
 .listing .item__content h3 a {
   display: block;
+}
+
+.c-dataset-element {
+  width: 100%; 
+
+  & > * {
+    @mixin responsive-declaration padding, 0.5em, 1em;
+    @mixin responsive-declaration padding-bottom, 0.25em, 0.75em;
+  }
+
+  &--group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--container {
+    flex: 0 0 24%;
+    border: 1px solid var(--color-light-gray);
+    margin-right: 1%;
+    margin-bottom: 1%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &--title {
+    color: var(--color-darker-teal);
+    font-size: 112.5%;
+  }
+
+  &--distribution-prompt {
+    margin-bottom: 0;
+  }
+  
+  /* TODO consider class names */
+  dt, dd {
+    display: inline;
+    margin-left: 0;
+  }
 }
