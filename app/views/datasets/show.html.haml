@@ -69,8 +69,7 @@
 
         .c-catalog-entry-downloads-wrap
           .c-catalog-entry--downloads
-            - dataset.elements.each_slice(4) do |slice|
-              %ul.u-list-undecorated.c-dataset-element--group
-                - slice.each do |elem|
-                  %li.c-dataset-element--container
-                    = render partial: 'dataset_element', locals: {elem: elem}
+            %ul.u-list-undecorated.c-dataset-element--group
+              - dataset.elements.each do |elem|
+                %li.c-dataset-element--container
+                  = render partial: 'dataset_element', locals: {elem: elem}
