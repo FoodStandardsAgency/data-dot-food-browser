@@ -130,12 +130,13 @@ dd {
   &--group {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin: 0 -0.5em; /* removes extraneous padding at outer edges of flex layout */
   }
 
   &--container {
     display: flex;
-    flex: 0 0 100%;
+    flex: 0 0 100%; /* set -grow -shrink -basis */
 
     @media (--breakpoint-sm) {
       flex-basis: 50%;
