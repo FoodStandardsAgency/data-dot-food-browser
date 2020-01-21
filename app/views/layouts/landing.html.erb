@@ -22,13 +22,15 @@
     <%= render 'application/favicon' %>
   </head>
 
-  <body>
+  <body class="theme--search">
     <div class="site js-site">
       <%= render partial: 'shared/gtm_noscript' %>
       <%= render partial: 'shared/global_cookie_message' %>
       <%= render partial: 'shared/phase_header' %>
       <%= render partial: 'shared/page_header' %>
       <%= render partial: 'shared/navigation' %>
+      <%= render partial: 'shared/hero' %>
+      <%= render partial: 'shared/highlighted_datasets' if @view_state && @view_state.show_highlighted? %>
       <%= yield %>
       <%= render partial: 'shared/page_footer' %>
       </div>

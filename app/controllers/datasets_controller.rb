@@ -13,6 +13,7 @@ class DatasetsController < ApplicationController
     @view_state.datasets = select_datasets(@view_state, api)
     @view_state.activity_codes = api.activity_codes
     @view_state.show_highlighted_datasets = true
+    render layout: 'landing'
   end
 
   def show

@@ -11,7 +11,7 @@
 
       %article.c-catalog-entry-wrap
         #block-pagetitle.c-catalog-entry--heading
-          %h2
+          %h1
             %span.field.field__title
               = dataset.title
 
@@ -20,7 +20,7 @@
             = dataset.description
 
         .c-catalog-entry--metadata
-          %h3 About this dataset
+          %h2 About this dataset
           %table.c-catalog-entry--table
             %thead
               %tr.u-sr-only
@@ -65,7 +65,7 @@
                 %td
                   = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
       .c-catalog-entry--metadata
-        %h3 Downloadable data
+        %h2 Downloadable data
 
         .c-catalog-entry-downloads-wrap
           .c-catalog-entry--downloads

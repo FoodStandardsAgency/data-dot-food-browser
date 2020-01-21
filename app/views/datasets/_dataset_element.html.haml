@@ -1,5 +1,5 @@
 %article.c-dataset-element
-  %h4.c-dataset-element--title
+  %h3.c-dataset-element--title
     = elem.title
   %dl.u-list-no-style.c-dataset-element--features
     - if elem.key?(:startDate)
@@ -14,7 +14,7 @@
         #{elem.end_date.strftime('%e %b %Y')}
 
   .c-dataset-element--downloads
-    %h5.reset-font-style.c-dataset-element--distribution-prompt
+    %h4.reset-font-style.c-dataset-element--distribution-prompt
       %strong
         Download:
     - elem.distributions.each do |dist|
