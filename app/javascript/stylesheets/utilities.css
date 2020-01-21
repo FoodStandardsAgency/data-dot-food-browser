@@ -174,9 +174,3 @@ dd {
     margin-left: 0;
   }
 }
-
-.data-dot-food-landing .hero-region {
-  @media (--breakpoint-xl) {
-    min-height: 15em;
-  }
-}
