@@ -17,6 +17,6 @@
     %h4.reset-font-style.c-dataset-element--distribution-prompt
       %strong
         Download:
-    - elem.distributions.each do |dist|
-      .c-dataset-element--distribution
-        = distribution_link(dist, elem)
+      - elem.distributions.each do |dist|
+        %span.c-dataset-element--distribution
+          = distribution_link(dist, elem)

@@ -160,7 +160,6 @@ dd {
   }
 
   &--title {
-    color: var(--fsa-secondary_mid-purple);
     font-size: 112.5%;
   }
 
