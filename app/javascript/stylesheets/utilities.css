@@ -1,4 +1,5 @@
 @import "fsastyles/helper/helper.css";
+@import "fsastyles/helper/custom-property.css"
 
 /* Utilities */
 
@@ -187,4 +188,10 @@ dd {
       margin-left: 0;
     }
   }
+}
+
+.fsa-purple {
+  width: 100%;
+  min-height: 1em;
+  background-color: var(--fsa-secondary_mid-purple);
 }
