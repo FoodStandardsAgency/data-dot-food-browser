@@ -190,7 +190,7 @@ dd {
   }
 }
 
-.fsa-purple {
+.u-navbar__placeholder {
   width: 100%;
   min-height: 1em;
   background-color: var(--fsa-secondary_mid-purple);
