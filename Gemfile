@@ -27,7 +27,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
   gem 'rails_real_favicon'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -47,6 +46,7 @@ gem 'cairn_catalog_browser', git: 'git@codebasehq.com:epimorphics/data-platform/
 gem 'faraday', '~> 0.15.0'
 gem 'faraday_middleware', '~> 0.12.2'
 gem 'font-awesome-sass'
+gem 'listen', '~> 3.0.5'
 gem 'yajl-ruby', require: 'yajl'
 
 gem 'aws-sdk-rails'

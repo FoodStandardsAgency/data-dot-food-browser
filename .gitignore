@@ -18,3 +18,5 @@
 public/assets
 tags
 .tags
+node_modules
+public/packs
