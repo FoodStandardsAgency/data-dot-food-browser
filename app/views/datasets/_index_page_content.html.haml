@@ -1,17 +1,34 @@
-%ul#results.c-dataset-list
+.o-results-summary
+  .o-results-summary--counts
+    = page_entries_info @view_state.datasets, entry_name: 'dataset'
+  = paginate @view_state.datasets, theme: 'cairn'
+
+#results.c-dataset-list.listing
   - @view_state.datasets.each do |dataset|
-    %li.c-dataset-entry
-      %h2.c-dataset-entry--title
-        %a{ href: dataset_path(id: dataset.id)}
-          = dataset.title
-
-      %p.c-dataset-entry--date-range
-        = summarise_date_range(dataset)
-
-      %p.c-dataset-entry--description
-        = dataset.description
-
-      = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: true}
+    %article.item.item--has-meta
+      .item__content
+        %h3.c-dataset-entry--title
+          %a{ href: dataset_path(id: dataset.id)}
+            %span.field.field__title
+              = dataset.title
+        %div
+          .field
+            %p.c-dataset-entry--description
+              = dataset.description
+          .field
+            = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: true}
+      %footer.item__meta
+        .item__tag
+          .field.field__field_alert_type
+            %h3.field__field_alert_type__heading.label__above
+              Dataset
+            .field__field_alert_type__item.field__field_alert_type__item--even
+              .alert__type_badge
+                Dataset
+        .item__date
+          .field.field__field_alert_modified
+            %time
+              = summarise_date_range(dataset)
 
 .o-results-summary
   .o-results-summary--counts

@@ -1,9 +1,9 @@
-%ul.c-dataset-keywords
+.c-dataset-keywords
   - if show_keywords
     - dataset.keywords.each do |keyword|
-      %li.o-dataset-keyword
+      %span.o-dataset-keyword
         = dataset_keyword_filter(keyword, @view_state.prefs)
   - if show_activities
     - dataset.activities.each do |activity|
-      %li.o-dataset-keyword
+      %span.o-dataset-keyword
         = dataset_activity_filter(activity, @view_state.prefs)

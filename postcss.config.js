@@ -7,6 +7,7 @@ module.exports = {
     require('postcss-custom-selectors'),
     require('postcss-mixins'),
     require('postcss-nested'),
+    require('postcss-url'),
     require('postcss-flexbugs-fixes'),
     require('postcss-preset-env')({
       autoprefixer: {

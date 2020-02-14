@@ -1,9 +1,9 @@
-%nav.o-datasets-nav
+%nav.navigation-side.o-datasets-nav
   %form{ action: datasets_path( anchor: 'results') }
-    %h3
+    %h2.sidebar-title
       Filter datasets
       - if @view_state.filter_defined?
-        .o-datasets-nav--reset-filter
+        %span.o-datasets-nav--reset-filter
           = link_to({ controller: :datasets, action: :index, anchor: 'results' }, title: "Reset filters") do
             %i.fa.fa-times
 
@@ -18,11 +18,11 @@
     .form-group.o-datasets-nav--years
       %h4.control-label
         Years
-      %ul
+      %ul.u-list-no-style.c-dataset-nav-year-list
         - @view_state.years.each do |year|
-          %li.c-dataset-nav-year
-            %label
-              %input{ type: 'checkbox', class: 'checkbox', name: 'year[]', value: year, checked: @view_state.check_year?(year) }
+          %li.c-dataset-nav-year-list-item
+            %input{ type: 'checkbox', class: 'checkbox', name: "year[#{year}]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
+            %label{ for: "year[#{year}]"}
               = year
         - unless @view_state.prefs.all_years?
           %li.c-dataset-nav-year
@@ -52,11 +52,5 @@
 
 
     %div
-      %button.c-navigation-search{ type: "submit" }
+      %button.c-navigation-search.button{ type: "submit" }
         Find matching datasets
-
-
-.o-results-summary
-  .o-results-summary--counts
-    = page_entries_info @view_state.datasets, entry_name: 'dataset'
-  = paginate @view_state.datasets, theme: 'cairn'

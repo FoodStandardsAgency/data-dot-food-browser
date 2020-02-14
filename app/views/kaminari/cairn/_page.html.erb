@@ -7,6 +7,6 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
 -%>
-<li class="c-paginator--page<%= ' c-paginator--page__current' if page.current? %>">
-  <%= link_to_unless page.current?, page, url, {remote: remote, rel: page.rel} %>
+<li class="pager__item <%= ' is-active' if page.current? %>">
+  <%= link_to page, url, {remote: remote, rel: page.rel} %>
 </li>
