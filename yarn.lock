@@ -3309,7 +3309,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-"fsastyles@file:../fsastyles":
+"fsastyles@file:vendor/fsastyles":
   version "0.0.3"
   dependencies:
     babel-polyfill "^6.26.0"

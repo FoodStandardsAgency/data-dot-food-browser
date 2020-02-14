@@ -20,7 +20,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "fsastyles": "file:../fsastyles",
+    "fsastyles": "file:vendor/fsastyles",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.0.2",
