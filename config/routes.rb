@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :datasets, only: %i[index show]
 
+  root 'datasets#index'
   get '/', to: 'datasets#index'
 
   get '/feedback', to: 'feedback#show'
