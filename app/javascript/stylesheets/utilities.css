@@ -144,6 +144,7 @@ dd {
       flex-flow: row wrap;
       justify-content: flex-start;
       margin: 0 -0.5em; /* removes extraneous padding at outer edges of flex layout */
+      padding-left: 0;
     }
 
     &--container {

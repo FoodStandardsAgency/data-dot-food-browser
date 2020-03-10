@@ -69,7 +69,7 @@
 
         .c-catalog-entry-downloads-wrap
           .c-catalog-entry--downloads
-            %ul.u-list-undecorated.c-dataset-element--group
+            %ul.c-dataset-element--group
               - dataset.elements.each do |elem|
                 %li.c-dataset-element--container
                   = render partial: 'dataset_element', locals: {elem: elem}
