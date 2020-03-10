@@ -72,7 +72,7 @@ dd {
   float: right;
 }
 
-.form-group + .form-group, .navigation-side > * + *, article > * + * {
+.form-group + .form-group, .navigation-side > * + *, .c-dataset-element > * + * {
   margin-top: 1em;
 }
 
@@ -192,6 +192,10 @@ dd {
       margin-left: 0;
     }
   }
+}
+
+.c-navigation-search.button {
+  font-size: 0.9em;
 }
 
 .u-navbar__placeholder {
