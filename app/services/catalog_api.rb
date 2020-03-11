@@ -2,7 +2,6 @@
 
 # Service wrapper for the catalog API
 class CatalogApi
-  DEFAULT_API_HOST = 'http://localhost:8080'
   DATASET_API_ROOT = '/catalog/data/dataset'
 
   attr_reader :api
@@ -63,10 +62,12 @@ class CatalogApi
   end
 
   def api_host
-    if defined?(Rails) && defined?(Rails.application.config.api_host)
-      Rails.application.config.api_host
-    else
-      DEFAULT_API_HOST
+    unless defined?(Rails) &&
+      Rails.application.config.api_host &&
+      !Rails.application.config.api_host.empty?
+      raise 'Environment variable FSA_DATA_DOT_FOOD_API_HOST is not defined'
     end
+
+    Rails.application.config.api_host
   end
 end
