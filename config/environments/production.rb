@@ -75,11 +75,14 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
   config.relative_url_root = '/catalog'
+
+  # The API host to use may be available in the environment
+  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_HOST']
 end

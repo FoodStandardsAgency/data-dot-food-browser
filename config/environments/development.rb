@@ -48,4 +48,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # The API host to use may be available in the environment
+  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_HOST'] || 'http://localhost:8080'
 end
