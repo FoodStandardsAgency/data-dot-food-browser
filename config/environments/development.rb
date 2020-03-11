@@ -50,5 +50,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # The API host to use may be available in the environment
-  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_HOST'] || 'http://localhost:8080'
+  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_URL'] || 'http://localhost:8080'
 end
