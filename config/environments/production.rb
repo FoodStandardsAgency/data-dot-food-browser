@@ -84,5 +84,5 @@ Rails.application.configure do
   config.relative_url_root = '/catalog'
 
   # The API host to use may be available in the environment
-  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_HOST']
+  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_URL']
 end
