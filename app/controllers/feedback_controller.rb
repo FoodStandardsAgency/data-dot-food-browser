@@ -10,7 +10,7 @@ class FeedbackController < ApplicationController
     presenter = FeedbackQuestions.new(load_questions, nil, params)
     FeedbackMailer.feedback_email(presenter).deliver_now
 
-    redirect_to controller: 'cairn_catalog_browser/datasets', action: :index
+    redirect_to controller: 'datasets', action: :index
   end
 
   private

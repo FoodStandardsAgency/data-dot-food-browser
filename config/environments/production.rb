@@ -81,7 +81,7 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  config.relative_url_root = '/catalog'
+  config.relative_url_root = ENV['RAILS_RELATIVE_URL_ROOT'] || '/catalog'
 
   # The API host to use may be available in the environment
   config.api_host = ENV['FSA_DATA_DOT_FOOD_API_URL']
