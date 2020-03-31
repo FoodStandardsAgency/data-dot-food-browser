@@ -13,11 +13,12 @@
 }
 
 .u-sr-only {
-  display:none;
+  display: none;
 }
 
 .u-disabled {
   cursor: not-allowed;
+
   a {
     pointer-events: none;
   }
@@ -37,13 +38,12 @@ dt {
 
 dl,
 dd {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 dd {
   margin-bottom: 1em;
 }
-
 
 /* FSA Missing Style */
 .visually-hidden {
@@ -61,7 +61,9 @@ dd {
   float: right;
 }
 
-.form-group + .form-group, .navigation-side > * + *, .c-dataset-element > * + * {
+.form-group + .form-group,
+.navigation-side > * + *,
+.c-dataset-element > * + * {
   margin-top: 1em;
 }
 
@@ -72,92 +74,28 @@ dd {
   color: color(black lightness(60%));
 }
 
-.o-dataset-keyword {
-  .o-dataset-keyword--filter {
-    background: var(--color-light-gray);
-    box-sizing: border-box;
-    display: inline-block;
-    font-size: 1rem;
-    letter-spacing: 0.055em;
-    line-height: 1.7rem;
-    margin: 0.5rem;
-    padding: 0.1rem 0.8rem;
-    position: relative;
+.o-dataset-keyword--filter {
+  background: var(--color-light-gray);
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.055em;
+  line-height: 1.7rem;
+  margin: 0.5rem;
+  padding: 0.1rem 0.8rem;
+  position: relative;
 
-    &:first-child {
-      margin-left: 0;
-    }
-
-    span {
-      text-decoration: underline;
-    }
-
-    .o-dataset-keyword--filter__selected {
-      color: var(--fsa-primary_dark-grey);
-      text-decoration: none;
-    }
+  &:first-child {
+    margin-left: 0;
   }
-}
 
-.listing .item__content h3 a {
-  display: block;
-}
+  span {
+    text-decoration: underline;
+  }
 
-.c-dataset {
-  &-element {
-    border: 1px solid var(--color-light-gray);
-    display: flex;
-    flex-flow: column nowrap;
-    flex-grow: 1;
-    justify-content: flex-end;
-
-    &--title {
-    margin-bottom: auto;
-    }
-
-    &--group {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      margin: 0 -0.5em; /* removes extraneous padding at outer edges of flex layout */
-      padding-left: 0;
-    }
-
-    &--container {
-      display: flex;
-      flex: 0 0 100%; /* set -grow -shrink -basis */
-
-      @media (--breakpoint-sm) {
-        flex-basis: 50%;
-      }
-
-      @media (--breakpoint-md) {
-        flex-basis: 33.3333%;
-      }
-
-      @media (--breakpoint-lg) {
-        flex-basis: 25%;
-      }
-
-      &> * {
-        margin: 0.5em;
-        padding: 0.5em;
-      }
-    }
-
-    &--title {
-      font-size: 112.5%;
-    }
-
-    &--distribution-prompt {
-      margin-bottom: 0;
-    }
-    
-    /* TODO consider class names */
-    dt, dd {
-      display: inline;
-      margin-left: 0;
-    }
+  &__selected {
+    color: var(--fsa-primary_dark-grey);
+    text-decoration: none;
   }
 }
 

@@ -1,0 +1,38 @@
+@import "fsastyles/helper/custom-property.css";
+
+.c-dataset-element__group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+
+  @media (--breakpoint-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (--breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.c-dataset-element__item,
+.c-dataset-element__item-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.c-dataset-element__item-content {
+  flex-direction: column;
+  justify-content: flex-end;
+
+  dt,
+  dd {
+    display: inline;
+    margin: 0;
+  }
+
+  & > *:first-child {
+    flex: 1 0 50%;
+    margin-bottom: auto;
+  }
+}
