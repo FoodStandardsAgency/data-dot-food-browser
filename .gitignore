@@ -26,3 +26,5 @@ tags
 yarn-debug.log*
 .yarn-integrity
 /coverage/**/*
+
+.vscode
