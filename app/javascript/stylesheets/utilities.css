@@ -1,12 +1,10 @@
 @import "fsastyles/helper/helper.css";
-@import "fsastyles/helper/custom-property.css"
+@import "fsastyles/helper/custom-property.css";
 
 /* Utilities */
-
 .u-list-undecorated {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .u-list-inline li {
@@ -31,15 +29,6 @@
 
 .u-no-wrap {
   white-space: nowrap;
-}
-
-.u-list-no-style {
-  list-style: none;
-  padding: 0;
-
-  li {
-    display: inline-block;
-  }
 }
 
 dt {
@@ -115,19 +104,6 @@ dd {
 }
 
 .c-dataset {
-
-  &-nav {
-    &-year-list {
-      display: flex;
-      flex-flow: row wrap;
-
-      &-item {
-        flex: 0 0 30%;
-        margin-left: 2%;
-      }
-    }
-  }
-
   &-element {
     border: 1px solid var(--color-light-gray);
     display: flex;
