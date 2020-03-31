@@ -1,21 +1,14 @@
 {
-  "name": "data-dot-food",
+  "name": "data-dot-food-browser",
   "version": "1.0.0",
   "main": "app/javascript/packs/application.js",
-  "repository": "git@codebasehq.com:epimorphics/fsa-projects/data-catalog-browser.git",
+  "repository": "git@github.com:FoodStandardsAgency/data-dot-food-browser.git",
   "author": "Epimorphics Ltd.",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@rails/webpacker": "^4.2.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
     "fsastyles": "joescottdave/fsastyles#local-dependency",
     "jquery": "^3.4.1",
     "jquery-ujs": "^1.2.2",
@@ -31,5 +24,16 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "stylelint": "^13.2.1",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
