@@ -5,14 +5,14 @@
       %section.hero
         - path = [{l: 'Home', u: {action: :index}}, 'Dataset details']
         = render partial: "breadcrumbs", locals: {path: path}
-.layout.layout--main
-  .layout__container.layout__container__main
+.layout.layout--main.layout--with-no-sidebar
+  .layout__container.layout__container--main
     .layout__content.layout__content--main.layout__content--header.js-content
       #block-pagetitle.c-catalog-entry--heading
         %h1
           %span.field.field__title
             = dataset.title
-    .layout__content.layout__content--main.layout__content--header.js-content
+    .layout__content.layout__content--main.layout__content--with-header.js-content
       %article
         .field.field__body.c-catalog-entry--description
           %p

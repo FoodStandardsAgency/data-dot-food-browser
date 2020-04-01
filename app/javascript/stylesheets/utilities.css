@@ -45,6 +45,11 @@ dd {
   margin-bottom: 1em;
 }
 
+.layout--with-no-sidebar > .layout__container--main {
+  display: block;
+  width: 100%;
+}
+
 /* FSA Missing Style */
 .visually-hidden {
   position: absolute !important;
