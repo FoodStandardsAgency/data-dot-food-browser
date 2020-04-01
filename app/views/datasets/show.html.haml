@@ -21,49 +21,36 @@
 
         .c-catalog-entry--metadata
           %h2 About this dataset
-          %table.c-catalog-entry--table
-            %thead
-              %tr.u-sr-only
-                %th
-                  Key
-                %th
-                  Value
-            %tbody
-              - if dataset.key?(:issued)
-                %tr
-                  %td
-                    Issued
-                  %td
-                    = dataset.issue_date.strftime("%e %b, %Y")
-              - if dataset.key?(:modified)
-                %tr
-                  %td
-                    Modified
-                  %td
-                    = dataset.modification_date.strftime("%e %b, %Y")
-              %tr
-                %td
-                  Update period
-                %td
-                  = dataset.update_period
-              - if dataset.key?(:license)
-                %tr
-                  %td
-                    License
-                  %td
-                    %a{ href: dataset.license_uri }
-                      = dataset.license_name
-              %tr
-                %td.u-tagged-value-prompt
-                  Keywords
-                %td
-                  = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
+          .important
+            - if dataset.key?(:issued)
+              %p
+                Issued: 
+                %strong
+                  = dataset.issue_date.strftime("%e %b, %Y")
+            - if dataset.key?(:modified)
+              %p
+                Modified: 
+                %strong
+                  = dataset.modification_date.strftime("%e %b, %Y")
+            %p
+              Update period: 
+              %strong
+                = dataset.update_period
+            - if dataset.key?(:license)
+              %p
+                License: 
+                %strong
+                  %a{ href: dataset.license_uri }
+                    = dataset.license_name
+            %p
+              Keywords: 
+              %span
+                = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
 
-              %tr
-                %td.u-tagged-value-prompt
-                  Activities
-                %td
-                  = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
+            %p
+              Activities:
+              %span
+                = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
       .c-catalog-entry--metadata
         %h2 Downloadable data
 
