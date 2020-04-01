@@ -8,49 +8,48 @@
 .layout.layout--main
   .layout__container.layout__container__main
     .layout__content.layout__content--main.layout__content--header.js-content
-
-      %article.c-catalog-entry-wrap
-        #block-pagetitle.c-catalog-entry--heading
-          %h1
-            %span.field.field__title
-              = dataset.title
-
-        .c-catalog-entry--description
+      #block-pagetitle.c-catalog-entry--heading
+        %h1
+          %span.field.field__title
+            = dataset.title
+    .layout__content.layout__content--main.layout__content--header.js-content
+      %article
+        .field.field__body.c-catalog-entry--description
           %p
             = dataset.description
 
-        .c-catalog-entry--metadata
-          %h2 About this dataset
-          .important
-            - if dataset.key?(:issued)
-              %p
-                Issued: 
-                %strong
-                  = dataset.issue_date.strftime("%e %b, %Y")
-            - if dataset.key?(:modified)
-              %p
-                Modified: 
-                %strong
-                  = dataset.modification_date.strftime("%e %b, %Y")
+      .c-catalog-entry--metadata
+        %h2 About this dataset
+        .important
+          - if dataset.key?(:issued)
             %p
-              Update period: 
+              Issued: 
               %strong
-                = dataset.update_period
-            - if dataset.key?(:license)
-              %p
-                License: 
-                %strong
-                  %a{ href: dataset.license_uri }
-                    = dataset.license_name
+                = dataset.issue_date.strftime("%e %b, %Y")
+          - if dataset.key?(:modified)
             %p
-              Keywords: 
-              %span
-                = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
+              Modified: 
+              %strong
+                = dataset.modification_date.strftime("%e %b, %Y")
+          %p
+            Update period: 
+            %strong
+              = dataset.update_period
+          - if dataset.key?(:license)
+            %p
+              License: 
+              %strong
+                %a{ href: dataset.license_uri }
+                  = dataset.license_name
+          %p
+            Keywords: 
+            %span
+              = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
 
-            %p
-              Activities:
-              %span
-                = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
+          %p
+            Activities:
+            %span
+              = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
       .c-catalog-entry--metadata
         %h2 Downloadable data
 
