@@ -1,0 +1,24 @@
+.o-dataset-keyword--filter {
+  display: inline-block;
+  position: relative;
+  margin: 0.5rem;
+  padding: 0.1rem 0.8rem;
+  box-sizing: border-box;
+  background: var(--color-light-gray);
+  font-size: 1rem;
+  letter-spacing: 0.055em;
+  line-height: 1.7rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  &__selected {
+    color: var(--fsa-primary_dark-grey);
+    text-decoration: none;
+  }
+}

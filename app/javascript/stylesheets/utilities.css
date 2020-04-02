@@ -79,31 +79,6 @@ dd {
   color: color(black lightness(60%));
 }
 
-.o-dataset-keyword--filter {
-  background: var(--color-light-gray);
-  box-sizing: border-box;
-  display: inline-block;
-  font-size: 1rem;
-  letter-spacing: 0.055em;
-  line-height: 1.7rem;
-  margin: 0.5rem;
-  padding: 0.1rem 0.8rem;
-  position: relative;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  span {
-    text-decoration: underline;
-  }
-
-  &__selected {
-    color: var(--fsa-primary_dark-grey);
-    text-decoration: none;
-  }
-}
-
 .c-navigation-search.button {
   font-size: 0.9em;
 }
