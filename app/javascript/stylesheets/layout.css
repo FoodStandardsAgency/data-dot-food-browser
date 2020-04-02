@@ -1,0 +1,4 @@
+.layout--with-no-sidebar > .layout__container--main {
+  display: block;
+  width: 100%;
+}
