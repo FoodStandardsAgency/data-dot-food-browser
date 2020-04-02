@@ -61,12 +61,6 @@ dd {
   float: right;
 }
 
-.form-group + .form-group,
-.navigation-side > * + *,
-.c-dataset-element > * + * {
-  margin-top: 1em;
-}
-
 .c-prompt-explanation {
   position: relative;
   text-transform: none;
