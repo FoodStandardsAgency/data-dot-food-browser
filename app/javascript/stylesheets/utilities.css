@@ -32,16 +32,13 @@
   white-space: nowrap;
 }
 
-dt {
-  font-weight: bold;
-}
-
 dl,
 dd {
   font-size: 0.9rem;
 }
 
 dd {
+  font-weight: bold;
   margin-bottom: 1em;
 }
 

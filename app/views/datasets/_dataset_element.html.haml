@@ -14,11 +14,10 @@
       %dd
         #{elem.end_date.strftime('%e %b %Y')}
 
-  .c-dataset-element__downloads
-    %h3.reset-font-style.c-dataset-element__distribution-prompt
-      %strong
-        Download:
-      %br
+  %dl.c-dataset-element__downloads
+    %dt.reset-font-style.c-dataset-element__distribution-prompt
+      Download:
+      %wbr
       - elem.distributions.each do |dist|
-        %span.c-dataset-element__distribution
+        %dd.c-dataset-element__distribution.u-no-wrap
           = distribution_link(dist, elem)
