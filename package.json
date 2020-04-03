@@ -9,9 +9,12 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@rails/webpacker": "^4.2.0",
-    "fsastyles": "joescottdave/fsastyles#local-dependency",
+    "babel-polyfill": "^6.26.0",
+    "custom-event-polyfill": "^1.0.7",
+    "fsastyles": "latest",
     "jquery": "^3.4.1",
     "jquery-ujs": "^1.2.2",
+    "mutationobserver-shim": "^0.3.5",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-media": "^7.0.8",
     "postcss-custom-properties": "^9.0.2",
@@ -21,9 +24,12 @@
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-url": "^8.0.0",
+    "svg4everybody": "^2.1.9",
+    "tabbable": "^4.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "wicg-inert": "^3.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
