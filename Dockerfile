@@ -20,12 +20,13 @@ RUN apk add --update \
 # Pulls in private dependencies, which can be used in the next stage,
 FROM base as builder
 
-COPY Gemfile Gemfile.lock ./
-RUN bundle install
-COPY package.json yarn.lock ./
-RUN yarn install
 COPY . .
-RUN rake assets:precompile
+RUN bundle install --without="development test"
+RUN yarn install
+RUN RAILS_ENV=${RAILS_ENV} rake assets:precompile
+
+# We don't need this at runtime, once the precompiled assets are built
+RUN rm -rf node_modules
 
 # Final build step
 FROM base
