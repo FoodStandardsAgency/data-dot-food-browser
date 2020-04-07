@@ -8,3 +8,12 @@
 .c-dataset-element > * + * {
   margin-top: 1em;
 }
+
+.theme--data .layout__container--main {
+  display: flex;
+  flex-direction: column;
+
+  aside {
+    order: -1;
+  }
+}
