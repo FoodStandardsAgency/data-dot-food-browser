@@ -21,12 +21,11 @@ RUN apk add --update \
 FROM base as builder
 
 COPY . .
-RUN bundle install --without="development test"
-RUN yarn install
-RUN RAILS_ENV=${RAILS_ENV} rake assets:precompile
-
-# We don't need this at runtime, once the precompiled assets are built
-RUN rm -rf node_modules
+RUN bundle install --without="development" \
+  && yarn install \
+  && RAILS_ENV=1 rake assets:precompile \
+  && mkdir -p 777 /usr/src/app/coverage \
+  && rm -rf node_modules
 
 # Final build step
 FROM base
@@ -47,6 +46,4 @@ RUN chmod 755 /usr/src/app/entrypoint.sh
 
 USER app
 
-# CMD ./bin/rails test
-# CMD ./bin/rails server -e ${RAILS_ENV} -b 0.0.0.0
 ENTRYPOINT /usr/src/app/entrypoint.sh

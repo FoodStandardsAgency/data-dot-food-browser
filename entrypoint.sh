@@ -14,8 +14,8 @@ fi
 
 if [ "$RAILS_ENV" == "production" ] && [ -z "$SECRET_KEY_BASE" ]
 then 
-  echo "Environment Variable \$SECRET_KEY_BASE not defined." >&2
-  SECRET_KEY_BASE=`./bin/rails secret`
+  echo "Setting environment variable \$SECRET_KEY_BASE."
+  export SECRET_KEY_BASE=`./bin/rails secret`
 fi
 
 exec ./bin/rails server -e ${RAILS_ENV} -b 0.0.0.0
