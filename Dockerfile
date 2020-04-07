@@ -44,7 +44,6 @@ COPY --from=builder --chown=app /usr/local/bundle /usr/local/bundle
 
 COPY entrypoint.sh ./
 RUN chmod 755 /usr/src/app/entrypoint.sh
-RUN RAILS_SERVE_STATIC_FILES=true rails assets:precompile
 
 USER app
 
