@@ -1,24 +1,45 @@
-.o-dataset-keyword--filter {
+.o-dataset-keyword__filter {
   display: inline-block;
-  position: relative;
-  margin: 0.5rem;
-  padding: 0.1rem 0.8rem;
-  box-sizing: border-box;
-  background: var(--color-light-gray);
-  font-size: 1rem;
+  margin: 0 0.1rem 0.5rem 0;
+  font-size: 1.1rem;
   letter-spacing: 0.055em;
   line-height: 1.7rem;
 
-  &:first-child {
-    margin-left: 0;
-  }
-
-  span {
+  &--selectable,
+  &--selected {
+    box-sizing: border-box;
+    display: block;
+    padding: 0.1rem 0.5rem;
+    background-color: inherit;
     text-decoration: underline;
+
+    /* start transition effects */
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        var(--darker-primary-color) 50%,
+        var(--darker-primary-color) 100%
+      );
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    transition: all linear 0.1s;
   }
 
-  &__selected {
-    color: var(--fsa-primary_dark-grey);
+  &--selectable:hover,
+  &--selectable:focus-within,
+  &--selectable:focus {
+    background-position-y: 100%;
+    color: white;
+  }
+
+  /* end transition effects */
+
+  &--selected {
+    padding: -0.1rem -0.8rem;
+    color: var(--color-white);
     text-decoration: none;
+    background: var(--darker-primary-color);
   }
 }
