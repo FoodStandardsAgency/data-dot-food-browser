@@ -113,7 +113,7 @@ module DatasetsHelper
   def remove_filter_button(prefs, filter_type, filter_value)
     dest = search_index_with_param(prefs, filter_type, filter_value, false)
     link_to(dest, class: 'c-filter-remove-button') do
-      content_tag(:i, '', class: 'fa fa-times')
+      content_tag(:span, 'Remove filter', class: 'u-sr-only')
     end
   end
 end

@@ -11,7 +11,15 @@
     &-button::before {
       color: var(--color-dark-teal);
       font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
       content: "\f00d";
     }
   }
+}
+
+.c-filter-remove-button::before {
+  color: var(--color-dark-teal);
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  content: "\f00d";
 }
