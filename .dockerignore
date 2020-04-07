@@ -13,6 +13,5 @@ node_modules
 .rake_tasks~
 README.md
 .ruby-version
-test
 tmp
 vendor
