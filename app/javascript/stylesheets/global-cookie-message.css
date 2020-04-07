@@ -1,0 +1,42 @@
+.cc_banner-wrapper {
+  position: fixed !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  height: auto !important;
+  animation: none !important;
+  z-index: 9001;
+}
+
+.cc_banner {
+  background-color: #007c75 !important;
+  color: #fff !important;
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  border: none !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+.cc_message {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  margin-left: 15px;
+}
+
+.cc_btn {
+  margin: 15px;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.js #global-cookie-message {
+  display: none; /* shown with JS, always on for non-JS */
+}
