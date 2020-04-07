@@ -1,3 +1,10 @@
+@define-mixin filter-icon {
+  color: var(--color-dark-teal);
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  content: "\f00d";
+}
+
 .o-datasets-nav {
   position: relative;
 
@@ -9,17 +16,11 @@
     width: 1em;
 
     &-button::before {
-      color: var(--color-dark-teal);
-      font-family: "Font Awesome 5 Free", sans-serif;
-      font-weight: 900;
-      content: "\f00d";
+      @mixin filter-icon;
     }
   }
 }
 
 .c-filter-remove-button::before {
-  color: var(--color-dark-teal);
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  content: "\f00d";
+  @mixin filter-icon;
 }
