@@ -34,7 +34,6 @@ FROM base
 RUN addgroup -S app && adduser -S -G app app
 ENV RAILS_SERVE_STATIC_FILES=true
 ENV RAILS_LOG_TO_STDOUT=true
-ENV SECRET_KEY_BASE=${RAILS_SECRET}
 ENV RAILS_RELATIVE_URL_ROOT='/'
 EXPOSE 3000
 
@@ -43,7 +42,12 @@ WORKDIR /usr/src/app
 COPY --from=builder --chown=app /usr/src/app /usr/src/app
 COPY --from=builder --chown=app /usr/local/bundle /usr/local/bundle
 
+COPY entrypoint.sh ./
+RUN chmod 755 /usr/src/app/entrypoint.sh
+RUN RAILS_SERVE_STATIC_FILES=true rails assets:precompile
+
 USER app
 
 # CMD ./bin/rails test
-CMD ./bin/rails server -e ${RAILS_ENV} -b 0.0.0.0
+# CMD ./bin/rails server -e ${RAILS_ENV} -b 0.0.0.0
+ENTRYPOINT /usr/src/app/entrypoint.sh
