@@ -3,9 +3,12 @@
     %h2.sidebar-title
       Filter datasets
       - if @view_state.filter_defined?
-        %span.o-datasets-nav--reset-filter
+        %span.o-datasets-nav__reset-filter
           = link_to({ controller: :datasets, action: :index, anchor: 'results' }, title: "Reset filters") do
-            %i.fa.fa-times
+            %span.u-sr-only
+              Reset filters
+            %span.o-datasets-nav__reset-filter-button
+            -# %i.fa.fa-times
 
     .form-group
       %label.control-label{ for: "search"}

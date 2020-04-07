@@ -1,0 +1,17 @@
+.o-datasets-nav {
+  position: relative;
+
+  &__reset-filter {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 1em;
+    width: 1em;
+
+    &-button::before {
+      color: var(--color-dark-teal);
+      font-family: "Font Awesome 5 Free", sans-serif;
+      content: "\f00d";
+    }
+  }
+}
