@@ -22,9 +22,9 @@
   </head>
 
   <body class="theme--data">
+    <%= render partial: 'shared/global_cookie_message' %>
     <div class="site js-site">
       <%= render partial: 'shared/gtm_noscript' %>
-      <%= render partial: 'shared/global_cookie_message' %>
       <%= render partial: 'shared/page_header' %>
       <%= yield %>
       <%= render partial: 'shared/page_footer' %>
