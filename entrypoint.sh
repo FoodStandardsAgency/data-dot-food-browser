@@ -6,7 +6,7 @@ then
   exit 1
 fi
 
-if [ -z "$RAILS_ENV" ]
+if [ -z "$RAILS_ENV" ] # We could default this but I'm unsure which way would be better
 then
   echo "Environment Variable \$RAILS_ENV not defined." >&2
   exit 1
