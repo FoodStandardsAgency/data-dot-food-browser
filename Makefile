@@ -1,4 +1,4 @@
-.PHONY:	dev image release prod tag test
+.PHONY:	clean dev image release prod tag test
 
 PREFIX = 293385631482.dkr.ecr.eu-west-1.amazonaws.com/epimorphics/amp
 IMAGE = data-dot-food-browser
@@ -27,3 +27,5 @@ tag:
 release:
 	@docker push ${PREFIX}/${IMAGE}:${TAG}
 
+clean:
+	@rake clobber clean webpacker:clobber tmp:clear

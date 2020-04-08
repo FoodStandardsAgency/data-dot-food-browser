@@ -23,7 +23,7 @@ FROM base as builder
 COPY . .
 RUN bundle install --without="development" \
   && yarn install \
-  && RAILS_ENV=1 rake assets:precompile \
+  && RAILS_ENV=production rake assets:precompile \
   && mkdir -p 777 /usr/src/app/coverage \
   && rm -rf node_modules
 
