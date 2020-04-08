@@ -19,7 +19,7 @@
       %input#search.form-control{ type: "text", name: "search", value: @view_state.search}
 
     .form-group.o-datasets-nav--years
-      %h4.control-label
+      %h3.control-label
         Years
       %ul.u-list-undecorated.c-dataset-nav-year-list
         - @view_state.years.each do |year|
@@ -33,7 +33,7 @@
 
     - unless @view_state.prefs.keywords.empty?
       .form-group.o-datasets-nav--keywords
-        %h4.control-label
+        %h3.control-label
           Keywords
         %ul
           - @view_state.prefs.keywords.each do |kw|
@@ -44,7 +44,7 @@
 
     - if @view_state.prefs.activity
       .form-group.o-datasets-nav--keywords
-        %h4.control-label
+        %h3.control-label
           Activity
         %ul
           - activity = @view_state.prefs.activity
