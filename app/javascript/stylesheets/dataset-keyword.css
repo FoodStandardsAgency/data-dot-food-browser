@@ -24,7 +24,7 @@
       );
     background-size: 100% 200%;
     background-repeat: no-repeat;
-    transition: all linear 0.1s;
+    transition: all var(--transition-enter);
   }
 
   &--selectable:hover,
