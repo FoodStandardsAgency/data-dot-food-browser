@@ -7,7 +7,7 @@
     paginator:     the paginator that renders the pagination tags inside
 -%>
 <%= paginator.render do -%>
-  <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+  <nav class="pager" role="navigation" aria-label="pagination">
     <ul class="pager__items js-pager__items">
       <%= prev_page_tag %>
       <% each_page do |page| -%>
