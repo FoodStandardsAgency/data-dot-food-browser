@@ -10,7 +10,7 @@
 
   .c-dataset-element__features {
     display: flex;
-    flex-flow: row;
+    justify-content: space-between;
 
     & > * {
       display: flex;
@@ -22,10 +22,6 @@
     dd {
       margin: 0;
       margin-right: 0.5em;
-    }
-
-    & > dt:last-of-type {
-      margin-left: auto;
     }
   }
 }

@@ -1,6 +1,6 @@
-%nav.navigation-side.o-datasets-nav
+%nav.navigation-side.o-datasets-nav{'aria-labelledby': 'filter-datasets__heading'}
   %form{ action: datasets_path( anchor: 'results') }
-    %h2.sidebar-title
+    %h2.sidebar-title#filter-datasets__heading
       Filter datasets
       - if @view_state.filter_defined?
         %span.o-datasets-nav__reset-filter
@@ -18,18 +18,17 @@
           name, description or keywords
       %input#search.form-control{ type: "text", name: "search", value: @view_state.search}
 
-    .form-group.o-datasets-nav--years
-      %h3.control-label
+    %fieldset.form-group.o-datasets-nav--years
+      %legend.control-label
         Years
-      %ul.u-list-undecorated.c-dataset-nav-year-list
-        - @view_state.years.each do |year|
-          %li.c-dataset-nav-year-list-item
-            %input{ type: 'checkbox', class: 'checkbox', name: "year[]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
-            %label{ for: "year[#{year}]"}
-              = year
-        - unless @view_state.prefs.all_years?
-          %li.c-dataset-nav-year
-            = all_years_link(@view_state.prefs)
+      - @view_state.years.each do |year|
+        .c-dataset-nav-year-list-item
+          %input{ type: 'checkbox', class: 'checkbox', name: "year[]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
+          %label{ for: "year[#{year}]"}
+            = year
+      - unless @view_state.prefs.all_years?
+        .c-dataset-nav-year
+          = all_years_link(@view_state.prefs)
 
     - unless @view_state.prefs.keywords.empty?
       .form-group.o-datasets-nav--keywords

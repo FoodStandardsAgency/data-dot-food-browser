@@ -24,3 +24,15 @@
 .c-filter-remove-button::before {
   @mixin filter-icon;
 }
+
+legend.control-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.form-group {
+  padding: 0;
+}

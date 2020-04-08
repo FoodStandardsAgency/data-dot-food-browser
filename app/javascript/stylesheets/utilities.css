@@ -73,3 +73,8 @@ dd {
   min-height: 1em;
   background-color: var(--fsa-secondary_mid-purple);
 }
+
+/* override rule that would push logo all the way to the right */
+.header__content > *:last-child {
+  margin: 0;
+}
