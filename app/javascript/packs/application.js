@@ -9,32 +9,32 @@ import 'mutationobserver-shim'
 import 'wicg-inert'
 import 'custom-event-polyfill'
 
-import '../../../node_modules/fsastyles/helper/polyfill/classList'
-import '../../../node_modules/fsastyles/helper/polyfill/closest'
-import '../../../node_modules/fsastyles/helper/polyfill/matches'
-import '../../../node_modules/fsastyles/helper/polyfill/pointerEvents'
+import 'fsastyles/helper/polyfill/classList'
+import 'fsastyles/helper/polyfill/closest'
+import 'fsastyles/helper/polyfill/matches'
+import 'fsastyles/helper/polyfill/pointerEvents'
 import svg4everybody from 'svg4everybody'
-import responsiveTables from '../../../node_modules/fsastyles/helper/responsiveTables'
-import stickyElement from '../../../node_modules/fsastyles/helper/stickyElement'
+import responsiveTables from 'fsastyles/helper/responsiveTables'
+import stickyElement from 'fsastyles/helper/stickyElement'
 // import cssCustomPropertySupport from './helper/cssCustomPropertySupport'
 
 // TODO Work out why this doesn't work if called on line 37 as in the pattern library
 // Require application style
 require('../stylesheets/style.css')
 
-const { navigation } = require('../../../node_modules/fsastyles/component/navigation/navigation')
-const { addHeading } = require('../../../node_modules/fsastyles/component/content/content')
-const { toggle } = require('../../../node_modules/fsastyles/component/toggle/toggle')
-const { peek } = require('../../../node_modules/fsastyles/component/peek/peek')
-const { fhrs } = require('../../../node_modules/fsastyles/component/fhrs/fhrs')
-const { toc } = require('../../../node_modules/fsastyles/component/toc/toc')
-const { changeAriaRoleOnToggle, autoOpenFormError, scrollToMultiStepForm } = require('../../../node_modules/fsastyles/component/form/form')
-const { autoOpenFirstSearchFilter } = require('../../../node_modules/fsastyles/component/search/search')
+const { navigation } = require('fsastyles/component/navigation/navigation')
+const { addHeading } = require('fsastyles/component/content/content')
+const { toggle } = require('fsastyles/component/toggle/toggle')
+const { peek } = require('fsastyles/component/peek/peek')
+const { fhrs } = require('fsastyles/component/fhrs/fhrs')
+const { toc } = require('fsastyles/component/toc/toc')
+const { changeAriaRoleOnToggle, autoOpenFormError, scrollToMultiStepForm } = require('fsastyles/component/form/form')
+const { autoOpenFirstSearchFilter } = require('fsastyles/component/search/search')
 
-const { toggleSidebarDocumentMenu } = require('../../../node_modules/fsastyles/component/document-menu-side-bar/document-menu-side-bar')
+const { toggleSidebarDocumentMenu } = require('fsastyles/component/document-menu-side-bar/document-menu-side-bar')
 
 // Require every image asset inside of img folder
-require.context('../../../node_modules/fsastyles/img/', true, /\.(gif|png|svg|jpe?g)$/)
+require.context('fsastyles/img/', true, /\.(gif|png|svg|jpe?g)$/)
 
 document.addEventListener('DOMContentLoaded', () => {
   // Polyfill svgs
