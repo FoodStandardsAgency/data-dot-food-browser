@@ -61,7 +61,7 @@ dd {
   position: relative;
   text-transform: none;
   font-weight: normal;
-  color: #484848;
+  color: var(--color-dark-grey);
 }
 
 .c-navigation-search.button {
