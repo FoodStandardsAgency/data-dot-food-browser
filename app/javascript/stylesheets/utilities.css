@@ -1,12 +1,10 @@
 @import "fsastyles/helper/helper.css";
-@import "fsastyles/helper/custom-property.css"
+@import "fsastyles/helper/custom-property.css";
 
 /* Utilities */
-
 .u-list-undecorated {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .u-list-inline li {
@@ -15,11 +13,12 @@
 }
 
 .u-sr-only {
-  display:none;
+  display: none;
 }
 
 .u-disabled {
   cursor: not-allowed;
+
   a {
     pointer-events: none;
   }
@@ -33,28 +32,15 @@
   white-space: nowrap;
 }
 
-.u-list-no-style {
-  list-style: none;
-  padding: 0;
-
-  li {
-    display: inline-block;
-  }
-}
-
-dt {
-  font-weight: bold;
-}
-
 dl,
 dd {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 dd {
+  font-weight: bold;
   margin-bottom: 1em;
 }
-
 
 /* FSA Missing Style */
 .visually-hidden {
@@ -67,131 +53,28 @@ dd {
 }
 
 /* Custom styles */
-
 .o-datasets-nav--reset-filter {
   float: right;
-}
-
-.form-group + .form-group, .navigation-side > * + *, article > * + * {
-  margin-top: 1em;
 }
 
 .c-prompt-explanation {
   position: relative;
   text-transform: none;
   font-weight: normal;
-  color: color(black lightness(60%));
+  color: var(--color-dark-grey);
 }
 
-.o-dataset-keyword {
-  .o-dataset-keyword--filter {
-    background: var(--color-light-gray);
-    box-sizing: border-box;
-    display: inline-block;
-    font-size: 1rem;
-    letter-spacing: 0.055em;
-    line-height: 1.7rem;
-    margin: 0.5rem;
-    padding: 0.1rem 0.8rem;
-    position: relative;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    span {
-      text-decoration: underline;
-    }
-
-    .o-dataset-keyword--filter__selected {
-      color: var(--fsa-primary_dark-grey);
-      text-decoration: none;
-    }
-  }
-
-  /* .o-dataset-keyword--filter::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -5px;
-    width: 5px;
-    background-color: var(--fsa-primary_dark-green);
-  } */
-}
-
-.listing .item__content h3 a {
-  display: block;
-}
-
-.c-dataset {
-
-  &-nav {
-    &-year-list {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-
-      &-item {
-        flex: 0 0 30%;
-      }
-    }
-  }
-
-  &-element {
-    border: 1px solid var(--color-light-gray);
-    display: flex;
-    flex-flow: column nowrap;
-    flex-grow: 1;
-    justify-content: space-between;
-
-    &--group {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      margin: 0 -0.5em; /* removes extraneous padding at outer edges of flex layout */
-    }
-
-    &--container {
-      display: flex;
-      flex: 0 0 100%; /* set -grow -shrink -basis */
-
-      @media (--breakpoint-sm) {
-        flex-basis: 50%;
-      }
-
-      @media (--breakpoint-md) {
-        flex-basis: 33.3333%;
-      }
-
-      @media (--breakpoint-lg) {
-        flex-basis: 25%;
-      }
-
-      &> * {
-        margin: 0.5em;
-        padding: 0.5em;
-      }
-    }
-
-    &--title {
-      font-size: 112.5%;
-    }
-
-    &--distribution-prompt {
-      margin-bottom: 0;
-    }
-    
-    /* TODO consider class names */
-    dt, dd {
-      display: inline;
-      margin-left: 0;
-    }
-  }
+.c-navigation-search.button {
+  font-size: 0.9em;
 }
 
 .u-navbar__placeholder {
   width: 100%;
   min-height: 1em;
   background-color: var(--fsa-secondary_mid-purple);
+}
+
+/* override rule that would push logo all the way to the right */
+.header__content > *:last-child {
+  margin: 0;
 }

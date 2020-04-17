@@ -1,0 +1,38 @@
+@define-mixin filter-icon {
+  color: var(--color-dark-teal);
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 900;
+  content: "\f00d";
+}
+
+.o-datasets-nav {
+  position: relative;
+
+  &__reset-filter {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 1em;
+    width: 1em;
+
+    &-button::before {
+      @mixin filter-icon;
+    }
+  }
+}
+
+.c-filter-remove-button::before {
+  @mixin filter-icon;
+}
+
+legend.control-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.form-group {
+  padding: 0;
+}

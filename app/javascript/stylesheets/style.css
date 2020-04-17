@@ -1,3 +1,9 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "fsastyles/style.css";
-@import 'utilities.css';
+@import "fonts.css";
+@import "layout.css";
+@import "utilities.css";
+@import "catalog-browser.css";
+@import "dataset-element.css";
+@import "dataset-keyword.css";
+@import "global-cookie-message.css";

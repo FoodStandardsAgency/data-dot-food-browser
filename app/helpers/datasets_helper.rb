@@ -68,13 +68,13 @@ module DatasetsHelper
   def dataset_keyword_filter_add(keyword, prefs, add)
     dataset_filter_add(:keyword, keyword, prefs, add,
                         maybe_selected_keyword(keyword, add),
-                        'o-dataset-keyword--filter')
+                        'o-dataset-keyword__filter')
   end
 
   def dataset_activity_filter_add(activity, prefs, add)
     dataset_filter_add(:activity, activity.id, prefs, add,
                         maybe_selected_keyword(activity.full_label, add),
-                        'o-dataset-keyword--filter')
+                        'o-dataset-keyword__filter')
   end
 
   # rubocop:disable Metrics/ParameterLists
@@ -106,14 +106,14 @@ module DatasetsHelper
   end
 
   def maybe_selected_keyword(keyword, unselected)
-    cls = unselected ? '' : 'o-dataset-keyword--filter__selected'
+    cls = unselected ? 'o-dataset-keyword__filter--selectable' : 'o-dataset-keyword__filter--selected'
     content_tag(:span, keyword, class: cls)
   end
 
   def remove_filter_button(prefs, filter_type, filter_value)
     dest = search_index_with_param(prefs, filter_type, filter_value, false)
     link_to(dest, class: 'c-filter-remove-button') do
-      content_tag(:i, '', class: 'fa fa-times')
+      content_tag(:span, 'Remove filter', class: 'u-sr-only')
     end
   end
 end

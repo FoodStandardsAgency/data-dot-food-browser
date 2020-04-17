@@ -1,0 +1,10 @@
+.layout--with-no-sidebar > .layout__container--main {
+  display: block;
+  width: 100%;
+}
+
+.form-group + .form-group,
+.navigation-side > * + *,
+.c-dataset-element > * + * {
+  margin-top: 1em;
+}

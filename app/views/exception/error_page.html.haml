@@ -1,14 +1,20 @@
-%article.col-wrap
-  .col
-    %h1
-      Hmm, something isn't right
+.layout.layout--main.layout--with-no-sidebar
+  .layout__container.layout__container--main
+    .layout__content.layout__content--main.layout__content--header.js-content
+      #block-pagetitle
+        %h1
+          %span.field.field__title
+            Hmm, something isn't right
+    .layout__content.layout__content--main.layout__content--with-header.js-content
+      %article
+        .field.field__body
+          %p
+            This page means that something is amiss. The error message I have is:
 
-    %p
-      This page means that something is amiss. The error message I have is:
+          %blockquote
+            %code
+              #{@view_state.msg}
 
-    %blockquote
-      %code
-        #{@view_state.msg}
-
-    %p
-      If this problem persists, please let us know via the feedback form.
+          %p
+            If this problem persists, please let us know via the feedback form.
+            
