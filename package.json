@@ -11,7 +11,7 @@
     "@rails/webpacker": "^4.2.0",
     "babel-polyfill": "^6.26.0",
     "custom-event-polyfill": "^1.0.7",
-    "fsastyles": "latest",
+    "fsastyles": "0.0.3",
     "jquery": "^3.4.1",
     "jquery-ujs": "^1.2.2",
     "mutationobserver-shim": "^0.3.5",
