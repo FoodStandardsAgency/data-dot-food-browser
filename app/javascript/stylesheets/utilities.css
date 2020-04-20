@@ -1,5 +1,5 @@
-@import "fsastyles/helper/helper.css";
-@import "fsastyles/helper/custom-property.css";
+@import 'fsastyles/helper/helper.css';
+@import 'fsastyles/helper/custom-property.css';
 
 /* Utilities */
 .u-list-undecorated {
@@ -71,7 +71,7 @@ dd {
 .u-navbar__placeholder {
   width: 100%;
   min-height: 1em;
-  background-color: var(--fsa-secondary_mid-purple);
+  background-color: var(--color-dark-purple);
 }
 
 /* override rule that would push logo all the way to the right */
