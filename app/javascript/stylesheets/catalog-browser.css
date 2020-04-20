@@ -1,8 +1,9 @@
 @define-mixin filter-icon {
   color: var(--color-dark-teal);
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 900;
-  content: "\f00d";
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight: 800;
+  font-size: 1.5rem;
+  content: 'x';
 }
 
 .o-datasets-nav {
