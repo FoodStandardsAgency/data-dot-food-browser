@@ -8,3 +8,11 @@
 .c-dataset-element > * + * {
   margin-top: 1em;
 }
+
+.theme--data .hero__region {
+  min-height: 16em;
+
+  @media (--breakpoint-md) {
+    min-height: 22em;
+  }
+}
