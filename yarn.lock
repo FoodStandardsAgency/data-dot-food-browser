@@ -3678,7 +3678,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-fsastyles@latest:
+fsastyles@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/fsastyles/-/fsastyles-0.0.3.tgz#111a659bde8570075d154886de0b568396d81c25"
   integrity sha512-h0ZcTjcPW1XCya9iFZ0+EBwxYsVULUEJOIOPB0Pd7KjVUiv+Eng4zjaQyyOxWhnGENUFdn5FV+Pn2Kp2Gvjzbg==
