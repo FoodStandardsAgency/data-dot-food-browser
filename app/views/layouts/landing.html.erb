@@ -29,6 +29,7 @@
       <%= render partial: 'shared/hero' %>
       <%= render partial: 'shared/highlighted_datasets' if @view_state && @view_state.show_highlighted? %>
       <%= yield %>
+      <%= render partial: 'shared/feedback_footer'%>
       <%= render partial: 'shared/page_footer' %>
       </div>
     </div>
