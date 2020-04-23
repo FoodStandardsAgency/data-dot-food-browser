@@ -37,3 +37,7 @@ legend.control-label {
 .form-group {
   padding: 0;
 }
+
+.theme--data .promo__background-image {
+  background-position: 0 0;
+}
