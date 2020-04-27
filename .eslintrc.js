@@ -4,7 +4,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module'
   },
-  extends: 'airbnb-base',
+  extends: 'standard',
   plugins: [
   ],
   // add your custom rules here

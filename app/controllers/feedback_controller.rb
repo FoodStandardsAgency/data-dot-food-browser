@@ -28,7 +28,7 @@ class FeedbackController < ApplicationController
 
   def current_dataset
     if (id = current_dataset_id)
-      CairnCatalogBrowser::CatalogApi.new.dataset(id)
+      CatalogApi.new.dataset(id)
     end
   end
 end

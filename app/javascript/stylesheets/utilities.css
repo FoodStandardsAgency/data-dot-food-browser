@@ -1,0 +1,80 @@
+@import 'fsastyles/helper/helper.css';
+@import 'fsastyles/helper/custom-property.css';
+
+/* Utilities */
+.u-list-undecorated {
+  list-style-type: none;
+  padding: 0;
+}
+
+.u-list-inline li {
+  display: inline-block;
+  margin: 0;
+}
+
+.u-sr-only {
+  display: none;
+}
+
+.u-disabled {
+  cursor: not-allowed;
+
+  a {
+    pointer-events: none;
+  }
+}
+
+.u-text-centre {
+  text-align: center;
+}
+
+.u-no-wrap {
+  white-space: nowrap;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* FSA Missing Style */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/* Custom styles */
+.o-datasets-nav--reset-filter {
+  float: right;
+}
+
+.c-prompt-explanation {
+  position: relative;
+  text-transform: none;
+  font-weight: normal;
+  color: var(--color-dark-grey);
+}
+
+.c-navigation-search.button {
+  font-size: 0.9em;
+}
+
+.u-navbar__placeholder {
+  width: 100%;
+  min-height: 1em;
+  background-color: var(--color-dark-purple);
+}
+
+/* override rule that would push logo all the way to the right */
+.header__content > *:last-child {
+  margin: 0;
+}

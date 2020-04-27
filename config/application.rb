@@ -32,4 +32,3 @@ end
 # Additional libs to load
 require 'kaminari'
 require 'version'
-require 'cairn_catalog_browser/version'

@@ -1,0 +1,24 @@
+%article.infobox.c-dataset-element__item-content
+  %h2
+    = elem.title
+  %dl.u-list-undecorated.c-dataset-element__features
+    - if elem.key?(:startDate) || elem.key?(:endDate)
+      %div
+        - if elem.key?(:startDate)
+          %dt.c-dataset-element__feature-start
+            From: 
+          %dd  
+            #{elem.start_date.strftime('%e %b %Y')}
+          %br
+        - if elem.key?(:endDate)
+          %dt.c-dataset-element__feature-end
+            To:
+          %dd
+            #{elem.end_date.strftime('%e %b %Y')}
+    %div
+      %dt.reset-font-style.c-dataset-element__distribution-prompt
+        Download:
+        %wbr
+        - elem.distributions.each do |dist|
+          %dd.c-dataset-element__distribution.u-no-wrap
+            = distribution_link(dist, elem)

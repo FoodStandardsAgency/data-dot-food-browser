@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get '/help', to: 'help#index'
-  mount CairnCatalogBrowser::Engine => '/'
 
-  root to: 'cairn_catalog_browser/datasets#index'
+  resources :datasets, only: %i[index show]
+
+  root 'datasets#index'
+  get '/', to: 'datasets#index'
 
   get '/feedback', to: 'feedback#show'
   post '/feedback', to: 'feedback#create'

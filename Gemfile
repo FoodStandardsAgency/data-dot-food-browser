@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+# gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -24,6 +24,12 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'capybara_minitest_spec'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+  gem 'mocha'
+  gem 'simplecov'
+  gem 'vcr'
 end
 
 group :development do
@@ -37,16 +43,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
-gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
-#gem 'fsa_pattern_library', path: '/home/ian/workspace/fsa/fsa-pattern-library'
-
-# gem 'cairn_catalog_browser', path: '/home/ian/workspace/epimorphics/cairn-catalog-browser'
-gem 'cairn_catalog_browser', git: 'git@codebasehq.com:epimorphics/data-platform/cairn-catalog-browser.git'
-
+# gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
 gem 'faraday', '~> 0.15.0'
 gem 'faraday_middleware', '~> 0.12.2'
-gem 'font-awesome-sass'
+gem 'kaminari', '~> 1.0.1'
 gem 'listen', '~> 3.0.5'
 gem 'yajl-ruby', require: 'yajl'
 
 gem 'aws-sdk-rails'
+
+gem 'webpacker', '~> 4.0'

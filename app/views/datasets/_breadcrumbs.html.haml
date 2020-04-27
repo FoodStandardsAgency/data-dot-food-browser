@@ -1,0 +1,12 @@
+.hero__secondary-navigation
+  #block-breadcrumbs.breadcrumb
+    %h2.visually-hidden
+      Breadcrumb
+    - path.each do |path_elem|
+      - if path_elem.is_a?(Hash)
+        .breadcrumb__item
+          = link_to(path_elem[:l], path_elem[:u], {class: 'breadcrumb__link'})
+      - else
+        .breadcrumb__item
+          %span
+            = path_elem

@@ -1,0 +1,57 @@
+%nav.navigation-side.o-datasets-nav{'aria-labelledby': 'filter-datasets__heading'}
+  %form{ action: datasets_path( anchor: 'results') }
+    %h2.sidebar-title#filter-datasets__heading
+      Filter datasets
+      - if @view_state.filter_defined?
+        %span.o-datasets-nav__reset-filter
+          = link_to({ controller: :datasets, action: :index, anchor: 'results' }, title: "Reset filters") do
+            %span.u-sr-only
+              Reset filters
+            %span.o-datasets-nav__reset-filter-button
+
+    .form-group
+      %label.control-label{ for: "search"}
+        Search
+        %br
+        %span.c-prompt-explanation
+          name, description or keywords
+      %input#search.form-control{ type: "text", name: "search", value: @view_state.search}
+
+    %fieldset.form-group.o-datasets-nav--years
+      %legend.control-label
+        Years
+      - @view_state.years.each do |year|
+        .c-dataset-nav-year-list-item
+          %input{ type: 'checkbox', class: 'checkbox', name: "year[]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
+          %label{ for: "year[#{year}]"}
+            = year
+      - unless @view_state.prefs.all_years?
+        .c-dataset-nav-year
+          = all_years_link(@view_state.prefs)
+
+    - unless @view_state.prefs.keywords.empty?
+      .form-group.o-datasets-nav--keywords
+        %h3.control-label
+          Keywords
+        %ul
+          - @view_state.prefs.keywords.each do |kw|
+            %li.c-dataset-nav-keyword
+              %input{ type: :hidden, name: :keyword, value: kw}
+              = kw
+              = remove_filter_button(@view_state.prefs, :keyword, kw)
+
+    - if @view_state.prefs.activity
+      .form-group.o-datasets-nav--keywords
+        %h3.control-label
+          Activity
+        %ul
+          - activity = @view_state.prefs.activity
+          %li.c-dataset-nav-keyword
+            %input{ type: :hidden, name: :activity, value: activity}
+            = @view_state.activity_codes.full_label(id: activity)
+            = remove_filter_button(@view_state.prefs, :activity, activity)
+
+
+    %div
+      %button.c-navigation-search.button{ type: "submit" }
+        Find matching datasets
