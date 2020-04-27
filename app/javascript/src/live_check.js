@@ -1,2 +1,2 @@
-window.fsaData = window.fsaData || {};
-window.fsaData.liveCheck = 'present';
+window.fsaData = window.fsaData || {}
+window.fsaData.liveCheck = 'present'
