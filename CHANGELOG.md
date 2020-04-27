@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.0.1 - 2020-04-27
+
+- Fixed GH-74: a regression in the `live-check` route used by
+  the monitoring tools to check the health of the app
+
 ## 1.0.0 2020-04-17
 
 ### Major changes
