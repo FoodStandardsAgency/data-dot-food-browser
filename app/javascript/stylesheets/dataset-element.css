@@ -15,17 +15,3 @@
     margin-top: var(--space);
   }
 }
-
-.c-dataset-element__features {
-  display: flex;
-  flex: row wrap;
-  justify-content: flex-start;
-
-  & > * {
-    margin: 0;
-  }
-
-  & > * + * {
-    margin-left: 1rem;
-  }
-}
