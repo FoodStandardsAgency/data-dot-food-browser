@@ -46,7 +46,7 @@
                           %label.control-label{ for: question.id }
                             = question.prompt
                           %textarea.form-control{ rows: 5, id: question.id, name: question.id }
-                  .form-actions.u-text-centre
+                  %div{class: ['form-actions', 'text-align:center']}
                     %button.button{ type: :submit }
                       Send feedback
 

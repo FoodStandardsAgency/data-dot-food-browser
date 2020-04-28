@@ -7,11 +7,11 @@
     remote:        data-remote
 -%>
 <li class="pager__item <%= 'pager__item--first' if current_page.first? %>">
-  <span class="u-no-wrap">
+  <span class="white-space:nowrap">
     <%- if current_page.first? %>
       <%= t('views.pagination.previous').html_safe %>
     <%- else %>
-      <%= link_to t('views.pagination.previous').html_safe, url, rel: 'prev', remote: remote, class: "u-no-wrap" %>
+      <%= link_to t('views.pagination.previous').html_safe, url, rel: 'prev', remote: remote, class: "white-space:nowrap" %>
     <%- end %>
   </span>
 </li>

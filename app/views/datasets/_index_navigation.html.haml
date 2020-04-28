@@ -5,7 +5,7 @@
       - if @view_state.filter_defined?
         %span.o-datasets-nav__reset-filter
           = link_to({ controller: :datasets, action: :index, anchor: 'results' }, title: "Reset filters") do
-            %span.u-sr-only
+            %span.visually-hidden
               Reset filters
             %span.o-datasets-nav__reset-filter-button
 
