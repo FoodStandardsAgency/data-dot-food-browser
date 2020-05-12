@@ -40,7 +40,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-if RUBY_PLATFORM=~ /win32/ 
+if RUBY_PLATFORM=~ /win32/
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 end
 
@@ -49,7 +49,6 @@ gem 'haml'
 gem 'faraday', '~> 0.15.0'
 gem 'faraday_middleware', '~> 0.12.2'
 gem 'kaminari', '~> 1.0.1'
-gem 'font-awesome-sass'
 gem 'listen', '~> 3.0.5'
 gem 'yajl-ruby', require: 'yajl'
 
