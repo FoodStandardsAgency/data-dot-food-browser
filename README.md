@@ -37,7 +37,9 @@ to allow access from a fixed range of IP addresses, including the
 Epimorphics office. So, assuming the IP address does not change, the
 dev API can be accessed via:
 
-    FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080
+```sh
+FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080
+```
 
 ### Notes on accessing the API via SSH tunnel (deprecated)
 
@@ -52,15 +54,19 @@ the staging API to `localhost`.
 To get the proxy running, you will need the appropriate ssh configuration.
 Into `~/.ssh/config` add:
 
-    Host fsa-staging-catalog
-      HostName fsa-staging-catalog.epimorphics.net
-      User ubuntu
-      IdentityFile ~/.ssh/fsa.pem
+```text
+Host fsa-staging-catalog
+    HostName fsa-staging-catalog.epimorphics.net
+    User ubuntu
+    IdentityFile ~/.ssh/fsa.pem
+```
 
 This assumes you have the FSA server credentials locally as `fsa.pem`. If you
 do not have the .pem file installed, look in S3:
 
-    aws --profile epimorphics s3 ls s3://epi-ops/keys/
+```sh
+aws --profile epimorphics s3 ls s3://epi-ops/keys/
+```
 
 (the `profile` may be different, depending what you have in `~/.aws/credentials`)
 
@@ -69,21 +75,72 @@ do not have the .pem file installed, look in S3:
 Set the location of the API URL in the environment, then
 start the Rails app in the usual way:
 
-    FSA_DATA_DOT_FOOD_API_HOST=http://18.202.57.165:8080 rails server
+```sh
+FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails server
+```
 
 ## Running the tests
 
 The unit tests are run with `rails test`:
 
-    FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails test
+```sh
+FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails test
+```
 
 Interactions with the API are recorded as VCR cassettes, which are
 automatically renewed periodically. To force the tests to exercise
 the API, first remove the existing cassettes:
 
-    rm test/vcr_cassettes/*
-    FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails test
+```sh
+rm test/vcr_cassettes/*
+FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails test
+```
+
+## Running as a Docker container
+
+The app is configured to be able to be run as a Docker container. First,
+assuming `docker` is installed, create the Docker image:
+
+```sh
+$ tag=`ruby -I . -e 'require "app/lib/version" ; puts "#{Version::VERSION}"'`
+$ docker build --pull --rm -f "Dockerfile" -t "datadotfood-${tag}:latest" .
+Sending build context to Docker daemon  25.76MB
+Step 1/22 : ARG RUBY_VERSION=2.6
+...
+Removing intermediate container 634190c6bc9a
+---> a0f6ea5bbb5f
+Successfully built a0f6ea5bbb5f
+Successfully tagged datadotfood-1.1.0:latest
+```
+
+You can list the local images to see the new image there:
+
+```sh
+$ docker image ls
+REPOSITORY              TAG                 IMAGE ID            CREATED              SIZE
+datadotfood-1.1.0       latest              a0f6ea5bbb5f        About a minute ago   364MB
+```
+
+To actually run the image, you need to supply the environment variables
+that configure the service
+
+```sh
+docker run \
+ -e "FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080"\
+ -e "RAILS_ENV=production"\
+ -e "SECRET_KEY_BASE=`rails secret`"\
+ -i\
+ --rm\
+ -p 3000:3000/tcp\
+ $tag
+```
 
 ## Code standards
 
-TODO
+Running `rubocop` and `eslint app/javascript` should report no errors.
+
+`rails test` should run with no errors and without extraneous console output.
+
+`TODO`s should be replaced by tickets.
+
+Deprecation warnings from Rails should be resolved as soon as possible.
