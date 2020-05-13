@@ -102,8 +102,9 @@ The app is configured to be able to be run as a Docker container. First,
 assuming `docker` is installed, create the Docker image:
 
 ```sh
-$ tag=`ruby -I . -e 'require "app/lib/version" ; puts "#{Version::VERSION}"'`
-$ docker build --pull --rm -f "Dockerfile" -t "datadotfood-${tag}:latest" .
+$ version=`ruby -I . -e 'require "app/lib/version" ; puts "#{Version::VERSION}"'`
+$ tag="datadotfood-${version}:latest"
+$ docker build --pull --rm -f "Dockerfile" -t $tag .
 Sending build context to Docker daemon  25.76MB
 Step 1/22 : ARG RUBY_VERSION=2.6
 ...
