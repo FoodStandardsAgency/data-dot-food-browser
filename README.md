@@ -99,27 +99,31 @@ FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails test
 ## Running as a Docker container
 
 The app is configured to be able to be run as a Docker container. First,
-assuming `docker` is installed, create the Docker image:
+assuming `docker` is installed, create the Docker image. For convenience,
+we suggest taging the docker image tagged with both the actual version, and a tag
+marking it as the most recent (i.e. `latest`) version:
 
 ```sh
-$ version=`ruby -I . -e 'require "app/lib/version" ; puts "#{Version::VERSION}"'`
-$ tag="datadotfood-${version}:latest"
-$ docker build --pull --rm -f "Dockerfile" -t $tag .
+$ version=`ruby -I . -e 'require "app/lib/version" ; puts Version::VERSION'`
+$ docker build --pull --rm -f "Dockerfile" \
+   -t "datadotfood:latest" -t "datadotfood:${version}" .
 Sending build context to Docker daemon  25.76MB
 Step 1/22 : ARG RUBY_VERSION=2.6
 ...
 Removing intermediate container 634190c6bc9a
----> a0f6ea5bbb5f
-Successfully built a0f6ea5bbb5f
-Successfully tagged datadotfood-1.1.0:latest
+---> c5a701a14a21
+Successfully built c5a701a14a21
+Successfully tagged datadotfood:latest
+Successfully tagged datadotfood:1.1.0
 ```
 
 You can list the local images to see the new image there:
 
 ```sh
 $ docker image ls
-REPOSITORY              TAG                 IMAGE ID            CREATED              SIZE
-datadotfood-1.1.0       latest              a0f6ea5bbb5f        About a minute ago   364MB
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+datadotfood             1.1.0               c5a701a14a21        3 minutes ago       364MB
+datadotfood             latest              c5a701a14a21        3 minutes ago       364MB
 ```
 
 To actually run the image, you need to supply the environment variables
@@ -133,7 +137,7 @@ docker run \
  -i\
  --rm\
  -p 3000:3000/tcp\
- $tag
+ datadotfood:latest
 ```
 
 ## Code standards
