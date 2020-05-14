@@ -98,46 +98,38 @@ FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails test
 
 ## Running as a Docker container
 
-The app is configured to be able to be run as a Docker container. First,
-assuming `docker` is installed, create the Docker image. For convenience,
-we suggest taging the docker image tagged with both the actual version, and a tag
-marking it as the most recent (i.e. `latest`) version:
+The app is configured to be able to be run as a Docker container. For
+convenience, a collection of `make` targets are provided. You may need
+to install make itself. On Ubuntu, for example:
 
 ```sh
-$ version=`ruby -I . -e 'require "app/lib/version" ; puts Version::VERSION'`
-$ docker build --pull --rm -f "Dockerfile" \
-   -t "datadotfood:latest" -t "datadotfood:${version}" .
-Sending build context to Docker daemon  25.76MB
+sudo apt install make
+```
+
+The available make targets include:
+
+- `image` - creates a new Docker image, labelled with the image name and
+  tagged with the current app version
+- `prod` - runs the curent Docker image in a local container, but in production
+  mode. This simulates how the app would run in a production deployment
+- `version` - reveals the current appliation version
+- `test` - runs the Rails tests on the app running in a container
+- `clean` - removes temporary build artefacts, such as webpacked assets
+- `release` - push the container to a registry
+
+For example, to ensure the image is up-to-date and then run the app
+locally but in production mode:
+
+```sh
+$ make clean prod
+I, [2020-05-14T13:31:25.009548 6572]  INFO -- : Removed data-dot-food-browser/public/assets
+Removed webpack output path directory data-dot-food-browser/public/packs
+docker build --tag data-dot-food-browser:1.1.0 .
+Sending build context to Docker daemon  7.222MB
 Step 1/22 : ARG RUBY_VERSION=2.6
 ...
-Removing intermediate container 634190c6bc9a
----> c5a701a14a21
-Successfully built c5a701a14a21
-Successfully tagged datadotfood:latest
-Successfully tagged datadotfood:1.1.0
-```
-
-You can list the local images to see the new image there:
-
-```sh
-$ docker image ls
-REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
-datadotfood             1.1.0               c5a701a14a21        3 minutes ago       364MB
-datadotfood             latest              c5a701a14a21        3 minutes ago       364MB
-```
-
-To actually run the image, you need to supply the environment variables
-that configure the service
-
-```sh
-docker run \
- -e "FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080"\
- -e "RAILS_ENV=production"\
- -e "SECRET_KEY_BASE=`rails secret`"\
- -i\
- --rm\
- -p 3000:3000/tcp\
- datadotfood:latest
+Successfully tagged data-dot-food-browser:1.1.0
+docker run --rm --name data-dot-food-browser -p3000:3000 -e RAILS_ENV=production ...
 ```
 
 ## Code standards
