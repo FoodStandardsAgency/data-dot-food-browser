@@ -1,6 +1,6 @@
 .PHONY:	clean image release prod tag test help version
 
-REGISTRY ?= 293385631482.dkr.ecr.eu-west-1.amazonaws.com/epimorphics/amp
+REGISTRY ?=  173681544495.dkr.ecr.eu-west-1.amazonaws.com/epimorphics
 IMAGE ?= data-dot-food-browser
 FSA_DATA_DOT_FOOD_API_URL ?= http://18.202.57.165:8080
 
