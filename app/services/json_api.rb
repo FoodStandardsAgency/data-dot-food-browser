@@ -120,8 +120,7 @@ class JsonApi # rubocop:disable Metrics/ClassLength
   def ok?(response, http_url)
     unless (200..207).cover?(response.status)
       msg = "Failed to read from #{http_url}: #{response.status.inspect}"
-      raise CairnCatalogBrowser::ServiceException.new(msg, response.status,
-                                                      http_url, response.body)
+      raise ServiceException.new(msg, response.status, http_url, response.body)
     end
 
     true

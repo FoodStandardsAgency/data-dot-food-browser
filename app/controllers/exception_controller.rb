@@ -48,7 +48,7 @@ class ExceptionController < ActionController::Base
 
     if ex.is_a?(ActionController::RoutingError) || ex.status == 404
       setup_not_found_exception_view(ex)
-    elsif ex.is_a?(CairnCatalogBrowser::ServiceException)
+    elsif ex.is_a?(ServiceException)
       setup_service_exception_view(ex)
     else
       setup_default_exception_view(ex)
