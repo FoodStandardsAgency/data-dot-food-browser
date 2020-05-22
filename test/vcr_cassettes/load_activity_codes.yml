@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:8080/catalog/data/activities
+    uri: http://18.202.57.165:8080/catalog/data/activities
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       vary:
       - Accept
       x-response-id:
-      - '245'
+      - '145'
       cache-control:
       - no-transform, max-age=0
       content-type:
@@ -27,7 +27,7 @@ http_interactions:
       content-length:
       - '4186'
       date:
-      - Tue, 19 Nov 2019 09:56:07 GMT
+      - Tue, 12 May 2020 16:45:14 GMT
       connection:
       - close
       server:
@@ -88,6 +88,6 @@ http_interactions:
         ,\n    \"label\" : \"Research\" ,\n    \"notation\" : 2 ,\n    \"prefLabel\"
         : \"Research\" ,\n    \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
         \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n  }\n   ]\n}\n\n"
-    http_version: 
-  recorded_at: Tue, 19 Nov 2019 09:56:07 GMT
-recorded_with: VCR 5.0.0
+    http_version: null
+  recorded_at: Tue, 12 May 2020 16:45:14 GMT
+recorded_with: VCR 5.1.0

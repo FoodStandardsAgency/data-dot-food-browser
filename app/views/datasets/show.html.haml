@@ -50,12 +50,10 @@
             Activities:
             %span
               = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: false, show_activities: true}
-      .c-catalog-entry--metadata
+      .c-catalog-entry--downloads
         %h2 Downloadable data
 
-        .c-catalog-entry-downloads-wrap
-          .c-catalog-entry__downloads
-            %ul.c-dataset-element__group.u-list-undecorated
-              - dataset.elements.each do |elem|
-                %li.c-dataset-element__item
-                  = render partial: 'dataset_element', locals: {elem: elem}
+        %ul.c-dataset-element__group.u-list-undecorated
+          - dataset.elements.each do |elem|
+            %li.c-dataset-element__item
+              = render partial: 'dataset_element', locals: {elem: elem}

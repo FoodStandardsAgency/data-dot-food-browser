@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # The API host to use may be available in the environment
+  config.api_host = ENV['FSA_DATA_DOT_FOOD_API_URL']
 end

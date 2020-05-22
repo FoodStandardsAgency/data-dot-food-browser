@@ -12,10 +12,6 @@
   margin: 0;
 }
 
-.u-sr-only {
-  display: none;
-}
-
 .u-disabled {
   cursor: not-allowed;
 
@@ -24,22 +20,12 @@
   }
 }
 
-.u-text-centre {
+.text-align\:center {
   text-align: center;
 }
 
-.u-no-wrap {
+.white-space\:nowrap {
   white-space: nowrap;
-}
-
-dl,
-dd {
-  font-size: 0.9rem;
-}
-
-dd {
-  font-weight: bold;
-  margin-bottom: 1em;
 }
 
 /* FSA Missing Style */

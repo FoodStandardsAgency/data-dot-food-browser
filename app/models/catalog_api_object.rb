@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Common implementation for Cairn API objects
+# Common implementation for API objects
 class CatalogApiObject
   attr_reader :json
   attr_reader :api

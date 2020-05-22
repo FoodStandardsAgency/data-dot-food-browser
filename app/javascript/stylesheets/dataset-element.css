@@ -1,27 +1,17 @@
 @import "fsastyles/helper/custom-property.css";
 
-.c-dataset-element__item {
-  padding-bottom: 0.5rem;
+.c-dataset-element__group {
+  --space: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-  &-content {
-    background: #fff;
-    width: 100%;
-  }
+  & > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  } 
 
-  .c-dataset-element__features {
-    display: flex;
-    justify-content: space-between;
-
-    & > * {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    dt,
-    dl,
-    dd {
-      margin: 0;
-      margin-right: 0.5em;
-    }
+  & > * + * {
+    margin-top: var(--space);
   }
 }

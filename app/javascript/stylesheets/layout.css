@@ -4,8 +4,7 @@
 }
 
 .form-group + .form-group,
-.navigation-side > * + *,
-.c-dataset-element > * + * {
+.navigation-side > * + * {
   margin-top: 1em;
 }
 
