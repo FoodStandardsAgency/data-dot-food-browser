@@ -48,7 +48,7 @@ gem 'haml'
 # gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
 gem 'faraday', '~> 0.15.0'
 gem 'faraday_middleware', '~> 0.12.2'
-gem 'kaminari', '~> 1.0.1'
+gem 'kaminari', '~> 1.2.1'
 gem 'listen', '~> 3.0.5'
 gem 'yajl-ruby', require: 'yajl'
 
