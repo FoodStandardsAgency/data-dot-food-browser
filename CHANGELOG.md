@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.2 - 2020-06-02
+
+- Updated Gem dependecies to resolve various CVE warnings
+- Added client-requested Google Search Console verification code
+
 ## 1.1.0 - 2020-03-11
 
 - Fix for GH-42, in which we isolate context-dependent config
