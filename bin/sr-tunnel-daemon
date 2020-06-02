@@ -2,12 +2,6 @@
 
 HOST=${HOST:-fsa-staging-catalog}
 
-if service tomcat7 status | grep 'Active: active'
-then
-  echo "Warning: local tomcat7 service is still running - aborting"
-  exit 1
-fi
-
 while true; do
   ssh_running=`ps -fC ssh | grep "$HOST"`
   if [[ "${ssh_running:-null}" = null ]];then
@@ -16,4 +10,3 @@ while true; do
   fi
   sleep 5
 done
-
