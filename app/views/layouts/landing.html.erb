@@ -8,12 +8,13 @@
     <% elsif @view_state && @view_state.respond_to?(:page_title) && @view_state.page_title %>
       <title><%= @view_state.page_title %></title>
     <% else %>
-      <title>FSA Open Data Catalog Browser</title>
+      <title>FSA Data Catalog Browser</title>
     <% end %>
     <%= csrf_meta_tags %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Food Standards Agency">
+    <meta name='google-site-verification' content='QKdwbKx5K9wx94C9VRt1d5n4EH22aI7MVGUfA1w8raE' />
 
     <%= render partial: 'shared/gtm_script' %>
     <%= javascript_pack_tag 'application' %>
