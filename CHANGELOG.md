@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.3 - 2020-07-27
+
+- Fix for GH-81: missing Sentry configuration on Rails application
+- Fix for GH-80: change in configuration for `aws-sdk-rails`
+
 ## 1.1.2 - 2020-06-02
 
 - Updated Gem dependecies to resolve various CVE warnings
