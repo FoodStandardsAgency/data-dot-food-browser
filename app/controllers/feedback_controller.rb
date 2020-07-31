@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Simple controller for feedback form
 class FeedbackController < ApplicationController
   skip_before_action :verify_authenticity_token
@@ -22,13 +24,13 @@ class FeedbackController < ApplicationController
   end
 
   def current_dataset_id
-    matches = request.referer.match(%r{\A.*/datasets/([^/]+)\Z})
+    matches = request&.referer&.match(%r{\A.*/datasets/([^/]+)\Z})
     matches && matches[1]
   end
 
   def current_dataset
-    if (id = current_dataset_id)
-      CatalogApi.new.dataset(id)
-    end
+    return unless (id = current_dataset_id)
+
+    CatalogApi.new.dataset(id)
   end
 end
