@@ -47,6 +47,90 @@ http_interactions:
         ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
         ,\n    \"mediaType\" : \"text/csv\" ,\n    \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
         \ }\n   ]\n}\n\n"
-    http_version: null
   recorded_at: Tue, 12 May 2020 16:45:15 GMT
-recorded_with: VCR 5.1.0
+- request:
+    method: get
+    uri: http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      content-type:
+      - text/html
+      date:
+      - Fri, 31 Jul 2020 07:54:46 GMT
+      location:
+      - https://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956
+      server:
+      - nginx
+      content-length:
+      - '178'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+  recorded_at: Fri, 31 Jul 2020 07:54:46 GMT
+- request:
+    method: get
+    uri: https://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-transform, max-age=0, max-age=3600
+      content-type:
+      - application/json
+      date:
+      - Fri, 31 Jul 2020 07:54:46 GMT
+      expires:
+      - Fri, 31 Jul 2020 08:54:46 GMT
+      server:
+      - nginx
+      vary:
+      - Accept
+      x-response-id:
+      - '1521190'
+      content-length:
+      - '1106'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.rdf\",
+        \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.ttl\",
+        \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n    \"downloadURL\" : \"https://fsadata.github.io/data-sharing-register/data/data-sharing-register-for-2016.csv\"
+        ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n    \"mediaType\" : \"text/csv\" ,\n    \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \ }\n   ]\n}\n\n"
+  recorded_at: Fri, 31 Jul 2020 07:54:46 GMT
+recorded_with: VCR 6.0.0
