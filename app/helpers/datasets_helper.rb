@@ -52,6 +52,7 @@ module DatasetsHelper
 
   def all_years_link(prefs)
     dest = search_index_with_param(prefs, :years, 'all', true)
+    dest[:anchor] = 'filter-datasets__heading'
     link_to('more years&hellip;'.html_safe, dest, class: 'c-all-years-link')
   end
 
@@ -67,14 +68,14 @@ module DatasetsHelper
 
   def dataset_keyword_filter_add(keyword, prefs, add)
     dataset_filter_add(:keyword, keyword, prefs, add,
-                        maybe_selected_keyword(keyword, add),
-                        'o-dataset-keyword__filter')
+                       maybe_selected_keyword(keyword, add),
+                       'o-dataset-keyword__filter')
   end
 
   def dataset_activity_filter_add(activity, prefs, add)
     dataset_filter_add(:activity, activity.id, prefs, add,
-                        maybe_selected_keyword(activity.full_label, add),
-                        'o-dataset-keyword__filter')
+                       maybe_selected_keyword(activity.full_label, add),
+                       'o-dataset-keyword__filter')
   end
 
   # rubocop:disable Metrics/ParameterLists
@@ -98,9 +99,9 @@ module DatasetsHelper
 
   def search_index_with_param(prefs, param, param_value, add)
     new_params = if add
-                    prefs.with_param(param.to_sym, param_value)
-                  else
-                    prefs.without_param(param.to_sym)
+                   prefs.with_param(param.to_sym, param_value)
+                 else
+                   prefs.without_param(param.to_sym)
                   end
     { controller: 'datasets', action: 'index', anchor: 'results' }.merge(new_params)
   end
