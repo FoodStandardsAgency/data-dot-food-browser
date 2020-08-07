@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.6 - 2020-07-08
+
+- Fix colour contrast issue on the hero region (white text on technically a white background);
+  visually this was not present, but detected by accessibility tools as a CSS issue
+
 ## 1.1.3 - 2020-07-27
 
 - Fix for GH-81: missing Sentry configuration on Rails application
