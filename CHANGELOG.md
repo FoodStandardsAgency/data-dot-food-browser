@@ -1,6 +1,6 @@
 # data-dot-food catalog browser change history
 
-## 1.1.4 - 2020-08-07
+## 1.1.5 - 2020-08-07
 
 - Fix for tab order issue, "more years..." link now sets the focus on the years area of the page instead of the results area
 
