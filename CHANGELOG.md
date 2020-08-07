@@ -4,6 +4,10 @@
 
 - Fix for tab order issue, "more years..." link now sets the focus on the years area of the page instead of the results area
 
+## 1.1.4 - 2020-07-31 (Ian)
+
+- Fix for GH-82: Sentry error when HTTP Referer field is missing
+
 ## 1.1.3 - 2020-07-27
 
 - Fix for GH-81: missing Sentry configuration on Rails application
