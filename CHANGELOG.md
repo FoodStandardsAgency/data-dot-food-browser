@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.4 - 2020-07-31 (Ian)
+
+- Fix for GH-82: Sentry error when HTTP Referer field is missing
+
 ## 1.1.3 - 2020-07-27
 
 - Fix for GH-81: missing Sentry configuration on Rails application
