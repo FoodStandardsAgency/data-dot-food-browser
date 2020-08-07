@@ -52,6 +52,7 @@ module DatasetsHelper
 
   def all_years_link(prefs)
     dest = search_index_with_param(prefs, :years, 'all', true)
+    dest[:anchor] = 'filter-datasets__heading'
     link_to('more years&hellip;'.html_safe, dest, class: 'c-all-years-link')
   end
 
