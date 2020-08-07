@@ -89,6 +89,6 @@ class Dataset < CatalogApiObject
   end
 
   def implicit_end_date
-    Date.today if key?(:startDate)
+    Time.zone.today if key?(:startDate)
   end
 end

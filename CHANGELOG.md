@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.5 - 2020-08-07 (Ian)
+
+- added missing .rubocop.yml
+- lots of fixes to resolve Rubocop warnings, most performed automatically
+
 ## 1.1.4 - 2020-07-31 (Ian)
 
 - Fix for GH-82: Sentry error when HTTP Referer field is missing

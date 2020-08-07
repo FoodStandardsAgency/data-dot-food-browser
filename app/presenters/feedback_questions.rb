@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Presenter to show feedback questions and answers
 class FeedbackQuestions
   attr_reader :dataset
@@ -7,7 +9,7 @@ class FeedbackQuestions
     @dataset = dataset
 
     question_keys = questions.map(&:id)
-    question_keys << "referer"
+    question_keys << 'referer'
 
     @answers = params.permit(question_keys) if params
   end
@@ -18,7 +20,7 @@ class FeedbackQuestions
 
   def each_qa
     @questions.each do |q|
-      answer = (@answers && @answers[q.id]) || "(no answer given)"
+      answer = (@answers && @answers[q.id]) || '(no answer given)'
       yield(q.id, q.prompt, answer)
     end
   end

@@ -91,7 +91,7 @@ class DatasetTest < ActiveSupport::TestCase
   it 'will return the time range of the dataset elements' do
     dataset_fixture.date_range[:from].must_be_kind_of Date
     dataset_fixture.date_range[:to].must_be_kind_of Date
-    dataset_fixture.date_range[:from].must_be :<=, dataset_fixture.date_range[:to] # rubocop:disable Metrics/LineLength
+    dataset_fixture.date_range[:from].must_be :<=, dataset_fixture.date_range[:to]
   end
 
   it 'will report the years covered by the attached elements' do
@@ -99,7 +99,7 @@ class DatasetTest < ActiveSupport::TestCase
     dataset_fixture.years.length.must_be :>=, 4
   end
 
-  it 'will return an array of all of the activities under which the ds is defined' do # rubocop:disable Metrics/LineLength
+  it 'will return an array of all of the activities under which the ds is defined' do
     VCR.use_cassette('load_activity_codes') do
       dataset_fixture.activities.length.must_equal 1
       dataset_fixture.activities.first.must_be_kind_of ActivityCode
