@@ -1,9 +1,18 @@
 # data-dot-food catalog browser change history
 
-## 1.1.6 - 2020-07-08
+## 1.1.6 - 2020-08-07 (Ian)
 
-- Fix colour contrast issue on the hero region (white text on technically a white background);
-  visually this was not present, but detected by accessibility tools as a CSS issue
+- added missing .rubocop.yml
+- lots of fixes to resolve Rubocop warnings, most performed automatically
+
+## 1.1.5 - 2020-08-07
+
+- Fix for tab order issue, "more years..." link now sets the focus on the years
+  area of the page instead of the results area
+
+## 1.1.4 - 2020-07-31 (Ian)
+
+- Fix for GH-82: Sentry error when HTTP Referer field is missing
 
 ## 1.1.3 - 2020-07-27
 

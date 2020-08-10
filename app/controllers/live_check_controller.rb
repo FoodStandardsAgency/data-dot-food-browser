@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Controller for automated liveness check
 class LiveCheckController < ApplicationController
   layout 'live_check'

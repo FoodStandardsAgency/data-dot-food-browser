@@ -2,8 +2,7 @@
 
 # Common implementation for API objects
 class CatalogApiObject
-  attr_reader :json
-  attr_reader :api
+  attr_reader :json, :api
 
   def initialize(json_or_url, api)
     @json = as_json(json_or_url, api).with_indifferent_access
@@ -32,9 +31,7 @@ class CatalogApiObject
     end
   end
 
-  def key?(key)
-    json.key?(key)
-  end
+  delegate :key?, to: :json
 
   private
 
@@ -61,4 +58,4 @@ class CatalogApiObject
       json_or_url
     end
   end
-  end
+end

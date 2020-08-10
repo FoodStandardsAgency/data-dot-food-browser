@@ -32,7 +32,7 @@ class DatasetsController < ApplicationController
   end
 
   def with_compact_view(params)
-    "_view=compact#{params && !params.empty? ? '&' : ''}#{params}"
+    "_view=compact#{params.present? ? '&' : ''}#{params}"
   end
 
   def view_support(params)
@@ -46,7 +46,7 @@ class DatasetsController < ApplicationController
   end
 
   def filter_datasets_by_year(datasets, prefs)
-    if prefs.years && !prefs.years.empty?
+    if prefs.years.present?
       datasets.select do |dataset|
         dataset.years.any? { |year| prefs.years.include?(year) }
       end
@@ -71,10 +71,7 @@ class DatasetsControllerViewSupport
   SUMMARY_YEARS = 5
 
   attr_reader :prefs
-  attr_accessor :datasets
-  attr_accessor :dataset
-  attr_accessor :activity_codes
-  attr_accessor :show_highlighted_datasets
+  attr_accessor :datasets, :dataset, :activity_codes, :show_highlighted_datasets
 
   def initialize(user_preferences)
     @prefs = user_preferences
@@ -111,7 +108,7 @@ class DatasetsControllerViewSupport
   end
 
   def check_year?(year)
-    (prefs.years&.include?(year)) || nil
+    prefs.years&.include?(year) || nil
   end
 
   def filter_defined?
@@ -122,9 +119,9 @@ class DatasetsControllerViewSupport
     @show_highlighted_datasets
   end
 
-  def page_title # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity
+  def page_title # rubocop:disable Metrics/AbcSize
     titles = []
-    titles.push("search for '#{search}'") if search && !search.empty?
+    titles.push("search for '#{search}'") if search.present?
 
     if !prefs.all_years? && prefs.years
       connective = prefs.years.length > 1 ? 'one of ' : ''

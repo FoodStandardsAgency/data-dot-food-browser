@@ -2,6 +2,433 @@
 http_interactions:
 - request:
     method: get
+    uri: http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      content-type:
+      - text/html
+      date:
+      - Fri, 31 Jul 2020 07:54:50 GMT
+      location:
+      - https://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90
+      server:
+      - nginx
+      content-length:
+      - '178'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+  recorded_at: Fri, 31 Jul 2020 07:54:50 GMT
+- request:
+    method: get
+    uri: https://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-transform, max-age=0, max-age=3600
+      content-type:
+      - application/json
+      date:
+      - Fri, 31 Jul 2020 07:54:51 GMT
+      expires:
+      - Fri, 31 Jul 2020 08:54:50 GMT
+      server:
+      - nginx
+      vary:
+      - Accept
+      x-response-id:
+      - '1521199'
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90.rdf\",
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90.ttl\",
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n    \"accrualPeriodicity\" : \"R/P3M\" ,\n    \"activity\" : [ { \n      \"@id\"
+        : \"http://data.food.gov.uk/codes/organisation/activities/6-2\" ,\n      \"broader\"
+        : \"http://data.food.gov.uk/codes/organisation/activities/6\" ,\n      \"inScheme\"
+        : \"http://data.food.gov.uk/codes/organisation/activities\" ,\n      \"label\"
+        : \"HR\" ,\n      \"notation\" : \"6-2\" ,\n      \"prefLabel\" : \"HR\" ,\n
+        \     \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
+        \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n    }\n     ] ,\n    \"description\"
+        : \"A quarterly-update of the gifts and hospitality received and registered
+        by FSA Board members and Directors\" ,\n    \"directorate\" : { \n      \"@id\"
+        : \"http://data.food.gov.uk/codes/organisation/directorates/D01\" ,\n      \"inScheme\"
+        : \"http://data.food.gov.uk/codes/organisation/directorates\" ,\n      \"label\"
+        : \"Chief Executive & Directors\" ,\n      \"notation\" : \"D01\" ,\n      \"prefLabel\"
+        : \"Chief Executive & Directors\" ,\n      \"topConceptOf\" : \"http://data.food.gov.uk/codes/organisation/directorates\"
+        ,\n      \"type\" : \"http://data.food.gov.uk/def/organisation/Directorate\"\n
+        \   }\n     ,\n    \"elements\" : [ { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/02471d9be8eeb726f4840bf4c6fd4428\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2015-16 Quarter 1\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/ed2b5757-04a7-4431-ada3-ee18da130dc6\"
+        ,\n        \"downloadURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/gifts-hospitality-2015-16-q1.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/ed2b5757-04a7-4431-ada3-ee18da130dc6\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2015-06-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/02471d9be8eeb726f4840bf4c6fd4428\"
+        ,\n      \"startDate\" : \"2015-04-01\" ,\n      \"temporal\" : \"2015-04-01/2015-06-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2015-16 Quarter 1\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/0c9eb8413007f14c69e3a4d3dd19785e\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2013-14 Quarter 4\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/2e8533c0-edcc-49b4-b830-506fe15e9ad0\"
+        ,\n        \"accessURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2013-14q4.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/2e8533c0-edcc-49b4-b830-506fe15e9ad0\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2014-03-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/0c9eb8413007f14c69e3a4d3dd19785e\"
+        ,\n      \"startDate\" : \"2014-01-01\" ,\n      \"temporal\" : \"2014-01-01/2014-03-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2013-14 Quarter 4\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Element\"\n
+        \   }\n    , { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/11fc247cf0765f9222911fa83be3bdda\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2014-15 Quarter 3\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/3b4000b0-6052-41fd-8d23-69d727f56752\"
+        ,\n        \"downloadURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2014-15-q3.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/3b4000b0-6052-41fd-8d23-69d727f56752\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2014-12-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/11fc247cf0765f9222911fa83be3bdda\"
+        ,\n      \"startDate\" : \"2014-10-01\" ,\n      \"temporal\" : \"2014-10-01/2014-12-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2014-15 Quarter 3\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/21fece772e388f812bd913462870bdf8\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2013-14 Quarter 3\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/69f81e4b-47e3-4c5e-a4ac-3404341874ca\"
+        ,\n        \"accessURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2013-14q3.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/69f81e4b-47e3-4c5e-a4ac-3404341874ca\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2013-12-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/21fece772e388f812bd913462870bdf8\"
+        ,\n      \"startDate\" : \"2013-10-01\" ,\n      \"temporal\" : \"2013-10-01/2013-12-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2013-14 Quarter 3\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Element\"\n
+        \   }\n    , { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/2c5b77a1-33c9-49a4-a3af-f4ac83bd6bbc\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2015-16 Quarter 3 (October 2015 - December 2015).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/ea094b02-23c3-4806-88c7-428c481e6b62\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2015-16-quarter-3.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2015-12-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/2c5b77a1-33c9-49a4-a3af-f4ac83bd6bbc\"
+        ,\n      \"startDate\" : \"2015-10-01\" ,\n      \"temporal\" : \"2015-10-01/2015-12-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2015-16 Quarter 3\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/2c698a6b39dae342917d70ea8e2c7755\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2014-15 Quarter 2\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/e840f89f-f346-4cb8-ab57-91b6001d559a\"
+        ,\n        \"downloadURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-hosp-gifts-2014-15-q2.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/e840f89f-f346-4cb8-ab57-91b6001d559a\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2014-09-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/2c698a6b39dae342917d70ea8e2c7755\"
+        ,\n      \"startDate\" : \"2014-07-01\" ,\n      \"temporal\" : \"2014-07-01/2014-09-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2014-15 Quarter 2\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/2e69be1dcf9521c7c2fec4568b5f9f70\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2014-15 Quarter 4\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/c52cb7d4-7f29-4dd7-a712-fecf0c879c40\"
+        ,\n        \"downloadURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2014-15-q4.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/c52cb7d4-7f29-4dd7-a712-fecf0c879c40\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2015-03-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/2e69be1dcf9521c7c2fec4568b5f9f70\"
+        ,\n      \"startDate\" : \"2015-01-01\" ,\n      \"temporal\" : \"2015-01-01/2015-03-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2014-15 Quarter 4\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/39b19008-adb3-4f7f-9104-d20a2a22c424\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2015-16 Quarter 4 (January 2016 - March 2016).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/2d19ce74-c400-4d47-a9c7-e9f44cb253f4\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2015-16-quarter-4.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2016-03-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/39b19008-adb3-4f7f-9104-d20a2a22c424\"
+        ,\n      \"startDate\" : \"2016-01-01\" ,\n      \"temporal\" : \"2016-01-01/2016-03-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2015-16 Quarter 4\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/3b9644b9-b0b1-43e8-88e0-7e5207990f11\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2016-17 Quarter 3 (October 2016 - December 2016).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/7f567e23-d38c-4edd-a74e-8a28628ea006\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2016-17-quarter-3.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2016-12-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/3b9644b9-b0b1-43e8-88e0-7e5207990f11\"
+        ,\n      \"startDate\" : \"2016-10-01\" ,\n      \"temporal\" : \"2016-10-01/2016-12-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2016-17 Quarter 3\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/61db9b25-1773-49e8-bfc3-04bb6572755d\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2018-19 Quarter 2 (July 2018 - September 2018).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/d3abf01e-2c5f-492a-adef-29e9be339b7c\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2018-19-quarter-2.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2018-09-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/61db9b25-1773-49e8-bfc3-04bb6572755d\"
+        ,\n      \"startDate\" : \"2018-07-01\" ,\n      \"temporal\" : \"2018-07-01/2018-09-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2018-19 Quarter 2\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/64c45558ea8ab5ab6efd8eac05cf1a28\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2013-14 Quarter 1\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/4658dd7c-31a7-4f0c-a068-fc2a36704199\"
+        ,\n        \"accessURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2013-14q1.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/4658dd7c-31a7-4f0c-a068-fc2a36704199\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2013-06-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/64c45558ea8ab5ab6efd8eac05cf1a28\"
+        ,\n      \"startDate\" : \"2013-04-01\" ,\n      \"temporal\" : \"2013-04-01/2013-06-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2013-14 Quarter 1\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Element\"\n
+        \   }\n    , { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/6b66e518-e690-436a-badf-3a096c5e6914\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2018-19 Quarter 3 (October 2018 - December 2018).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/c60480c5-a956-40ba-a6ed-714303f550cb\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2018-19-quarter-3.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2018-12-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/6b66e518-e690-436a-badf-3a096c5e6914\"
+        ,\n      \"startDate\" : \"2018-10-01\" ,\n      \"temporal\" : \"2018-10-01/2018-12-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2018-19 Quarter 3\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/706f75f3caf5d3f491ae1e14d37ab201\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2013-14 Quarter 2\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/43e73335-2650-4d8b-86a8-3354f3ac6ab1\"
+        ,\n        \"accessURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2013-14q2.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/43e73335-2650-4d8b-86a8-3354f3ac6ab1\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2013-09-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/706f75f3caf5d3f491ae1e14d37ab201\"
+        ,\n      \"startDate\" : \"2013-07-01\" ,\n      \"temporal\" : \"2013-07-01/2013-09-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2013-14 Quarter 2\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Element\"\n
+        \   }\n    , { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/752fe35f-6210-4b41-a9bf-d06188f56407\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2016-17 Quarter 1 (April 2017 - June 2017).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/ce4eae53-dc2c-482b-89c7-c326bf830572\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2017-18-quarter-1.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2017-06-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/752fe35f-6210-4b41-a9bf-d06188f56407\"
+        ,\n      \"startDate\" : \"2017-04-01\" ,\n      \"temporal\" : \"2017-04-01/2017-06-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2017-18 Quarter 1\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/9dd6d5a5-fa65-458d-939d-33c1dcb6172b\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2016-17 Quarter 2 (July 2016 - September 2016).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/6e824fba-bf4b-4521-9efd-3a3b656ab9fa\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2016-17-quarter-2.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2016-09-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/9dd6d5a5-fa65-458d-939d-33c1dcb6172b\"
+        ,\n      \"startDate\" : \"2016-07-01\" ,\n      \"temporal\" : \"2016-07-01/2016-09-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2016-17 Quarter 2\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/a85b71932cfb4b0241b7591baf667d64\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2014-15 Quarter 1\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/afdb8085-36f4-4060-ba77-b0dd269c216e\"
+        ,\n        \"downloadURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2014-15q1.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/afdb8085-36f4-4060-ba77-b0dd269c216e\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2014-06-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/a85b71932cfb4b0241b7591baf667d64\"
+        ,\n      \"startDate\" : \"2014-04-01\" ,\n      \"temporal\" : \"2014-04-01/2014-06-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2014-15 Quarter 1\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/aa6ac9b1-a537-447d-b834-ea11c7fd3656\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2017-18 Quarter 4 (January 2018 - March 2018).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/870558d3-d98c-4921-b4d2-72435ec7e085\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2017-18-quarter-4.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2018-03-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/aa6ac9b1-a537-447d-b834-ea11c7fd3656\"
+        ,\n      \"startDate\" : \"2018-01-01\" ,\n      \"temporal\" : \"2018-01-01/2018-03-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2017-18 Quarter 4\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/c6273910a48b316516ba8336cd832959\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2015-16 Quarter 2\" ,\n      \"distribution\" : { \n        \"@id\"
+        : \"http://data.food.gov.uk/catalog/data/distribution/d0e1ac12-2fbe-4e52-8f6b-ce55b9fad6be\"
+        ,\n        \"downloadURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/gifts-hospitality-2015-16-q2.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/d0e1ac12-2fbe-4e52-8f6b-ce55b9fad6be\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2015-09-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/c6273910a48b316516ba8336cd832959\"
+        ,\n      \"startDate\" : \"2015-07-01\" ,\n      \"temporal\" : \"2015-07-01/2015-09-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2015-16 Quarter 2\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/c81b70ad-60bc-4aee-9b8e-97e6fb171ec5\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2018-19 Quarter 1 (April 2018 - June 2018).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/87f5fe7d-911c-48bd-8894-bf4d44973c2a\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2018-19-quarter-1.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2018-06-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/c81b70ad-60bc-4aee-9b8e-97e6fb171ec5\"
+        ,\n      \"startDate\" : \"2018-04-01\" ,\n      \"temporal\" : \"2018-04-01/2018-06-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2018-19 Quarter 1\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/c90ea6bc-b4b4-4512-9337-7d0de5399b10\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2017-18 Quarter 3 (October 2017 - December 2017).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/7fd86d10-80e5-44ce-942c-1a2fb1629a46\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2017-18-quarter-3.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2017-12-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/c90ea6bc-b4b4-4512-9337-7d0de5399b10\"
+        ,\n      \"startDate\" : \"2017-10-01\" ,\n      \"temporal\" : \"2017-10-01/2017-12-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2017-18 Quarter 3\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/cc2c97f6-2d8f-4ec2-ba74-6d336418e7dd\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2017-18 Quarter 2 (July 2017 - September 2017).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/d73bcf57-5034-4ccb-aa7d-fc11ef179e28\"
+        ,\n        \"accessURL\" : \"\" ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2017-18-quarter-2.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2017-09-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/cc2c97f6-2d8f-4ec2-ba74-6d336418e7dd\"
+        ,\n      \"startDate\" : \"2017-07-01\" ,\n      \"temporal\" : \"2017-07-01/2017-09-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2017-18 Quarter 2\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/e7766f133c86d9121db46ed9e8d6ee4f\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2012-2013\" ,\n      \"distribution\" : { \n        \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/distribution/b26cab95-0ca5-4a04-8d7d-a5db2b676d36\"
+        ,\n        \"accessURL\" : \"https://fsa-catalogue2.s3.eu-west-2.amazonaws.com/fsa-board-directors-gifts-hosp-2012-13.csv\"
+        ,\n        \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/b26cab95-0ca5-4a04-8d7d-a5db2b676d36\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2013-03-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/e7766f133c86d9121db46ed9e8d6ee4f\"
+        ,\n      \"startDate\" : \"2012-04-01\" ,\n      \"temporal\" : \"2012-04-01/2013-03-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2012-2013\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Element\"\n
+        \   }\n    , { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/faa91a1f-de74-45eb-be9e-226a30154052\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2016-17 Quarter 1 (April 2016 - June 2016).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/c990128f-ef7f-4a8f-8be1-40ad97807911\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2016-17-quarter-1.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2016-06-30\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/faa91a1f-de74-45eb-be9e-226a30154052\"
+        ,\n      \"startDate\" : \"2016-04-01\" ,\n      \"temporal\" : \"2016-04-01/2016-06-30\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2016-17 Quarter 1\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/fe00a63b-867e-4fb3-98f1-95d35b2fd2eb\"
+        ,\n      \"dataset\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n      \"description\" : \"FSA Board and directors registered gifts and
+        hospitality 2016-17 Quarter 4 (January 2017 - March 2017).\" ,\n      \"distribution\"
+        : { \n        \"@id\" : \"http://data.food.gov.uk/catalog/distribution/8df87316-0766-492d-a6e3-c776d5d43e3f\"
+        ,\n        \"downloadURL\" : \"https://fsadata.github.io/board-and-directors-registered-gifts-and-hospitality/data/fsa-board-and-directors-registered-gifts-and-hospitality-2016-17-quarter-4.csv\"
+        ,\n        \"mediaType\" : \"text/csv\" ,\n        \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \     }\n       ,\n      \"endDate\" : \"2017-03-31\" ,\n      \"identifier\"
+        : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90/element/fe00a63b-867e-4fb3-98f1-95d35b2fd2eb\"
+        ,\n      \"startDate\" : \"2017-01-01\" ,\n      \"temporal\" : \"2017-01-01/2017-03-31\"
+        ,\n      \"title\" : \"FSA Board and directors registered gifts and hospitality
+        2016-17 Quarter 4\" ,\n      \"type\" : [ \"http://vocab.epimorphics.com/def/catalog/Element\",
+        \"http://www.w3.org/ns/dcat#Dataset\" ]\n    }\n     ] ,\n    \"endDate\"
+        : \"2018-12-31\" ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90\"
+        ,\n    \"issued\" : \"2014-04-01\" ,\n    \"keyword\" : [ \"gifts\", \"transparency\"
+        ] ,\n    \"keywords\" : [ \"http://data.food.gov.uk/catalog/data/keyword/gifts\",
+        \"http://data.food.gov.uk/catalog/data/keyword/transparency\" ] ,\n    \"landingPage\"
+        : \"https://data.gov.uk/dataset/fsa-board-and-directors-registered-gifts-and-hospitality\"
+        ,\n    \"license\" : { \n      \"@id\" : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n      \"label\" : \"Open Government Licence (v3)\" ,\n      \"notation\"
+        : \"OGLv3\" ,\n      \"prefLabel\" : \"Open Government Licence (v3)\" ,\n
+        \     \"type\" : [ \"http://creativecommons.org/ns#License\", \"http://schema.theodi.org/odrs#License\"
+        ]\n    }\n     ,\n    \"modified\" : \"2020-02-17\" ,\n    \"published\" :
+        true ,\n    \"publisher\" : \"http://www.food.gov.uk/#id\" ,\n    \"startDate\"
+        : \"2012-04-01\" ,\n    \"temporal\" : \"2012-04-01/2018-12-31\" ,\n    \"title\"
+        : \"Register of Gifts and Hospitality\" ,\n    \"type\" : \"http://vocab.epimorphics.com/def/catalog/Dataset\"\n
+        \ }\n   ]\n}\n\n"
+  recorded_at: Fri, 31 Jul 2020 07:54:51 GMT
+- request:
+    method: get
     uri: http://18.202.57.165:8080/catalog/data/dataset/0cf781b6-6886-4cd1-ad68-829252b15f90
     body:
       encoding: US-ASCII
@@ -19,7 +446,7 @@ http_interactions:
       vary:
       - Accept
       x-response-id:
-      - '144'
+      - '56'
       cache-control:
       - no-transform, max-age=0
       content-type:
@@ -27,7 +454,7 @@ http_interactions:
       transfer-encoding:
       - chunked
       date:
-      - Tue, 12 May 2020 16:45:14 GMT
+      - Fri, 07 Aug 2020 12:44:58 GMT
       connection:
       - close
       server:
@@ -337,6 +764,5 @@ http_interactions:
         : \"2012-04-01\" ,\n    \"temporal\" : \"2012-04-01/2017-12-31\" ,\n    \"title\"
         : \"Register of Gifts and Hospitality\" ,\n    \"type\" : \"http://vocab.epimorphics.com/def/catalog/Dataset\"\n
         \ }\n   ]\n}\n\n"
-    http_version: null
-  recorded_at: Tue, 12 May 2020 16:45:14 GMT
-recorded_with: VCR 5.1.0
+  recorded_at: Fri, 07 Aug 2020 12:44:59 GMT
+recorded_with: VCR 6.0.0
