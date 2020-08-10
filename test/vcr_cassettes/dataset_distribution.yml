@@ -2,54 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://18.202.57.165:8080/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.15.4
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      vary:
-      - Accept
-      x-response-id:
-      - '146'
-      cache-control:
-      - no-transform, max-age=0
-      content-type:
-      - application/json
-      content-length:
-      - '1106'
-      date:
-      - Tue, 12 May 2020 16:45:14 GMT
-      connection:
-      - close
-      server:
-      - Server
-    body:
-      encoding: UTF-8
-      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
-        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
-        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
-        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
-        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
-        : [ \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.rdf\",
-        \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.ttl\",
-        \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.html\"
-        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
-        ,\n    \"downloadURL\" : \"https://fsadata.github.io/data-sharing-register/data/data-sharing-register-for-2016.csv\"
-        ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
-        ,\n    \"mediaType\" : \"text/csv\" ,\n    \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
-        \ }\n   ]\n}\n\n"
-  recorded_at: Tue, 12 May 2020 16:45:15 GMT
-- request:
-    method: get
     uri: http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956
     body:
       encoding: US-ASCII
@@ -133,4 +85,52 @@ http_interactions:
         ,\n    \"mediaType\" : \"text/csv\" ,\n    \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
         \ }\n   ]\n}\n\n"
   recorded_at: Fri, 31 Jul 2020 07:54:46 GMT
+- request:
+    method: get
+    uri: http://18.202.57.165:8080/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      vary:
+      - Accept
+      x-response-id:
+      - '35'
+      cache-control:
+      - no-transform, max-age=0
+      content-type:
+      - application/json
+      content-length:
+      - '1106'
+      date:
+      - Fri, 07 Aug 2020 12:44:55 GMT
+      connection:
+      - close
+      server:
+      - Server
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.rdf\",
+        \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.ttl\",
+        \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n    \"downloadURL\" : \"https://fsadata.github.io/data-sharing-register/data/data-sharing-register-for-2016.csv\"
+        ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n    \"mediaType\" : \"text/csv\" ,\n    \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \ }\n   ]\n}\n\n"
+  recorded_at: Fri, 07 Aug 2020 12:44:55 GMT
 recorded_with: VCR 6.0.0

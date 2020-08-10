@@ -33,7 +33,7 @@ module DatasetsHelper
       elsif from || to
         concat summarise_date_range_abbrev(from || to)
       else
-        concat content_tag(:span, 'Undated', class: 'c-dataset-entry--date-range__default')
+        concat tag.span('Undated', class: 'c-dataset-entry--date-range__default')
       end
     end
   end
@@ -47,7 +47,7 @@ module DatasetsHelper
   end
 
   def summarise_date_range_abbrev(date)
-    content_tag(:time, date.strftime('%b %Y'), datetime: date.strftime('%Y-%m-%d'))
+    tag.time(date.strftime('%b %Y'), datetime: date.strftime('%Y-%m-%d'))
   end
 
   def all_years_link(prefs)
@@ -68,14 +68,14 @@ module DatasetsHelper
 
   def dataset_keyword_filter_add(keyword, prefs, add)
     dataset_filter_add(:keyword, keyword, prefs, add,
-                        maybe_selected_keyword(keyword, add),
-                        'o-dataset-keyword__filter')
+                       maybe_selected_keyword(keyword, add),
+                       'o-dataset-keyword__filter')
   end
 
   def dataset_activity_filter_add(activity, prefs, add)
     dataset_filter_add(:activity, activity.id, prefs, add,
-                        maybe_selected_keyword(activity.full_label, add),
-                        'o-dataset-keyword__filter')
+                       maybe_selected_keyword(activity.full_label, add),
+                       'o-dataset-keyword__filter')
   end
 
   # rubocop:disable Metrics/ParameterLists
@@ -84,7 +84,7 @@ module DatasetsHelper
     if add
       link_to(text, dest, class: cls)
     else
-      content_tag(:span, text, class: cls)
+      tag.span(text, class: cls)
     end
   end
   # rubocop:enable Metrics/ParameterLists
@@ -99,22 +99,23 @@ module DatasetsHelper
 
   def search_index_with_param(prefs, param, param_value, add)
     new_params = if add
-                    prefs.with_param(param.to_sym, param_value)
-                  else
-                    prefs.without_param(param.to_sym)
-                  end
+                   prefs.with_param(param.to_sym, param_value)
+                 else
+                   prefs.without_param(param.to_sym)
+                 end
     { controller: 'datasets', action: 'index', anchor: 'results' }.merge(new_params)
   end
 
   def maybe_selected_keyword(keyword, unselected)
-    cls = unselected ? 'o-dataset-keyword__filter--selectable' : 'o-dataset-keyword__filter--selected'
-    content_tag(:span, keyword, class: cls)
+    cls =
+      unselected ? 'o-dataset-keyword__filter--selectable' : 'o-dataset-keyword__filter--selected'
+    tag.span(keyword, class: cls)
   end
 
   def remove_filter_button(prefs, filter_type, filter_value)
     dest = search_index_with_param(prefs, filter_type, filter_value, false)
     link_to(dest, class: 'c-filter-remove-button') do
-      content_tag(:span, 'Remove filter', class: 'u-sr-only')
+      tag.span('Remove filter', class: 'u-sr-only')
     end
   end
 end

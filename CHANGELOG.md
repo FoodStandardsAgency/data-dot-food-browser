@@ -1,8 +1,14 @@
 # data-dot-food catalog browser change history
 
+## 1.1.6 - 2020-08-07 (Ian)
+
+- added missing .rubocop.yml
+- lots of fixes to resolve Rubocop warnings, most performed automatically
+
 ## 1.1.5 - 2020-08-07
 
-- Fix for tab order issue, "more years..." link now sets the focus on the years area of the page instead of the results area
+- Fix for tab order issue, "more years..." link now sets the focus on the years
+  area of the page instead of the results area
 
 ## 1.1.4 - 2020-07-31 (Ian)
 

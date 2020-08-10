@@ -63,8 +63,8 @@ class CatalogApi
 
   def api_host
     unless defined?(Rails) &&
-      Rails.application.config.api_host &&
-      !Rails.application.config.api_host.empty?
+           Rails.application.config.api_host &&
+           !Rails.application.config.api_host.empty?
       raise 'Environment variable FSA_DATA_DOT_FOOD_API_URL is not defined'
     end
 

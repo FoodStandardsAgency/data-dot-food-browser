@@ -1,1 +1,6 @@
-Rails.application.config.autoload_paths += ["#{Rails.root}/app/services", "#{Rails.root}/app/presenters"]
+# frozen_string_literal: true
+
+Rails.application.config.autoload_paths += [
+  Rails.root.join('/app/services'),
+  Rails.root.join('/app/presenters')
+]
