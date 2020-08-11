@@ -64,3 +64,27 @@
 .header__content > *:last-child {
   margin: 0;
 }
+
+/* Skip to main content styles */
+.skip-to-content {
+  background: var(--color-white);
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.off-canvas {
+  left: -999rem;
+  position: absolute;
+  top: -999rem;
+
+  @media print {
+    display: none;
+  }
+}
+
+.off-canvas--focusable {
+  &:focus {
+    left: 0;
+    top: 0;
+  }
+}
