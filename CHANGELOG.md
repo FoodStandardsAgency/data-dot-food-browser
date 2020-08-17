@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.8 - 2020-08-17 (Bogdan)
+
+- Kaminari (the pagination library) was using bold tags to show the datasets numbers;
+  this bold tags have now been replaced with strong tags to fix WCAG error
+
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
