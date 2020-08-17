@@ -1,6 +1,6 @@
 # data-dot-food catalog browser change history
 
-## 1.1.7 - 2020-08-08
+## 1.1.7 - 2020-08-08 (Bogdan)
 
 - Fix colour contrast issue on the hero region (white text on technically a white background);
   visually this was not present, but detected by accessibility tools as a CSS issue
