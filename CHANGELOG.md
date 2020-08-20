@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.9 - 2020-08-20 (Bogdan)
+
+- added "skip to main content" link at the top left of the page
+
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
