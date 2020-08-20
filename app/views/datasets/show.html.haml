@@ -5,7 +5,7 @@
       %section.hero
         - path = [{l: 'Home', u: {action: :index}}, 'Dataset details']
         = render partial: "breadcrumbs", locals: {path: path}
-.layout.layout--main.layout--with-no-sidebar
+.layout.layout--main.layout--with-no-sidebar{ role: 'main' }
   .layout__container.layout__container--main
     .layout__content.layout__content--main.layout__content--header.js-content
       #block-pagetitle.c-catalog-entry--heading
