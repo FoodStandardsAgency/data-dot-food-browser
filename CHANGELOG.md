@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.10 - 2020-08-20 (Bogdan)
+
+- added landmarks that are unique and include the whole website's content
+
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
