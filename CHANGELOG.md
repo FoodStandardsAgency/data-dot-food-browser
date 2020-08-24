@@ -4,6 +4,7 @@
 
 - Fix colour contrast issue on the hero region (white text on technically a white background);
   visually this was not present, but detected by accessibility tools as a CSS issue
+- Remove residual uses of inline styles
 
 ## 1.1.6 - 2020-08-07 (Ian)
 
