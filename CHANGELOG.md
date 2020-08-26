@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.9 - 2020-08-20 (Bogdan)
+
+- added "skip to main content" link at the top left of the page
+
 ## 1.1.8 - 2020-08-17 (Bogdan)
 
 - Kaminari (the pagination library) was using bold tags to show the datasets numbers;
