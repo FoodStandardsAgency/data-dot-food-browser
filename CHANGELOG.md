@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.12 - 2020-08-26 (Bogdan)
+
+- added automated testing via github actions;
+  the API url for the tests is set to staging
+
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
