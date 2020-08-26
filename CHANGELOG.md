@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.11 - 2020-08-26 (Bogdan)
+
+- changed Sentry configuration so it will only report errors in production
+
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
