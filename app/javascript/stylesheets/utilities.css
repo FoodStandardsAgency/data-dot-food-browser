@@ -20,6 +20,10 @@
   }
 }
 
+.u-clear-right {
+  clear: right;
+}
+
 .text-align\:center {
   text-align: center;
 }
