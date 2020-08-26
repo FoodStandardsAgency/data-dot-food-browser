@@ -1,11 +1,17 @@
 # data-dot-food catalog browser change history
 
+## 1.1.7 - 2020-08-08 (Bogdan)
+
+- Fix colour contrast issue on the hero region (white text on technically a white background);
+  visually this was not present, but detected by accessibility tools as a CSS issue
+- Remove residual uses of inline styles
+
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
 - lots of fixes to resolve Rubocop warnings, most performed automatically
 
-## 1.1.5 - 2020-08-07
+## 1.1.5 - 2020-08-07 (Bogdan)
 
 - Fix for tab order issue, "more years..." link now sets the focus on the years
   area of the page instead of the results area
