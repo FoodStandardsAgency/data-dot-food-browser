@@ -14,4 +14,4 @@ jobs:
     - name: Install dependencies
       run: bundle install
     - name: Run tests
-      run: FSA_DATA_DOT_FOOD_API_URL=https://data.food.gov.uk rails test
+      run: FSA_DATA_DOT_FOOD_API_URL=http://fsa-staging-catalog.epimorphics.net rails test
