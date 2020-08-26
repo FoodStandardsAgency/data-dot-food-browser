@@ -81,6 +81,8 @@ FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails server
 
 ## Running the tests
 
+Tests are currently being ran on `push`, or by doing a pull request. If you wish to run the tests locally please read the below instructions.
+
 The unit tests are run with `rails test`:
 
 ```sh
