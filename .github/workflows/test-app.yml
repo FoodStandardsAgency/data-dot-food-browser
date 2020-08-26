@@ -11,7 +11,9 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
-    - name: Install dependencies
+    - name: Install dependencies (bundle)
       run: bundle install
+    - name: Install dependencies (yarn)
+      run: yarn install
     - name: Run tests
       run: FSA_DATA_DOT_FOOD_API_URL=http://fsa-staging-catalog.epimorphics.net rails test
