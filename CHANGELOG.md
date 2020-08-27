@@ -9,6 +9,10 @@
 
 - changed Sentry configuration so it will only report errors in production
 
+## 1.1.10 - 2020-08-20 (Bogdan)
+
+- added landmarks that are unique and include the whole website's content
+
 ## 1.1.9 - 2020-08-20 (Bogdan)
 
 - added "skip to main content" link at the top left of the page

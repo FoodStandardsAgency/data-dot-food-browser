@@ -1,8 +1,8 @@
-<div class="layout">
+<div class="layout" role="region" aria-labelledby="feedback">
   <div class="layout__container">
     <div class="layout__content">
       <div class="phase-banner">
-        <span>This is a new service – your <%= link_to('feedback', "#{Rails.application.config.relative_url_root}/feedback")%> will help us to improve it.</span>
+        <span id="feedback">This is a new service – your <%= link_to('feedback', "#{Rails.application.config.relative_url_root}/feedback")%> will help us to improve it.</span>
       </div>
     </div>
   </div>
