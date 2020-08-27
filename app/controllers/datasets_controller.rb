@@ -98,6 +98,10 @@ class DatasetsControllerViewSupport
     prefs.all_years? ? yrs : yrs.slice(0, SUMMARY_YEARS)
   end
 
+  def summary_years
+    SUMMARY_YEARS
+  end
+
   def all_years
     datasets
       .map(&:years)
