@@ -1,15 +1,39 @@
 # data-dot-food catalog browser change history
 
+## 1.1.12 - 2020-08-26 (Bogdan)
+
+- added automated testing via github actions;
+  the API url for the tests is set to staging
+
+## 1.1.11 - 2020-08-26 (Bogdan)
+
+- changed Sentry configuration so it will only report errors in production
+
 ## 1.1.10 - 2020-08-20 (Bogdan)
 
 - added landmarks that are unique and include the whole website's content
+
+## 1.1.9 - 2020-08-20 (Bogdan)
+
+- added "skip to main content" link at the top left of the page
+
+## 1.1.8 - 2020-08-17 (Bogdan)
+
+- Kaminari (the pagination library) was using bold tags to show the datasets numbers;
+  this bold tags have now been replaced with strong tags to fix WCAG error
+
+## 1.1.7 - 2020-08-08 (Bogdan)
+
+- Fix colour contrast issue on the hero region (white text on technically a white background);
+  visually this was not present, but detected by accessibility tools as a CSS issue
+- Remove residual uses of inline styles
 
 ## 1.1.6 - 2020-08-07 (Ian)
 
 - added missing .rubocop.yml
 - lots of fixes to resolve Rubocop warnings, most performed automatically
 
-## 1.1.5 - 2020-08-07
+## 1.1.5 - 2020-08-07 (Bogdan)
 
 - Fix for tab order issue, "more years..." link now sets the focus on the years
   area of the page instead of the results area
