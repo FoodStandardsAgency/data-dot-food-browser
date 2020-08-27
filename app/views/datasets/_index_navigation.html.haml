@@ -20,11 +20,17 @@
     %fieldset.form-group.o-datasets-nav--years
       %legend.control-label
         Years
-      - @view_state.years.each do |year|
-        .c-dataset-nav-year-list-item
-          %input{ type: 'checkbox', class: 'checkbox', name: "year[]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
-          %label{ for: "year[#{year}]"}
-            = year
+      - @view_state.years.each_with_index do |year, index|
+        - if index == @view_state.summary_years
+          .c-dataset-nav-year-list-item
+            %input{ type: 'checkbox', class: 'checkbox', name: "year[]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
+            %label{ id: 'next-year', for: "year[#{year}]"}
+              = year
+        - else
+          .c-dataset-nav-year-list-item
+            %input{ type: 'checkbox', class: 'checkbox', name: "year[]", id: "year[#{year}]", value: year, checked: @view_state.check_year?(year) }
+            %label{ for: "year[#{year}]"}
+              = year
       - unless @view_state.prefs.all_years?
         .c-dataset-nav-year
           = all_years_link(@view_state.prefs)
