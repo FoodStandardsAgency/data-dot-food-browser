@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.13 - 2020-08-27 (Bogdan)
+
+- Fixed focus reset issue when clicking "more years..."
+
 ## 1.1.12 - 2020-08-26 (Bogdan)
 
 - added automated testing via github actions;
