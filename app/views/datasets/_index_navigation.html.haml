@@ -59,7 +59,9 @@
   - if @view_state.set_focus?
     :javascript
       document.addEventListener('DOMContentLoaded', function () {
-        document
-          .querySelector('.u-focus-on-load')
-          .focus()
+        window.setTimeout(function () {
+          document
+            .querySelector('.u-focus-on-load')
+            .focus()
+        }, 500)
       })
