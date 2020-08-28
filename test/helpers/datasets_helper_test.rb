@@ -12,6 +12,6 @@ class DatasetsHelperTest < ActionView::TestCase
 
   it 'should return a link with all the years and focus set on datasets heading' do
     link = all_years_link(prefs)
-    link.must_include '#next-year'
+    link.must_include '#filter-datasets__heading'
   end
 end

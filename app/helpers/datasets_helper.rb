@@ -51,8 +51,8 @@ module DatasetsHelper
   end
 
   def all_years_link(prefs)
-    dest = search_index_with_param(prefs, :years, 'all', true)
-    dest[:anchor] = 'next-year'
+    dest = search_index_with_params(prefs, { years: 'all', user_action: 'more' }, true)
+    dest[:anchor] = 'filter-datasets__heading'
     link_to('more years&hellip;'.html_safe, dest, class: 'c-all-years-link')
   end
 
@@ -98,12 +98,27 @@ module DatasetsHelper
   end
 
   def search_index_with_param(prefs, param, param_value, add)
-    new_params = if add
-                   prefs.with_param(param.to_sym, param_value)
-                 else
-                   prefs.without_param(param.to_sym)
-                 end
-    { controller: 'datasets', action: 'index', anchor: 'results' }.merge(new_params)
+    search_index_with_params(prefs, [[param, param_value]].to_h, add)
+  end
+
+  def search_index_with_params(prefs, params, add)
+    params_ =
+      if add
+        prefs.to_h.merge(params)
+      else
+        prefs.to_h.except(params.keys)
+      end
+    # params_ = prefs.to_h
+    # params.each do |key, val|
+    #   params_ = if add
+    #               params_.with_param(key.to_sym, val)
+    #             else
+    #               params_.without_param(key.to_sym)
+    #             end
+    #   byebug
+    # end
+
+    { controller: 'datasets', action: 'index', anchor: 'results' }.merge(params_)
   end
 
   def maybe_selected_keyword(keyword, unselected)

@@ -4,13 +4,14 @@
 # incoming request parameters
 class UserPreferences
   PERMITTED_PARAMS = [
-    :search, :activity, :keyword, :years, :activity, :id, { year: [] }
+    :search, :activity, :keyword, :years, :activity, :id, :user_action, { year: [] }
   ].freeze
 
-  attr_reader :keywords
+  attr_reader :keywords, :user_action
 
   def initialize(params)
     @keywords = extract_keywords(params)
+    @user_action = params.delete(:user_action)
     @params = params
   end
 

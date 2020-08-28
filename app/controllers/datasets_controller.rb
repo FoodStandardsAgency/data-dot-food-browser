@@ -93,22 +93,37 @@ class DatasetsControllerViewSupport
     prefs.end_date
   end
 
-  def years
-    yrs = all_years
-    prefs.all_years? ? yrs : yrs.slice(0, SUMMARY_YEARS)
+  def year_options # rubocop:disable Metrics/MethodLength
+    options = years.map do |year|
+      {
+        type: 'checkbox',
+        class: 'checkbox',
+        name: 'year[]',
+        id: "year-#{year}",
+        value: year,
+        checked: check_year?(year)
+      }
+    end
+
+    if set_focus?
+      focus_year = [years.size - 1, SUMMARY_YEARS].min
+      options[focus_year][:class] = 'checkbox u-focus-on-load'
+    end
+
+    options
   end
 
-  def summary_years
-    SUMMARY_YEARS
+  def years
+    prefs.all_years? ? all_years : all_years.slice(0, SUMMARY_YEARS)
   end
 
   def all_years
-    datasets
-      .map(&:years)
-      .flatten
-      .uniq
-      .sort
-      .reverse
+    @all_years ||= datasets
+                   .map(&:years)
+                   .flatten
+                   .uniq
+                   .sort
+                   .reverse
   end
 
   def check_year?(year)
@@ -132,5 +147,15 @@ class DatasetsControllerViewSupport
       titles.push("year is #{connective}#{prefs.years.join(' ')}")
     end
     !titles.empty? && "Datasets matching: #{titles.join(' and ')}"
+  end
+
+  # If the most recent user action was the "more years" expansion, we auto-set
+  # the focus to assist people who are using keyboard navigation
+  def set_focus?
+    prefs.user_action == 'more'
+  end
+
+  def show_more_years?
+    all_years.size > years.size
   end
 end
