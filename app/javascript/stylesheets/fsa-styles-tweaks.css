@@ -1,0 +1,7 @@
+.data-dot-food-landing .hero__background.hero__background--pattern {
+  background-image: url('../../../public/themes/custom/fsa/src/img/background/pattern.svg');
+}
+
+.data-dot-food-landing .hero .hero-heading {
+  background-color: inherit;
+}
