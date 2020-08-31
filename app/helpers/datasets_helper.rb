@@ -81,8 +81,10 @@ module DatasetsHelper
   # rubocop:disable Metrics/ParameterLists
   def dataset_filter_add(param_name, param, prefs, add, text, cls)
     dest = search_index_with_param(prefs, param_name, param, add)
+    inner_text = text.gsub(/<[^>]*>/, '')
+
     if add
-      link_to(text, dest, class: cls)
+      link_to(text, dest, class: cls, 'aria-label' => "Filter for datasets matching #{inner_text}")
     else
       tag.span(text, class: cls)
     end
