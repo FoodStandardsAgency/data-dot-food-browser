@@ -68,7 +68,7 @@ class ExceptionController < ApplicationController
   def setup_not_found_exception_view(exception)
     Rails.logger.debug(exception.exception)
     ExceptionControllerViewState.new(
-      "Not found: #{ex.exception.message}", 404, 'Page not found'
+      "Not found: #{exception&.exception&.message}", 404, 'Page not found'
     )
   end
 
