@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.1.14 - 2020-09-07 (Ian)
+
+- Fix for GH-96 (skip to main content not working on feedback form)
+- temporarily using a forked version of `fsastyles` due to Webpack issues
+
 ## 1.1.13 - 2020-08-27 (Bogdan)
 
 - Fixed focus reset issue when clicking "more years..."
