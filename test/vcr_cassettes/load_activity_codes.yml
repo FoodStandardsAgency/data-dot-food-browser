@@ -308,4 +308,97 @@ http_interactions:
         : \"Research\" ,\n    \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
         \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n  }\n   ]\n}\n\n"
   recorded_at: Fri, 28 Aug 2020 16:13:27 GMT
+- request:
+    method: get
+    uri: https://fsa-dev-catalog.epimorphics.net/catalog/data/activities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-transform, max-age=0, max-age=3600
+      content-type:
+      - application/json
+      date:
+      - Mon, 07 Sep 2020 09:56:51 GMT
+      expires:
+      - Mon, 07 Sep 2020 10:56:52 GMT
+      server:
+      - anon
+      vary:
+      - Accept
+      x-response-id:
+      - '4150'
+      content-length:
+      - '4186'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/activities.csv\", \"http://data.food.gov.uk/catalog/data/activities.rdf\",
+        \"http://data.food.gov.uk/catalog/data/activities.ttl\", \"http://data.food.gov.uk/catalog/data/activities.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/6\"
+        ,\n    \"inScheme\" : \"http://data.food.gov.uk/codes/organisation/activities\"
+        ,\n    \"label\" : \"Running the Organisation\" ,\n    \"narrower\" : [ {
+        \n      \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/6-1\"
+        ,\n      \"label\" : \"Financial\" ,\n      \"notation\" : \"6-1\"\n    }\n
+        \   , { \n      \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/6-2\"
+        ,\n      \"label\" : \"HR\" ,\n      \"notation\" : \"6-2\"\n    }\n    ,
+        { \n      \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/6-3\"
+        ,\n      \"label\" : \"Other\" ,\n      \"notation\" : \"6-3\"\n    }\n     ]
+        ,\n    \"notation\" : 6 ,\n    \"prefLabel\" : \"Running the Organisation\"
+        ,\n    \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
+        \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n  }\n  , { \n    \"@id\"
+        : \"http://data.food.gov.uk/codes/organisation/activities/5\" ,\n    \"inScheme\"
+        : \"http://data.food.gov.uk/codes/organisation/activities\" ,\n    \"label\"
+        : \"Enforcement\" ,\n    \"notation\" : 5 ,\n    \"prefLabel\" : \"Enforcement\"
+        ,\n    \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
+        \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n  }\n  , { \n    \"@id\"
+        : \"http://data.food.gov.uk/codes/organisation/activities/4\" ,\n    \"inScheme\"
+        : \"http://data.food.gov.uk/codes/organisation/activities\" ,\n    \"label\"
+        : \"Safety\" ,\n    \"notation\" : 4 ,\n    \"prefLabel\" : \"Safety\" ,\n
+        \   \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\", \"http://www.w3.org/2004/02/skos/core#Concept\"
+        ]\n  }\n  , { \n    \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/1\"
+        ,\n    \"inScheme\" : \"http://data.food.gov.uk/codes/organisation/activities\"
+        ,\n    \"label\" : \"Regulation\" ,\n    \"narrower\" : [ { \n      \"@id\"
+        : \"http://data.food.gov.uk/codes/organisation/activities/1-1\" ,\n      \"label\"
+        : \"Legislation\" ,\n      \"narrower\" : [ { \n        \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/1-1-1\"
+        ,\n        \"label\" : \"UK\" ,\n        \"notation\" : \"1-1-1\"\n      }\n
+        \     , { \n        \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/1-1-2\"
+        ,\n        \"label\" : \"EU\" ,\n        \"notation\" : \"1-1-2\"\n      }\n
+        \     , { \n        \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/1-1-3\"
+        ,\n        \"label\" : \"WHO\" ,\n        \"notation\" : \"1-1-3\"\n      }\n
+        \     , { \n        \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/1-1-4\"
+        ,\n        \"label\" : \"Other\" ,\n        \"notation\" : \"1-1-4\"\n      }\n
+        \      ] ,\n      \"notation\" : \"1-1\"\n    }\n    , { \n      \"@id\" :
+        \"http://data.food.gov.uk/codes/organisation/activities/1-2\" ,\n      \"label\"
+        : \"Non-Legislation\" ,\n      \"notation\" : \"1-2\"\n    }\n     ] ,\n    \"notation\"
+        : 1 ,\n    \"prefLabel\" : \"Regulation\" ,\n    \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
+        \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n  }\n  , { \n    \"@id\"
+        : \"http://data.food.gov.uk/codes/organisation/activities/3\" ,\n    \"inScheme\"
+        : \"http://data.food.gov.uk/codes/organisation/activities\" ,\n    \"label\"
+        : \"Policy\" ,\n    \"notation\" : 3 ,\n    \"prefLabel\" : \"Policy\" ,\n
+        \   \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\", \"http://www.w3.org/2004/02/skos/core#Concept\"
+        ]\n  }\n  , { \n    \"@id\" : \"http://data.food.gov.uk/codes/organisation/activities/2\"
+        ,\n    \"inScheme\" : \"http://data.food.gov.uk/codes/organisation/activities\"
+        ,\n    \"label\" : \"Research\" ,\n    \"notation\" : 2 ,\n    \"prefLabel\"
+        : \"Research\" ,\n    \"type\" : [ \"http://data.food.gov.uk/def/organisation/Activity\",
+        \"http://www.w3.org/2004/02/skos/core#Concept\" ]\n  }\n   ]\n}\n\n"
+  recorded_at: Mon, 07 Sep 2020 09:56:52 GMT
 recorded_with: VCR 6.0.0
