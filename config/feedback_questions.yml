@@ -1,6 +1,6 @@
 -
   id: purpose
-  prompt: "Please tell us what you would like do with our data:"
+  prompt: "Let us know what you would like do with our data:"
 -
   id: working-ok
   prompt: "What is working well at the moment?"
@@ -8,12 +8,8 @@
   id: improve
   prompt: "What could we do better?"
 -
-  id: research
-  prompt: "We are working on a new version of this site. Would you be willing to have a brief chat with one of our researchers to help us find out what you need?"
-  input_type: yesno
--
   id: contact
-  prompt: "If you would like a response to your comments, or are willing to participate in the study, please provide your email address:"
+  prompt: "If you would us to reply to your comments, please provide your email address:"
   input_type: email
 -
   id: referer
