@@ -3,6 +3,6 @@
 class Version
   MAJOR = 1
   MINOR = 1
-  PATCH = 13
+  PATCH = 14
   VERSION = "#{MAJOR}.#{MINOR}.#{PATCH}"
 end
