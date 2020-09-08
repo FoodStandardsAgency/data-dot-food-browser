@@ -2,6 +2,14 @@
   background-image: url('/catalog/themes/custom/fsa/src/img/background/pattern.svg');
 }
 
-.data-dot-food-landing .hero .hero-heading {
-  background-color: inherit;
+.data-dot-food-landing .hero .hero__background {
+  background-color: var(--colour-medium-blue);
+}
+
+.promo__content {
+  background-color: white;
+}
+
+#featured-datasets-heading {
+  background-image: none;
 }
