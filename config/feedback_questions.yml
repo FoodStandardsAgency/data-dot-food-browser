@@ -1,6 +1,6 @@
 -
   id: purpose
-  prompt: "Let us know what you would like do with our data:"
+  prompt: "Let us know what you would like to do with our data:"
 -
   id: working-ok
   prompt: "What is working well at the moment?"
@@ -9,7 +9,7 @@
   prompt: "What could we do better?"
 -
   id: contact
-  prompt: "If you would us to reply to your comments, please provide your email address:"
+  prompt: "If you would like us to reply, please provide your email address:"
   input_type: email
 -
   id: referer
