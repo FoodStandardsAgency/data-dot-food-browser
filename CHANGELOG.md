@@ -1,5 +1,11 @@
 # data-dot-food catalog browser change history
 
+## 1.1.15 - 2020-09-97 (Ian)
+
+- Various WCAG fixes on the feedback form
+- Removed question on user-research participation from feedback form
+- Added a lighthouse target to the scripts in `package.json`
+
 ## 1.1.14 - 2020-09-07 (Ian)
 
 - Fix for GH-96 (skip to main content not working on feedback form)

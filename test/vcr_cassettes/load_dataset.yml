@@ -1104,17 +1104,17 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Mon, 07 Sep 2020 09:57:03 GMT
+      - Tue, 08 Sep 2020 13:18:51 GMT
       expires:
-      - Mon, 07 Sep 2020 10:57:03 GMT
+      - Tue, 08 Sep 2020 14:18:51 GMT
       server:
       - anon
       vary:
       - Accept
       x-response-id:
-      - '4171'
-      transfer-encoding:
-      - chunked
+      - '7479'
+      content-length:
+      - '28748'
       connection:
       - Close
     body:
@@ -1422,5 +1422,5 @@ http_interactions:
         : \"2012-04-01\" ,\n    \"temporal\" : \"2012-04-01/2017-12-31\" ,\n    \"title\"
         : \"Register of Gifts and Hospitality\" ,\n    \"type\" : \"http://vocab.epimorphics.com/def/catalog/Dataset\"\n
         \ }\n   ]\n}\n\n"
-  recorded_at: Mon, 07 Sep 2020 09:57:03 GMT
+  recorded_at: Tue, 08 Sep 2020 13:18:51 GMT
 recorded_with: VCR 6.0.0

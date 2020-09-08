@@ -37,7 +37,12 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "lighthouse": "^6.3.0",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "scripts": {
+    "lighthouse.json": "npx lighthouse --chrome-flags='--headless' --output=json --output-path=lighthouse-report.json 'http://localhost:3000' ",
+    "lighthouse": "npx lighthouse --chrome-flags='--headless' --view 'http://localhost:3000'"
   }
 }
