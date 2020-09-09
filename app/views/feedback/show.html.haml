@@ -40,7 +40,8 @@
                         - elsif question.input_type
                           %label.control-label{ for: question.id }
                             = question.prompt
-                          %input.form-control{ type: question.input_type, id: question.id, name: question.id, autocomplete: 'on' }
+                          - autocomplete_type = question.input_type == 'email' ? 'email' : 'on'
+                          %input.form-control{ type: question.input_type, id: question.id, name: question.id, autocomplete: autocomplete_type }
                         - else
                           %label.control-label{ for: question.id }
                             = question.prompt
