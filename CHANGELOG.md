@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.15 - 2020-09-09 (Ian)
+
+- Added `main` landmark to 404 page, to resolve warnings from Axe and Silktide
+
 ## 1.1.15 - 2020-09-97 (Ian)
 
 - Various WCAG fixes on the feedback form
