@@ -1,6 +1,10 @@
 # data-dot-food catalog browser change history
 
-## 1.1.15 - 2020-09-09 (Ian)
+## 1.1.17 - 2020-09-09 (Ian)
+
+- Change autocomplete attribute to `email` to resolve warning from Silktide
+
+## 1.1.16 - 2020-09-09 (Ian)
 
 - Added `main` landmark to 404 page, to resolve warnings from Axe and Silktide
 
