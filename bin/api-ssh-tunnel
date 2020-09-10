@@ -4,4 +4,10 @@ HOST=${HOST:-fsa-staging-catalog}
 
 echo "Starting ssh tunnel to ${HOST}:8080"
 ssh -f $HOST -L 8080:localhost:8080 -N
-ps -adef | grep "ssh.*${HOST}" | grep -v grep
+ssh_ps=`ps -adef | grep "ssh.*${HOST}" | grep -v grep`
+
+echo $ssh_ps
+echo
+echo To stop this ssh tunnel, use:
+echo -n "  kill -HUP "
+echo "$ssh_ps" | sed -rn 's/[a-z]+ *([0-9]+).*/\1/p'
