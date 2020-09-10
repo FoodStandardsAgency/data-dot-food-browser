@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.1.18 - 2020-09-10 (Ian)
+
+- Updated JS and Ruby dependencies to resolve reported CVE vulnerabilities
+
 ## 1.1.17 - 2020-09-09 (Ian)
 
 - Change autocomplete attribute to `email` to resolve warning from Silktide
