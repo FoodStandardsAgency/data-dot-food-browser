@@ -48,7 +48,7 @@ In future, we will rely on accessing the API via a URL passed through
 the environment.
 
 The application expects the API to be running on `localhost:8080`.
-The script `bin/sr-tunnel-daemon` wraps a simple ssh command to proxy
+The script `bin/api-ssh-tunnel` wraps a simple ssh command to proxy
 the staging API to `localhost`.
 
 To get the proxy running, you will need the appropriate ssh configuration.
