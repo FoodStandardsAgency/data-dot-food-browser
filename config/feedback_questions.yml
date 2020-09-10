@@ -11,6 +11,7 @@
   id: contact
   prompt: "If you would like us to reply, please provide your email address:"
   input_type: email
+  autocomplete_type: email
 -
   id: referer
   prompt: "Which page were you looking at?"
