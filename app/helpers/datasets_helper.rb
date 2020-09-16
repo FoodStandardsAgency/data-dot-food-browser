@@ -108,17 +108,8 @@ module DatasetsHelper
       if add
         prefs.to_h.merge(params)
       else
-        prefs.to_h.except(params.keys)
+        prefs.to_h.except(*params.keys)
       end
-    # params_ = prefs.to_h
-    # params.each do |key, val|
-    #   params_ = if add
-    #               params_.with_param(key.to_sym, val)
-    #             else
-    #               params_.without_param(key.to_sym)
-    #             end
-    #   byebug
-    # end
 
     { controller: 'datasets', action: 'index', anchor: 'results' }.merge(params_)
   end
@@ -131,8 +122,8 @@ module DatasetsHelper
 
   def remove_filter_button(prefs, filter_type, filter_value)
     dest = search_index_with_param(prefs, filter_type, filter_value, false)
-    link_to(dest, class: 'c-filter-remove-button') do
-      tag.span('Remove filter', class: 'u-sr-only')
+    link_to(dest, class: 'c-filter-remove-button', title: "Remove #{filter_type} #{filter_value}") do
+      tag.span('Remove filter', class: 'u-sr-only visually-hidden')
     end
   end
 end
