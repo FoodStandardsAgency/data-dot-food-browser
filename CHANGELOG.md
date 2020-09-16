@@ -1,5 +1,11 @@
 # data-dot-food catalog browser change history
 
+## 1.2.0 - 2020-09-16 (Ian)
+
+- Update minor release to mark that this is the WCAG compliance release,
+  September 2020
+- added link to client-supplied accessibility statement
+
 ## 1.1.18 - 2020-09-10 (Ian)
 
 - Updated JS and Ruby dependencies to resolve reported CVE vulnerabilities
