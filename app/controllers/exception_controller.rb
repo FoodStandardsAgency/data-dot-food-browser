@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 # Simple view state container to pass to exception view
 class ExceptionControllerViewState
-  attr_reader :msg
-  attr_reader :status
+  attr_reader :msg, :status
 
   def initialize(msg, status, title = nil)
     @msg = msg
@@ -20,7 +21,7 @@ end
 
 # Controller that also acts a Rack middleware app to
 # handle exceptions
-class ExceptionController < ActionController::Base
+class ExceptionController < ApplicationController
   layout 'application'
 
   def render_error
@@ -34,13 +35,13 @@ class ExceptionController < ActionController::Base
     ex = ActionController::RoutingError.new('')
     @view_state = view_state(ex)
 
-    render 'error_page', status: 404
+    render 'error_page', status: :not_found
   end
 
   private
 
-  def view_state(ex)
-    setup_view(ActionDispatch::ExceptionWrapper.new(request.env, ex))
+  def view_state(exception)
+    setup_view(ActionDispatch::ExceptionWrapper.new(request.env, exception))
   end
 
   def setup_view(wex)
@@ -55,8 +56,8 @@ class ExceptionController < ActionController::Base
     end
   end
 
-  def setup_service_exception_view(ex)
-    svc_exception = ex.exception
+  def setup_service_exception_view(exception)
+    svc_exception = exception.exception
     Rails.logger.debug("ServiceException #{svc_exception.message} \
       #{svc_exception.status} \
       #{svc_exception.service_message} from #{svc_exception.source}")
@@ -64,17 +65,17 @@ class ExceptionController < ActionController::Base
                                      'Something has gone wrong')
   end
 
-  def setup_not_found_exception_view(ex)
-    Rails.logger.debug(ex.exception)
+  def setup_not_found_exception_view(exception)
+    Rails.logger.debug(exception.exception)
     ExceptionControllerViewState.new(
-      "Not found: #{ex.exception.message}", 404, 'Page not found'
+      "Not found: #{exception&.exception&.message}", 404, 'Page not found'
     )
   end
 
-  def setup_default_exception_view(ex)
-    Rails.logger.debug(ex.exception)
+  def setup_default_exception_view(exception)
+    Rails.logger.debug(exception.exception)
     ExceptionControllerViewState.new(
-      "Sorry, something went wrong: #{ex.exception.message}", 500,
+      "Sorry, something went wrong: #{exception.exception.message}", 500,
       'Something has gone wrong (500)'
     )
   end

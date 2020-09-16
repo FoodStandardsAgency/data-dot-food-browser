@@ -32,7 +32,7 @@ class DatasetsController < ApplicationController
   end
 
   def with_compact_view(params)
-    "_view=compact#{params && !params.empty? ? '&' : ''}#{params}"
+    "_view=compact#{params.present? ? '&' : ''}#{params}"
   end
 
   def view_support(params)
@@ -46,7 +46,7 @@ class DatasetsController < ApplicationController
   end
 
   def filter_datasets_by_year(datasets, prefs)
-    if prefs.years && !prefs.years.empty?
+    if prefs.years.present?
       datasets.select do |dataset|
         dataset.years.any? { |year| prefs.years.include?(year) }
       end
@@ -71,10 +71,7 @@ class DatasetsControllerViewSupport
   SUMMARY_YEARS = 5
 
   attr_reader :prefs
-  attr_accessor :datasets
-  attr_accessor :dataset
-  attr_accessor :activity_codes
-  attr_accessor :show_highlighted_datasets
+  attr_accessor :datasets, :dataset, :activity_codes, :show_highlighted_datasets
 
   def initialize(user_preferences)
     @prefs = user_preferences
@@ -96,22 +93,41 @@ class DatasetsControllerViewSupport
     prefs.end_date
   end
 
+  def year_options # rubocop:disable Metrics/MethodLength
+    options = years.map do |year|
+      {
+        type: 'checkbox',
+        class: 'checkbox',
+        name: 'year[]',
+        id: "year-#{year}",
+        value: year,
+        checked: check_year?(year)
+      }
+    end
+
+    if set_focus?
+      focus_year = [years.size - 1, SUMMARY_YEARS].min
+      options[focus_year][:class] = 'checkbox u-focus-on-load'
+    end
+
+    options
+  end
+
   def years
-    yrs = all_years
-    prefs.all_years? ? yrs : yrs.slice(0, SUMMARY_YEARS)
+    prefs.all_years? ? all_years : all_years.slice(0, SUMMARY_YEARS)
   end
 
   def all_years
-    datasets
-      .map(&:years)
-      .flatten
-      .uniq
-      .sort
-      .reverse
+    @all_years ||= datasets
+                   .map(&:years)
+                   .flatten
+                   .uniq
+                   .sort
+                   .reverse
   end
 
   def check_year?(year)
-    (prefs.years&.include?(year)) || nil
+    prefs.years&.include?(year) || nil
   end
 
   def filter_defined?
@@ -122,14 +138,24 @@ class DatasetsControllerViewSupport
     @show_highlighted_datasets
   end
 
-  def page_title # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity
+  def page_title # rubocop:disable Metrics/AbcSize
     titles = []
-    titles.push("search for '#{search}'") if search && !search.empty?
+    titles.push("search for '#{search}'") if search.present?
 
     if !prefs.all_years? && prefs.years
       connective = prefs.years.length > 1 ? 'one of ' : ''
       titles.push("year is #{connective}#{prefs.years.join(' ')}")
     end
     !titles.empty? && "Datasets matching: #{titles.join(' and ')}"
+  end
+
+  # If the most recent user action was the "more years" expansion, we auto-set
+  # the focus to assist people who are using keyboard navigation
+  def set_focus?
+    prefs.user_action == 'more'
+  end
+
+  def show_more_years?
+    all_years.size > years.size
   end
 end

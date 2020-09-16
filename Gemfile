@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -40,9 +42,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-if RUBY_PLATFORM=~ /win32/
-  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-end
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] if RUBY_PLATFORM =~ /win32/
 
 gem 'haml'
 # gem 'fsa_pattern_library', git: 'git@codebasehq.com:epimorphics/fsa-projects/fsa-pattern-library.git'
@@ -55,4 +55,4 @@ gem 'yajl-ruby', require: 'yajl'
 gem 'aws-sdk-rails'
 gem 'sentry-raven'
 
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'

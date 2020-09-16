@@ -1,12 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+echo "** Note: Re-named to api-ssh-tunnel"
+echo
 
-HOST=${HOST:-fsa-staging-catalog}
-
-while true; do
-  ssh_running=`ps -fC ssh | grep "$HOST"`
-  if [[ "${ssh_running:-null}" = null ]];then
-    echo "Starting ssh tunnel"
-    ssh -f $HOST -L 8080:localhost:8080 -N
-  fi
-  sleep 5
-done
+bindir=`dirname $0`
+. ${bindir}/api-ssh-tunnel

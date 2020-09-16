@@ -1,0 +1,19 @@
+name: Rails tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Install dependencies (bundle)
+      run: bundle install
+    - name: Install dependencies (yarn)
+      run: yarn install
+    - name: Run tests
+      run: FSA_DATA_DOT_FOOD_API_URL=http://fsa-staging-catalog.epimorphics.net rails test

@@ -1,7 +1,7 @@
-.hero__secondary-navigation
+%nav.hero__secondary-navigation{ 'aria-label' => 'breadcrumbs' }
   #block-breadcrumbs.breadcrumb
     %h2.visually-hidden
-      Breadcrumb
+      Breadcrumbs
     - path.each do |path_elem|
       - if path_elem.is_a?(Hash)
         .breadcrumb__item

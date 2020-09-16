@@ -1,11 +1,11 @@
 - dataset = @view_state.dataset
-.layout.hero-wrapper
+.layout.hero-wrapper{ role: 'complementary' }
   .layout__container
     .layout__content.hero-wrapper__content
       %section.hero
         - path = [{l: 'Home', u: {action: :index}}, 'Dataset details']
         = render partial: "breadcrumbs", locals: {path: path}
-.layout.layout--main.layout--with-no-sidebar
+%main#main-content.layout.layout--main.layout--with-no-sidebar
   .layout__container.layout__container--main
     .layout__content.layout__content--main.layout__content--header.js-content
       #block-pagetitle.c-catalog-entry--heading
@@ -23,26 +23,26 @@
         .important
           - if dataset.key?(:issued)
             %p
-              Issued: 
+              Issued:
               %strong
                 = dataset.issue_date.strftime("%e %b, %Y")
           - if dataset.key?(:modified)
             %p
-              Modified: 
+              Modified:
               %strong
                 = dataset.modification_date.strftime("%e %b, %Y")
           %p
-            Update period: 
+            Update period:
             %strong
               = dataset.update_period
           - if dataset.key?(:license)
             %p
-              License: 
+              License:
               %strong
                 %a{ href: dataset.license_uri }
                   = dataset.license_name
           %p
-            Keywords: 
+            Keywords:
             %span
               = render partial: "keywords_list", locals: {dataset: dataset, show_keywords: true, show_activities: false}
 

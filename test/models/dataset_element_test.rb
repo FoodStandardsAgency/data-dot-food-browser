@@ -9,7 +9,7 @@ class DatasetElementTest < ActiveSupport::TestCase
   let :element_fixture do
     VCR.use_cassette('load_dataset_element') do
       api = CatalogApi.new
-      api.dataset_element('c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d') # rubocop:disable Metrics/LineLength
+      api.dataset_element('c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d')
     end
   end
 
@@ -75,6 +75,6 @@ class DatasetElementTest < ActiveSupport::TestCase
 
     k = DatasetElement.new({}, nil).sort_key
     k.must_be_kind_of Date
-    k.year.must_equal Time.now.year
+    k.year.must_equal Time.zone.now.year
   end
 end

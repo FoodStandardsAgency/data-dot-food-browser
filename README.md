@@ -48,7 +48,7 @@ In future, we will rely on accessing the API via a URL passed through
 the environment.
 
 The application expects the API to be running on `localhost:8080`.
-The script `bin/sr-tunnel-daemon` wraps a simple ssh command to proxy
+The script `bin/api-ssh-tunnel` wraps a simple ssh command to proxy
 the staging API to `localhost`.
 
 To get the proxy running, you will need the appropriate ssh configuration.
@@ -80,6 +80,8 @@ FSA_DATA_DOT_FOOD_API_URL=http://18.202.57.165:8080 rails server
 ```
 
 ## Running the tests
+
+Tests are currently being ran on `push`, or by doing a pull request. If you wish to run the tests locally please read the below instructions.
 
 The unit tests are run with `rails test`:
 

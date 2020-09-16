@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails'
@@ -17,6 +19,7 @@ require 'rails/test_unit/railtie'
 Bundler.require(*Rails.groups)
 
 module DataCatalogBrowser
+  # :nodoc:
   class Application < Rails::Application
     # Settings in config/environments/* take precedence
     # Application configuration should go into files in config/initializers

@@ -1,14 +1,14 @@
-.layout.layout--main.layout--with-no-sidebar
+%main#main-content.layout.layout--main.layout--with-no-sidebar
   .layout__container.layout__container--main
     .layout__content.layout__content--main.js-content
       %div
         %div
           %h1
-            %span.field.field__title 
+            %span.field.field__title
               We welcome your feedback
           %p
             Please help us to make our open data service more effective by telling us what is working
-            well, or what we need to improve.        
+            well, or what we need to improve.
       %article.c-contact-form
         %div
           .field.field__webform
@@ -21,9 +21,8 @@
 
                   - @view_state.each_q do |question|
                     - unless question.hidden?
-                      .form-group
+                      %p.form-group
                         - if question.input_type == 'yesno'
-                          %br
                           %fieldset.radios
                             %legend
                               %span
@@ -41,34 +40,28 @@
                         - elsif question.input_type
                           %label.control-label{ for: question.id }
                             = question.prompt
-                          %input.form-control{ type: question.input_type, id: question.id, name: question.id }
+                          %input.form-control{ type: question.input_type, id: question.id, name: question.id, autocomplete: question.autocomplete_type }
                         - else
                           %label.control-label{ for: question.id }
                             = question.prompt
-                          %textarea.form-control{ rows: 5, id: question.id, name: question.id }
+                          %textarea.form-control{ rows: 5, id: question.id, name: question.id, autocomplete: 'on' }
                   %div{class: ['form-actions', 'text-align:center']}
                     %button.button{ type: :submit }
                       Send feedback
 
-            %h3.c-contact-form__privacy-notice How we will use your personal data
+            %h2.c-contact-form__privacy-notice How we will use your personal data
             %p.text-muted.col--fluid-two-thirds
-              In providing your email address in the feedback form you consented to it being used to
+              In providing your email address in the feedback form you consent to it being used to
               contact you about the data catalog feedback.  You are able to withdraw this consent at any
-              time by getting in touch with us, or with the Food Standards Agency (FSA) via
-              = mail_to('data@food.gov.uk')
-            %p.text-muted.col--fluid-two-thirds
-              The FSA is the Controller of this data and
+              time by getting in touch with the Food Standards Agency (FSA) via
+              = succeed '.' do
+                = mail_to('data@food.gov.uk')
+              The FSA is the Controller of this data, and
               = link_to('Epimorphics Ltd', 'https://www.epimorphics.com')
-              is the processor.  This means
-              that Epimorphics is conducting this research and using contact details on instruction of the FSA
-              for this purpose only. Epimorphics will not use it for any other purpose, or share it with any
-              other third parties.
-            %p.text-muted.col--fluid-two-thirds
-              We will retain your contact details only for as long as it is necessary to complete the
-              user research (or no longer than 12 months), after which it will be destroyed securely.
-              All research findings will be anonymised and may form part of FSA reports.
+              is the processor.
             %p.text-muted.col--fluid-two-thirds
               If you have any enquiries about the way your contact details are being used, please contact
               us.  For more information about the way the FSA processes personal data
-              and information about your rights, please refer to the on the
-              = link_to('FSA website', 'https://www.food.gov.uk/privacy-policy')
+              and information about your rights, please refer to the privacy policy on the
+              = succeed '.' do
+                = link_to('FSA website', 'https://www.food.gov.uk/privacy-policy')

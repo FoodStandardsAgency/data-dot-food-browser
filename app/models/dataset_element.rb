@@ -52,6 +52,6 @@ class DatasetElement < CatalogApiObject
   private
 
   def default_sort_key
-    Date.today
+    Time.zone.today
   end
 end

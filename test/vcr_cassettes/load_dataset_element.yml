@@ -2,6 +2,193 @@
 http_interactions:
 - request:
     method: get
+    uri: http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      content-type:
+      - text/html
+      date:
+      - Fri, 31 Jul 2020 07:54:47 GMT
+      location:
+      - https://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d
+      server:
+      - nginx
+      content-length:
+      - '178'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+  recorded_at: Fri, 31 Jul 2020 07:54:47 GMT
+- request:
+    method: get
+    uri: https://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-transform, max-age=0, max-age=3600
+      content-type:
+      - application/json
+      date:
+      - Fri, 31 Jul 2020 07:54:47 GMT
+      expires:
+      - Fri, 31 Jul 2020 08:54:47 GMT
+      server:
+      - nginx
+      vary:
+      - Accept
+      x-response-id:
+      - '1518665'
+      content-length:
+      - '3673'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.rdf\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.ttl\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\"
+        ,\n    \"dataset\" : { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7\"
+        ,\n      \"accrualPeriodicity\" : \"R/P1Y\" ,\n      \"activity\" : \"http://data.food.gov.uk/codes/organisation/activities/6-3\"
+        ,\n      \"description\" : \"A summary of data sharing agreements between
+        the FSA and other organisations.\" ,\n      \"directorate\" : \"http://data.food.gov.uk/codes/organisation/directorates/D05\"
+        ,\n      \"elements\" : [ \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/9b119dc7-cec5-4ae4-b1e2-510864a01166\"
+        ] ,\n      \"endDate\" : \"2017-12-31\" ,\n      \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7\"
+        ,\n      \"issued\" : \"2017-01-09\" ,\n      \"keyword\" : [ \"agreement\",
+        \"personal data\" ] ,\n      \"keywords\" : [ \"http://data.food.gov.uk/catalog/data/keyword/agreement\",
+        \"http://data.food.gov.uk/catalog/data/keyword/personal-data\" ] ,\n      \"landingPage\"
+        : \"http://fsadata.github.io/data-sharing-register\" ,\n      \"license\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n      \"modified\" : \"2018-02-09\" ,\n      \"published\" : true ,\n      \"publisher\"
+        : \"http://www.food.gov.uk/#id\" ,\n      \"startDate\" : \"2016-01-01\" ,\n
+        \     \"temporal\" : \"2016-01-01/2017-12-31\" ,\n      \"title\" : \"Data
+        Sharing Register\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Dataset\"\n
+        \   }\n     ,\n    \"description\" : \"This dataset is an abridged version
+        of the Information Management and Security Team log of Data Sharing Agreements.
+        The log is used to record, track and report on the various data sharing agreements
+        made by the FSA with other organisations to share information compliantly
+        in 2016.\" ,\n    \"distribution\" : { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n      \"downloadURL\" : \"https://fsadata.github.io/data-sharing-register/data/data-sharing-register-for-2016.csv\"
+        ,\n      \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n      \"mediaType\" : \"text/csv\" ,\n      \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \   }\n     ,\n    \"endDate\" : \"2016-12-31\" ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\"
+        ,\n    \"startDate\" : \"2016-01-01\" ,\n    \"temporal\" : \"2016-01-01/2016-12-31\"
+        ,\n    \"title\" : \"Data Sharing Register for 2016\" ,\n    \"type\" : [
+        \"http://vocab.epimorphics.com/def/catalog/Element\", \"http://www.w3.org/ns/dcat#Dataset\"
+        ]\n  }\n   ]\n}\n\n"
+  recorded_at: Fri, 31 Jul 2020 07:54:47 GMT
+- request:
+    method: get
+    uri: http://fsa-staging-catalog.epimorphics.net/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Tue, 25 Aug 2020 15:50:17 GMT
+      server:
+      - anon
+      vary:
+      - Accept
+      x-response-id:
+      - '287'
+      cache-control:
+      - no-transform, max-age=0, max-age=3600
+      content-type:
+      - application/json
+      content-length:
+      - '3673'
+      expires:
+      - Tue, 25 Aug 2020 16:50:18 GMT
+      access-control-allow-origin:
+      - "*"
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.rdf\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.ttl\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\"
+        ,\n    \"dataset\" : { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7\"
+        ,\n      \"accrualPeriodicity\" : \"R/P1Y\" ,\n      \"activity\" : \"http://data.food.gov.uk/codes/organisation/activities/6-3\"
+        ,\n      \"description\" : \"A summary of data sharing agreements between
+        the FSA and other organisations.\" ,\n      \"directorate\" : \"http://data.food.gov.uk/codes/organisation/directorates/D05\"
+        ,\n      \"elements\" : [ \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/9b119dc7-cec5-4ae4-b1e2-510864a01166\"
+        ] ,\n      \"endDate\" : \"2017-12-31\" ,\n      \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7\"
+        ,\n      \"issued\" : \"2017-01-09\" ,\n      \"keyword\" : [ \"agreement\",
+        \"personal data\" ] ,\n      \"keywords\" : [ \"http://data.food.gov.uk/catalog/data/keyword/agreement\",
+        \"http://data.food.gov.uk/catalog/data/keyword/personal-data\" ] ,\n      \"landingPage\"
+        : \"http://fsadata.github.io/data-sharing-register\" ,\n      \"license\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n      \"modified\" : \"2018-02-09\" ,\n      \"published\" : true ,\n      \"publisher\"
+        : \"http://www.food.gov.uk/#id\" ,\n      \"startDate\" : \"2016-01-01\" ,\n
+        \     \"temporal\" : \"2016-01-01/2017-12-31\" ,\n      \"title\" : \"Data
+        Sharing Register\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Dataset\"\n
+        \   }\n     ,\n    \"description\" : \"This dataset is an abridged version
+        of the Information Management and Security Team log of Data Sharing Agreements.
+        The log is used to record, track and report on the various data sharing agreements
+        made by the FSA with other organisations to share information compliantly
+        in 2016.\" ,\n    \"distribution\" : { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n      \"downloadURL\" : \"https://fsadata.github.io/data-sharing-register/data/data-sharing-register-for-2016.csv\"
+        ,\n      \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n      \"mediaType\" : \"text/csv\" ,\n      \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \   }\n     ,\n    \"endDate\" : \"2016-12-31\" ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\"
+        ,\n    \"startDate\" : \"2016-01-01\" ,\n    \"temporal\" : \"2016-01-01/2016-12-31\"
+        ,\n    \"title\" : \"Data Sharing Register for 2016\" ,\n    \"type\" : [
+        \"http://vocab.epimorphics.com/def/catalog/Element\", \"http://www.w3.org/ns/dcat#Dataset\"
+        ]\n  }\n   ]\n}\n\n"
+  recorded_at: Tue, 25 Aug 2020 15:50:18 GMT
+- request:
+    method: get
     uri: http://18.202.57.165:8080/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d
     body:
       encoding: US-ASCII
@@ -19,7 +206,7 @@ http_interactions:
       vary:
       - Accept
       x-response-id:
-      - '143'
+      - '704'
       cache-control:
       - no-transform, max-age=0
       content-type:
@@ -27,7 +214,7 @@ http_interactions:
       content-length:
       - '3673'
       date:
-      - Tue, 12 May 2020 16:45:14 GMT
+      - Fri, 28 Aug 2020 16:13:26 GMT
       connection:
       - close
       server:
@@ -72,6 +259,82 @@ http_interactions:
         ,\n    \"title\" : \"Data Sharing Register for 2016\" ,\n    \"type\" : [
         \"http://vocab.epimorphics.com/def/catalog/Element\", \"http://www.w3.org/ns/dcat#Dataset\"
         ]\n  }\n   ]\n}\n\n"
-    http_version: null
-  recorded_at: Tue, 12 May 2020 16:45:14 GMT
-recorded_with: VCR 5.1.0
+  recorded_at: Fri, 28 Aug 2020 16:13:27 GMT
+- request:
+    method: get
+    uri: https://fsa-dev-catalog.epimorphics.net/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-transform, max-age=0, max-age=3600
+      content-type:
+      - application/json
+      date:
+      - Wed, 16 Sep 2020 15:32:01 GMT
+      expires:
+      - Wed, 16 Sep 2020 16:32:02 GMT
+      server:
+      - anon
+      vary:
+      - Accept
+      x-response-id:
+      - '20761'
+      content-length:
+      - '3673'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "{ \n  \"@context\" : \"http://data.food.gov.uk/catalog/meta/context.jsonld\"
+        ,\n  \"meta\" : { \n    \"publisher\" : \"Food Standards Agency\" ,\n    \"licence\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n    \"documentation\" : \"http://data.food.gov.uk/catalog/doc\" ,\n    \"version\"
+        : \"0.0\" ,\n    \"comment\" : \"Status: Alpha service\" ,\n    \"hasFormat\"
+        : [ \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.rdf\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.ttl\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d.html\"
+        ]\n  }\n   ,\n  \"items\" : [ { \n    \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\"
+        ,\n    \"dataset\" : { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7\"
+        ,\n      \"accrualPeriodicity\" : \"R/P1Y\" ,\n      \"activity\" : \"http://data.food.gov.uk/codes/organisation/activities/6-3\"
+        ,\n      \"description\" : \"A summary of data sharing agreements between
+        the FSA and other organisations.\" ,\n      \"directorate\" : \"http://data.food.gov.uk/codes/organisation/directorates/D05\"
+        ,\n      \"elements\" : [ \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\",
+        \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/9b119dc7-cec5-4ae4-b1e2-510864a01166\"
+        ] ,\n      \"endDate\" : \"2017-12-31\" ,\n      \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7\"
+        ,\n      \"issued\" : \"2017-01-09\" ,\n      \"keyword\" : [ \"agreement\",
+        \"personal data\" ] ,\n      \"keywords\" : [ \"http://data.food.gov.uk/catalog/data/keyword/agreement\",
+        \"http://data.food.gov.uk/catalog/data/keyword/personal-data\" ] ,\n      \"landingPage\"
+        : \"http://fsadata.github.io/data-sharing-register\" ,\n      \"license\"
+        : \"http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\"
+        ,\n      \"modified\" : \"2018-02-09\" ,\n      \"published\" : true ,\n      \"publisher\"
+        : \"http://www.food.gov.uk/#id\" ,\n      \"startDate\" : \"2016-01-01\" ,\n
+        \     \"temporal\" : \"2016-01-01/2017-12-31\" ,\n      \"title\" : \"Data
+        Sharing Register\" ,\n      \"type\" : \"http://vocab.epimorphics.com/def/catalog/Dataset\"\n
+        \   }\n     ,\n    \"description\" : \"This dataset is an abridged version
+        of the Information Management and Security Team log of Data Sharing Agreements.
+        The log is used to record, track and report on the various data sharing agreements
+        made by the FSA with other organisations to share information compliantly
+        in 2016.\" ,\n    \"distribution\" : { \n      \"@id\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n      \"downloadURL\" : \"https://fsadata.github.io/data-sharing-register/data/data-sharing-register-for-2016.csv\"
+        ,\n      \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
+        ,\n      \"mediaType\" : \"text/csv\" ,\n      \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
+        \   }\n     ,\n    \"endDate\" : \"2016-12-31\" ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/dataset/c27423b7-775c-4220-a626-638fecd409a7/element/57bee23ec56bb56904388aad33176a5d\"
+        ,\n    \"startDate\" : \"2016-01-01\" ,\n    \"temporal\" : \"2016-01-01/2016-12-31\"
+        ,\n    \"title\" : \"Data Sharing Register for 2016\" ,\n    \"type\" : [
+        \"http://vocab.epimorphics.com/def/catalog/Element\", \"http://www.w3.org/ns/dcat#Dataset\"
+        ]\n  }\n   ]\n}\n\n"
+  recorded_at: Wed, 16 Sep 2020 15:32:02 GMT
+recorded_with: VCR 6.0.0
