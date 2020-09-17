@@ -16,6 +16,4 @@ jobs:
     - name: Install dependencies (yarn)
       run: yarn install
     - name: Run Lighthouse
-      run: |
-        yarn global add @lhci/cli
-        lhci autorun
+      run: yarn run lhci autorun
