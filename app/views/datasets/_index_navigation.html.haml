@@ -38,7 +38,7 @@
             %li.c-dataset-nav-keyword
               %input{ type: :hidden, name: :keyword, value: kw}
               = kw
-              = remove_filter_button(@view_state.prefs, :keyword, kw)
+              = remove_filter_button(@view_state.prefs, 'keyword', kw)
 
     - if @view_state.prefs.activity
       .form-group.o-datasets-nav--keywords
@@ -49,7 +49,7 @@
           %li.c-dataset-nav-keyword
             %input{ type: :hidden, name: :activity, value: activity}
             = @view_state.activity_codes.full_label(id: activity)
-            = remove_filter_button(@view_state.prefs, :activity, activity)
+            = remove_filter_button(@view_state.prefs, 'activity', activity)
 
 
     %div

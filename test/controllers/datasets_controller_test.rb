@@ -33,6 +33,17 @@ class DatasetsControllerTest < ActionDispatch::IntegrationTest
           assert_select('.u-focus-on-load')
         end
       end
+
+      it 'should allow the user to remove a filter' do
+        VCR.use_cassette('datasets_controller_test', record: :new_episodes) do
+          get('/datasets', params: { keyword: 'foi' })
+
+          _(
+            css_select('a.c-filter-remove-button')
+              .first['href']
+          ).must_equal('/datasets#results')
+        end
+      end
     end
   end
 end
