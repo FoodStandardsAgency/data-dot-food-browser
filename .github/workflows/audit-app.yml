@@ -1,0 +1,21 @@
+name: Audit with Lighthouse
+
+on: [push, pull_request]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Install dependencies (bundle)
+      run: bundle install
+    - name: Install dependencies (yarn)
+      run: yarn install
+    - name: Run Lighthouse
+      run: |
+        yarn global add @lhci/cli
+        lhci autorun
