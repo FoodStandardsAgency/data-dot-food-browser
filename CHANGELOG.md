@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.2.2 - 2020-09-17 (Bogdan)
+
+- Added automatic lighthouse check for every commit/PR; this check
+  should fail if accessibility is affected by the commit/PR
+
 ## 1.2.1 - 2020-09-16 (Ian)
 
 - fix for GH-100, regression in remove-filter link
