@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## 1.3.0 - 2021-02-22
+
+- (Ian) change feedback email address to go direct to FSA
+- (Ian) Rubygem and JS dependency updates
+
 ## 1.2.2 - 2020-09-17 (Bogdan)
 
 - Added automatic lighthouse check for every commit/PR; this check
