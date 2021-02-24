@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@lhci/cli": "^0.6.1",
     "@rails/webpacker": "^5.2.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.1.0",
@@ -22,7 +23,7 @@
     "fsastyles": "ijdickinson/fsastyles",
     "jquery": "^3.5.0",
     "jquery-ujs": "^1.2.2",
-    "lighthouse": "^6.3.0",
+    "lighthouse": "^7.0.1",
     "mutationobserver-shim": "^0.3.5",
     "postcss-cssnext": "^3.1.0",
     "postcss-flexbugs-fixes": "^4.1.0",

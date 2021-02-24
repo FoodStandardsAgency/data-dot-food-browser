@@ -2,13 +2,13 @@
 
 # Send content of feedback form as email
 class FeedbackMailer < ApplicationMailer
-  default from: 'fsa-data-feedback@epimorphics.com'
+  default from: 'data@food.gov.uk'
 
   def feedback_email(questions_and_answers)
     @view_state = questions_and_answers
 
     now = Time.zone.now.strftime('%H:%M %d-%m-%Y')
-    mail(to: 'fsa-data-feedback@epimorphics.com',
+    mail(to: 'data@food.gov.uk',
          subject: "FSA data catalog feedback - #{now}")
   end
 end

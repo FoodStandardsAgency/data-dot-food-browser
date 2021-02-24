@@ -31,3 +31,4 @@ yarn-debug.log*
 
 localhost*.report.html
 lighthouse-report.json
+/.lighthouseci/
