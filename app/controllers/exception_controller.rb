@@ -24,8 +24,11 @@ end
 class ExceptionController < ApplicationController
   layout 'application'
 
+  # regex to match addresses like `http://18.202.1.2:8080`
+  INTERNAL_API_URL_PATTERN = %r{https?://(\d+\.)+\d+(:\d+)?}
+
   def render_error
-    ex = env['action_dispatch.exception']
+    ex = request.env['action_dispatch.exception']
     @view_state = view_state(ex)
 
     render 'error_page', status: @view_state.status
@@ -66,9 +69,15 @@ class ExceptionController < ApplicationController
   end
 
   def setup_not_found_exception_view(exception)
-    Rails.logger.debug(exception.exception)
+    msg = exception&.exception&.message
+
+    if msg&.match?(INTERNAL_API_URL_PATTERN)
+      # we don't want expose internal URI's in error messages
+      msg = msg.gsub(INTERNAL_API_URL_PATTERN, '[[SapiNT API]]')
+    end
+
     ExceptionControllerViewState.new(
-      "Not found: #{exception&.exception&.message}", 404, 'Page not found'
+      "Not found: #{msg}", 404, 'Page not found'
     )
   end
 
