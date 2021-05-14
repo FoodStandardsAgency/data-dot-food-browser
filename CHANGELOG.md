@@ -1,5 +1,10 @@
 # data-dot-food catalog browser change history
 
+## In preparation
+
+- (Ian) Rubygem and JS dependency updates
+- (Ian) Change sort order for date-sort data elemnents (GH-112)
+
 ## 1.3.0 - 2021-02-22
 
 - (Ian) change feedback email address to go direct to FSA
