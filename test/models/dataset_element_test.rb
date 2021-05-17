@@ -77,4 +77,30 @@ class DatasetElementTest < ActiveSupport::TestCase
     k.must_be_kind_of Date
     k.year.must_equal Time.zone.now.year
   end
+
+  it 'should define a reverse sort order for date-ordered elements' do
+    fixture1 = DatasetElement.new(
+      { startDate: '2021-05-14' },
+      nil
+    )
+    fixture2 = DatasetElement.new(
+      { startDate: '2020-05-14' },
+      nil
+    )
+
+    _(fixture1 <=> fixture2).must_be :<, 0
+  end
+
+  it 'should define a forward sort order for non date-ordered elements' do
+    fixture1 = DatasetElement.new(
+      { startDate: '2021-05-14', title: 'beta' },
+      nil
+    )
+    fixture2 = DatasetElement.new(
+      { startDate: '2021-05-14', title: 'alpha' },
+      nil
+    )
+
+    _(fixture1 <=> fixture2).must_be :>, 0
+  end
 end
