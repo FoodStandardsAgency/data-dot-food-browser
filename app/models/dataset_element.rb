@@ -45,13 +45,27 @@ class DatasetElement < CatalogApiObject
   end
 
   def <=>(other)
-    cmp = sort_key <=> other.sort_key
-    cmp.zero? ? (secondary_sort_key <=> other.secondary_sort_key) : cmp
+    key = sort_key
+    cmp = key <=> other.sort_key
+
+    if cmp.zero?
+      key = secondary_sort_key
+      cmp = key <=> other.secondary_sort_key
+    end
+
+    cmp * sort_polarity(key)
   end
 
   private
 
   def default_sort_key
     Time.zone.today
+  end
+
+  # The sort polarity is used to order objects based the sort key.
+  # In particular, items with date sort-keys are sorted in reverse,
+  # so that the most recent item appears at the top of the list
+  def sort_polarity(sort_key_type)
+    @sort_polarity ||= sort_key_type.is_a?(Date) ? -1 : 1
   end
 end
