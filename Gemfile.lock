@@ -228,8 +228,13 @@ GEM
       sprockets-rails
       tilt
     semantic_range (3.0.0)
-    sentry-raven (3.1.2)
+    sentry-ruby (4.5.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       faraday (>= 1.0)
+      sentry-ruby-core (= 4.5.1)
+    sentry-ruby-core (4.5.1)
+      concurrent-ruby
+      faraday
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -296,7 +301,7 @@ DEPENDENCIES
   rails (< 6)
   rails_real_favicon
   sass-rails (~> 6.0)
-  sentry-raven
+  sentry-ruby
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
