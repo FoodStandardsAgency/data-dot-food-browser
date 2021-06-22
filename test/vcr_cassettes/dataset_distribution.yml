@@ -197,7 +197,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.4.1
+      - Faraday v1.4.2
       Accept:
       - application/json
   response:
@@ -208,7 +208,7 @@ http_interactions:
       vary:
       - Accept
       x-response-id:
-      - '3445'
+      - '3330'
       cache-control:
       - no-transform, max-age=0
       content-type:
@@ -216,7 +216,7 @@ http_interactions:
       content-length:
       - '1106'
       date:
-      - Fri, 14 May 2021 08:06:44 GMT
+      - Tue, 22 Jun 2021 07:53:42 GMT
       server:
       - Server
     body:
@@ -234,5 +234,5 @@ http_interactions:
         ,\n    \"identifier\" : \"http://data.food.gov.uk/catalog/data/distribution/23f65130-7026-4c84-9e1b-9b3eb1e3c956\"
         ,\n    \"mediaType\" : \"text/csv\" ,\n    \"type\" : \"http://www.w3.org/ns/dcat#Distribution\"\n
         \ }\n   ]\n}\n\n"
-  recorded_at: Fri, 14 May 2021 08:06:44 GMT
+  recorded_at: Tue, 22 Jun 2021 07:53:42 GMT
 recorded_with: VCR 6.0.0
