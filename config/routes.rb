@@ -20,5 +20,5 @@ Rails.application.routes.draw do
     status: 302
   )
 
-  get '*unmatched_route', to: 'exception#render_404'
+  get '*unmatched_route', to: 'exception#render404'
 end
