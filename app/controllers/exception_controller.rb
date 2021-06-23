@@ -31,14 +31,18 @@ class ExceptionController < ApplicationController
     ex = request.env['action_dispatch.exception']
     @view_state = view_state(ex)
 
-    render 'error_page', status: @view_state.status
+    render 'exception/error_page', status: @view_state.status
   end
 
-  def render_404
-    ex = ActionController::RoutingError.new('')
-    @view_state = view_state(ex)
+  def render404
+    if request.formats.map(&:symbol).include?(:html)
+      ex = ActionController::RoutingError.new('')
+      @view_state = view_state(ex)
 
-    render 'error_page', status: :not_found
+      render 'exception/error_page', status: :not_found
+    else
+      render layout: false, plain: 'not found', status: :not_found
+    end
   end
 
   private
@@ -49,8 +53,9 @@ class ExceptionController < ApplicationController
 
   def setup_view(wex)
     ex = wex.exception
+    status = ex.respond_to?(:status) && ex.status
 
-    if ex.is_a?(ActionController::RoutingError) || ex.status == 404
+    if ex.is_a?(ActionController::RoutingError) || status == 404
       setup_not_found_exception_view(ex)
     elsif ex.is_a?(ServiceException)
       setup_service_exception_view(ex)

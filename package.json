@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@lhci/cli": "^0.7.2",
     "@rails/webpacker": "^5.2.1",
     "babel-eslint": "^10.0.3",
@@ -41,9 +42,6 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.9.0",
     "wicg-inert": "^3.0.2"
-  },
-  "devDependencies": {
-    "@babel/polyfill": "^7.12.1"
   },
   "scripts": {
     "lighthouse.json": "npx lighthouse --chrome-flags='--headless' --output=json --output-path=lighthouse-report.json 'http://localhost:3000' ",
