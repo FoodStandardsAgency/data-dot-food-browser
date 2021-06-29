@@ -53,6 +53,6 @@ gem 'listen', '~> 3.0.5'
 gem 'yajl-ruby', require: 'yajl'
 
 gem 'aws-sdk-rails'
-gem 'sentry-raven'
+gem 'sentry-ruby'
 
 gem 'webpacker', '~> 5.0'
