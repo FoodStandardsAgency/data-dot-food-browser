@@ -1,5 +1,9 @@
 # data-dot-food catalog browser change history
 
+## 1.3.2 - 2021-06-29
+
+- (Ian) Small changes to reduce the number of non-useful Sentry alerts
+
 ## 1.3.1 - 2021-05-14
 
 - (Ian) Rubygem and JS dependency updates
